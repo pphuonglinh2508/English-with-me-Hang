@@ -1,0 +1,1989 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Tiếng Anh của Mẹ">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#7A3B24">
+<meta name="description" content="English with Mẹ Hằng – luyện nghe và nói tiếng Anh để đón gia đình bà Telma Garcia tại Đà Nẵng và Hội An.">
+<title>English with Mẹ Hằng</title>
+<link rel="icon" href="data:,">
+<link rel="apple-touch-icon" href="data:,">
+<style>
+:root{
+  --cream:#FBF4E6; --paper:#FFFBF4; --yellow:#F3C75F; --yellow-soft:#FBEBC0;
+  --terra:#B0532B; --terra-dark:#8A3E1E; --brown:#3A2417; --brown-2:#644433;
+  --red:#953A2A; --green:#2D6A39; --green-bg:#E2F1DE; --orange:#8A4B0F; --orange-bg:#FCE7CC;
+  --line:#E6D4B6; --top:#7A3B24;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--brown);
+  font:18px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial,sans-serif;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:var(--terra-dark)}
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:10px;
+  padding:8px 12px;padding-top:calc(8px + env(safe-area-inset-top));background:var(--top);color:#FFF4DE;
+  box-shadow:0 2px 6px rgba(58,36,23,.18)}
+.homebtn{flex:0 0 auto;min-height:48px;display:inline-flex;align-items:center;gap:6px;padding:0 14px;border-radius:12px;
+  background:var(--yellow);color:var(--brown);font-weight:800;text-decoration:none;white-space:nowrap;font-size:17px}
+.toptitle{flex:1;min-width:0;font-weight:700;font-size:17px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+main{max-width:720px;margin:0 auto;padding:14px 14px calc(120px + env(safe-area-inset-bottom));outline:none}
+.bottomnav{position:fixed;bottom:0;left:0;right:0;z-index:30;display:grid;grid-template-columns:repeat(5,1fr);
+  background:var(--paper);border-top:2px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+.bottomnav a{min-height:64px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+  text-decoration:none;color:var(--brown-2);font-size:13.5px;line-height:1.15;text-align:center;padding:6px 2px;font-weight:700}
+.bottomnav a .ic{font-size:21px;line-height:1}
+.bottomnav a.on{color:var(--terra-dark);background:var(--yellow-soft)}
+.bottomnav a.quick{color:var(--red)}
+h1{font-size:27px;line-height:1.25;margin:6px 0 10px;color:var(--red)}
+h2{font-size:22px;line-height:1.3;margin:24px 0 10px}
+h3{font-size:19px;line-height:1.3;margin:14px 0 8px}
+p{margin:8px 0}
+.muted{color:var(--brown-2)}
+.small{font-size:16px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px;margin:12px 0;
+  box-shadow:0 1px 2px rgba(58,36,23,.05)}
+.card.hl{background:var(--yellow-soft);border-color:#EBCB79}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:10px 14px;border-radius:14px;
+  border:2px solid var(--terra);background:#fff;color:var(--terra-dark);font:inherit;font-weight:700;cursor:pointer;
+  text-decoration:none;text-align:center;line-height:1.25;-webkit-tap-highlight-color:transparent;touch-action:manipulation;
+  max-width:100%;word-break:break-word}
+.btn:active{transform:translateY(1px)}
+.btn.primary{background:var(--terra);color:#FFF8EC}
+.btn.big{width:100%;min-height:62px;font-size:20px}
+.btn.block{width:100%}
+.btn.soft{border-color:#E2C57E;background:var(--yellow-soft);color:var(--brown)}
+.btn.ghost{border-color:var(--line);background:var(--paper);color:var(--brown)}
+.btn.on{background:var(--terra);color:#FFF8EC}
+.btn.playing{box-shadow:0 0 0 4px var(--yellow)}
+.btn[disabled]{opacity:.55;cursor:default}
+.btn:focus-visible,.homebtn:focus-visible,.bottomnav a:focus-visible,select:focus-visible{outline:3px solid #1E5FA8;outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0}
+.row>.btn{flex:1 1 140px}
+.stack{display:grid;gap:10px;margin:10px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+.grid2>.btn{min-height:76px;flex-direction:column;gap:4px;font-size:17px}
+.grid2 .ic{font-size:26px}
+.en{font-size:22px;font-weight:600;line-height:1.4;margin:2px 0 6px;overflow-wrap:anywhere}
+.en.xl{font-size:27px}
+.en b,.st b{color:var(--red);font-weight:800}
+.vi{color:var(--brown-2);margin:4px 0}
+.hint{background:#F6EEDD;border-radius:10px;padding:8px 10px;margin:8px 0;font-size:17px}
+.lbl{font-weight:700;color:var(--brown-2)}
+.tip{background:#FFF3D6;border-left:5px solid var(--yellow);border-radius:8px;padding:8px 10px;margin:8px 0;font-size:17px}
+.chip{display:inline-block;border-radius:999px;padding:3px 12px;font-size:15px;font-weight:700;background:#F1E6D2;color:var(--brown-2);margin-top:6px}
+.chip.comfortable{background:var(--green-bg);color:var(--green)}
+.chip.practice{background:var(--orange-bg);color:var(--orange)}
+.good{background:var(--green-bg);color:var(--green);border-radius:12px;padding:12px;margin:10px 0;font-weight:700}
+.almost{background:var(--orange-bg);color:var(--orange);border-radius:12px;padding:12px;margin:10px 0;font-weight:700}
+.info{background:#EFE6D6;border-radius:12px;padding:12px;margin:10px 0}
+.w{border-radius:6px;padding:0 3px}
+.w.ok{background:var(--green-bg);color:var(--green);font-weight:700}
+.w.miss{background:var(--orange-bg);color:var(--orange);font-weight:700}
+.opt{width:100%;justify-content:flex-start;text-align:left;border-color:var(--line);background:var(--paper);color:var(--brown);font-weight:600}
+.opt.right{background:var(--green-bg);border-color:#8DBF8F;color:var(--green)}
+.opt.other{background:var(--orange-bg);border-color:#E9B77F;color:var(--orange)}
+.bubble{border-radius:18px;padding:14px;margin:10px 0}
+.bubble.guest{background:#fff;border:2px solid var(--line);border-top-left-radius:4px}
+.bubble.me{background:var(--yellow-soft);border:2px solid #E7CD8A;border-top-right-radius:4px}
+.who{font-size:15px;font-weight:800;color:var(--brown-2);text-transform:none}
+.dl{border-bottom:1px solid var(--line);padding:10px 0}
+.dl:last-child{border-bottom:0}
+.bar{height:16px;border-radius:999px;background:#EADBC0;overflow:hidden;margin:6px 0}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,#E9B64A,#C9763F);border-radius:999px}
+.stat{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line)}
+.stat:last-child{border-bottom:0}
+.stat b{font-size:20px}
+.count{font-size:44px;font-weight:800;color:var(--red);line-height:1}
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#8C4027,#6B3220);color:#FFF4DE;border:0}
+.hero h1{color:#FFE7A8;margin-top:2px}
+.hero .muted{color:#F5DFC3}
+.lanterns{position:absolute;top:-6px;right:10px;display:flex;gap:10px;pointer-events:none}
+.lantern{width:26px;height:34px;border-radius:50%/45%;background:radial-gradient(circle at 50% 40%,#FFD36B,#D9562E 70%);
+  position:relative;box-shadow:0 0 14px rgba(255,200,90,.55)}
+.lantern:before{content:"";position:absolute;left:50%;top:-14px;width:2px;height:14px;background:#E9C77B}
+.lantern:after{content:"";position:absolute;left:50%;bottom:-9px;width:6px;height:9px;margin-left:-3px;background:#F3C75F;border-radius:0 0 3px 3px}
+.lantern.l2{margin-top:12px;transform:scale(.8)}
+.lantern.l3{margin-top:4px;transform:scale(.9)}
+.hero .msg{font-size:19px;font-weight:600;margin-top:4px;max-width:78%}
+.toast{position:fixed;left:12px;right:12px;bottom:calc(78px + env(safe-area-inset-bottom));z-index:40;max-width:620px;margin:0 auto;
+  background:var(--brown);color:#FFF4DE;border-radius:14px;padding:12px 14px;font-size:17px;box-shadow:0 6px 20px rgba(0,0,0,.25);
+  display:none}
+.toast.show{display:block}
+.banner{max-width:720px;margin:10px auto 0;padding:0 14px}
+.banner .info{margin:0}
+.toggle{background:none;border:0;color:var(--terra-dark);font:inherit;font-weight:700;text-decoration:underline;min-height:48px;padding:0 4px;cursor:pointer}
+.hidden{display:none !important}
+.stepnum{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;
+  background:var(--terra);color:#fff;font-weight:800;font-size:16px;margin-right:6px;flex:0 0 auto}
+.steph{display:flex;align-items:center;font-weight:800;font-size:19px;margin:4px 0 8px}
+.weekcard.now{border:3px solid var(--terra)}
+ul.clean{padding-left:22px;margin:6px 0}
+ul.clean li{margin:4px 0}
+select{font:inherit;min-height:52px;width:100%;border-radius:12px;border:2px solid var(--line);background:#fff;color:var(--brown);padding:0 10px}
+.dots{display:flex;gap:6px;flex-wrap:wrap}
+.dot{width:38px;text-align:center;font-size:14px}
+.dot i{display:block;width:30px;height:30px;margin:0 auto 2px;border-radius:50%;background:#EADBC0}
+.dot i.on{background:var(--yellow);box-shadow:inset 0 0 0 3px #D9A93A}
+audio{width:100%;margin:8px 0}
+.unitnum{display:inline-block;background:var(--yellow);color:var(--brown);border-radius:10px;padding:2px 10px;font-weight:800;font-size:15px}
+.done{color:var(--green);font-weight:800}
+.quickcat{scroll-margin-top:80px}
+.qbtn{width:100%;flex-direction:column;align-items:flex-start;text-align:left;min-height:72px;border-color:var(--line);background:#fff;color:var(--brown);padding:12px 14px}
+.qbtn .en{font-size:24px;margin:0}
+.qbtn .vi{font-size:18px;margin:2px 0 0}
+.qbtn .play{font-size:15px;color:var(--terra-dark);font-weight:800}
+@media (min-width:700px){ .grid2{grid-template-columns:repeat(3,1fr)} }
+@media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="homebtn" href="#/home">🏠 Trang chủ</a>
+  <div class="toptitle" id="toptitle" aria-live="polite">English with Mẹ Hằng</div>
+</header>
+<div class="banner" id="banner"></div>
+<main id="view" tabindex="-1"><p style="padding:20px">Đang mở bài học…</p></main>
+<nav class="bottomnav" aria-label="Điều hướng chính">
+  <a href="#/home" data-nav="home"><span class="ic" aria-hidden="true">🏠</span>Trang chủ</a>
+  <a href="#/units" data-nav="units"><span class="ic" aria-hidden="true">📚</span>Bài học</a>
+  <a href="#/listen" data-nav="listen"><span class="ic" aria-hidden="true">🎧</span>Luyện nghe</a>
+  <a href="#/speak" data-nav="speak"><span class="ic" aria-hidden="true">🗣️</span>Luyện nói</a>
+  <a href="#/quick" data-nav="quick" class="quick"><span class="ic" aria-hidden="true">🆘</span>Cứu nguy</a>
+</nav>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:20px">Mẹ cần bật JavaScript để dùng trang học này.</p></noscript>
+<script>
+/* ============================================================
+   LESSON CONTENT — English with Mẹ Hằng
+   How to add a phrase: P("English with **stress**", "Tiếng Việt", "cách ĐỌC", "Real-life variant", "Mẹo (optional)")
+   ** marks the stressed syllable(s). CAPS in the pronunciation hint = stressed.
+   ============================================================ */
+function P(en, vi, pr, real, tip) { return { en: en, vi: vi, pr: pr, real: real, tip: tip || "" }; }
+function D(who, en, vi) { return { who: who, en: en, vi: vi }; }
+function S(guest, alt, vi, opts) { return { guest: guest, alt: alt, vi: vi, options: opts.map(function (o) { return { en: o[0], vi: o[1] }; }) }; }
+
+const LESSONS = {
+  unit1: {
+    num: 1,
+    title: "Đón khách ở sân bay",
+    titleEn: "Airport Welcome & First Impressions",
+    description: "Mẹ đón bà Telma Garcia và gia đình tại Sân bay Quốc tế Đà Nẵng: chào hỏi, hỏi thăm chuyến bay, giúp mang hành lý.",
+    phrases: [
+      P("**Wel**come to Viet**nam**!", "Chào mừng mọi người đến Việt Nam!", "UEL-cơm tơ vi-et-NAM", "Welcome! You made it to Vietnam!", "Cuối chữ welcome là âm “m”: Mẹ ngậm môi lại nhẹ nhàng."),
+      P("**Hi**, I'm **Hằng**. It's so **nice** to **meet** you!", "Xin chào, tôi là Hằng. Rất vui được gặp bạn!", "HAI, am HANG. its sâu NAIS tơ MÍT-chiu", "Hi there! I'm Hằng. So nice to finally meet you!", "“meet you” khi nói nhanh nghe như “mít-chiu”."),
+      P("How was your **flight**?", "Chuyến bay của bạn thế nào?", "hao uơz io PHLAIT", "So, how was the flight?", "Nhớ âm cuối “t” trong flight: đầu lưỡi chạm nướu răng trên rồi dừng lại."),
+      P("You must be **tired** after such a **long** **jour**ney.", "Chắc bạn mệt lắm sau chuyến đi dài như vậy.", "iu mấst bi TAI-ơd ÉP-tơ sấch ơ LONG JƠ-ni", "You guys must be exhausted!", "“You guys” là cách người Mỹ gọi thân mật “mọi người”, dùng cho cả nam và nữ."),
+      P("Did you have any **trou**ble **find**ing your **lug**gage?", "Bạn tìm hành lý có gặp khó khăn gì không?", "đít-chu hev E-ni TRẤ-bồ PHAIN-đing io LẤ-gịch", "Did you get all your bags okay?"),
+      P("Let me **help** you with your **bags**.", "Để tôi giúp bạn mang hành lý nhé.", "lét-mi HEL-piu uýth io BEGZ", "Here, let me grab those for you.", "bags kết thúc bằng âm “gz” rung nhẹ, khác với back (lưng)."),
+      P("We're **so** **hap**py you're **here**!", "Chúng tôi rất vui vì mọi người đã đến!", "uia SÂU HE-pi io HIA", "We're so glad you're here!"),
+      P("The **car** is **wait**ing out**side**.", "Xe đang đợi ở bên ngoài.", "đơ CAR ỉz UÊI-đing ao-SAID", "Our car's just outside.", "Âm cuối “d” trong outside: chạm đầu lưỡi lên nướu, đừng bỏ mất."),
+      P("**First**, we'll **go** to the ho**tel** to **rest**.", "Trước tiên, mình sẽ về khách sạn nghỉ ngơi.", "PHƠST, uiu GÂU tơ đơ hâu-TEL tơ REST", "We'll head to the hotel first so you can rest.", "hotel nhấn âm sau: hâu-TEL."),
+      P("Is this your **first** **time** in Viet**nam**?", "Đây có phải lần đầu bạn đến Việt Nam không?", "ỉz đis io PHƠST TAIM in vi-et-NAM", "Have you been to Vietnam before?")
+    ],
+    dialogue: [
+      D("H", "Welcome to Vietnam! You must be Mrs. Garcia.", "Chào mừng đến Việt Nam! Chắc hẳn đây là bà Garcia?"),
+      D("G", "Yes! And you must be Hằng. It's so wonderful to finally meet you!", "Đúng rồi! Còn chị chắc là Hằng. Thật tuyệt khi cuối cùng cũng được gặp chị!"),
+      D("H", "It's so nice to meet you too! How was your flight?", "Tôi cũng rất vui được gặp chị! Chuyến bay của chị thế nào?"),
+      D("G", "It was long, but it was okay. We're a little tired.", "Chuyến bay dài, nhưng cũng ổn. Chúng tôi hơi mệt một chút."),
+      D("H", "You must be tired after such a long journey. Let me help you with your bags.", "Chắc mọi người mệt lắm sau chuyến đi dài như vậy. Để tôi giúp mang hành lý nhé."),
+      D("G", "Oh, thank you! That's very kind of you.", "Ôi, cảm ơn chị! Chị thật chu đáo."),
+      D("H", "The car is waiting outside. First, we'll go to the hotel to rest.", "Xe đang đợi bên ngoài. Trước tiên, mình sẽ về khách sạn nghỉ ngơi."),
+      D("G", "That sounds perfect.", "Vậy thì tuyệt quá.")
+    ],
+    roleplay: {
+      intro: "Mẹ đang đứng ở cửa ra Sân bay Đà Nẵng. Gia đình bà Telma vừa bước ra.",
+      steps: [
+        S("Hi! You must be Hằng!", "Hello! Are you Hằng?", "Xin chào! Chị chắc là Hằng!", [["Yes! Welcome to Vietnam!", "Đúng rồi! Chào mừng đến Việt Nam!"], ["Hi! It's so nice to meet you!", "Xin chào! Rất vui được gặp chị!"], ["Yes, I'm Hằng. We're so happy you're here!", "Vâng, tôi là Hằng. Chúng tôi rất vui vì mọi người đã đến!"]]),
+        S("It's so nice to meet you. That was a really long flight!", "Wow, that flight felt like forever!", "Rất vui được gặp chị. Chuyến bay dài thật đấy!", [["You must be tired after such a long journey.", "Chắc chị mệt lắm sau chuyến đi dài như vậy."], ["Oh no! How was your flight?", "Ôi! Chuyến bay thế nào?"], ["Let's go to the hotel so you can rest.", "Mình về khách sạn để chị nghỉ ngơi nhé."]]),
+        S("We have a lot of bags, I'm afraid.", "Sorry, we packed way too much!", "Chúng tôi mang nhiều hành lý quá.", [["No problem. Let me help you with your bags.", "Không sao. Để tôi giúp mang hành lý nhé."], ["Don't worry. The car is waiting outside.", "Đừng lo. Xe đang đợi bên ngoài."]])
+      ],
+      end: { en: "Thank you so much. You're very kind!", vi: "Cảm ơn chị nhiều lắm. Chị thật tốt bụng!" }
+    }
+  },
+
+  unit2: {
+    num: 2,
+    title: "Giới thiệu gia đình & trò chuyện lịch sự",
+    titleEn: "Introducing the Family & Polite Conversation",
+    description: "Mẹ giới thiệu bản thân và gia đình, hỏi thăm cuộc sống của gia đình bà Telma ở Mỹ, và trò chuyện thân thiện.",
+    phrases: [
+      P("This is my **hus**band.", "Đây là chồng tôi.", "đis ỉz mai HẤZ-bần", "Let me introduce my husband.", "husband: âm cuối “d” rất nhẹ, nhưng đừng bỏ hẳn."),
+      P("And this is my **daugh**ter, **Linh**.", "Và đây là con gái tôi, Linh.", "en đis ỉz mai ĐA-đơr, LINH", "And of course, you already know Linh!", "Người Mỹ đọc daughter gần như “ĐA-đơr”, âm “t” biến thành âm “đ” nhẹ."),
+      P("**Please** call me **Hằng**.", "Cứ gọi tôi là Hằng nhé.", "PLIZ col mi HANG", "Oh, just call me Hằng.", "please kết thúc bằng âm “z” rung nhẹ."),
+      P("What would you **like** me to **call** you?", "Tôi nên gọi bạn thế nào cho phải?", "guát gút-chu LAIK mi tơ COL iu", "Should I call you Telma or Mrs. Garcia?", "Đây là cách lịch sự nhất khi chưa biết nên gọi khách lớn tuổi thế nào. Lúc đầu Mẹ gọi “Mrs. Garcia”. Nếu bà nói “Call me Telma”, Mẹ cứ gọi “Telma” nhé."),
+      P("It's **such** a **pleas**ure to **meet** your **fam**ily.", "Thật vui khi được gặp gia đình bạn.", "its SẤCH ơ PLE-giơ tơ MIT io PHE-mơ-li", "We're so happy to finally meet all of you."),
+      P("Your **fam**ily is **love**ly.", "Gia đình bạn thật đáng yêu.", "io PHE-mơ-li ỉz LẤV-li", "You have such a lovely family.", "lovely: âm “v” cắn nhẹ môi dưới, không đọc thành “b”."),
+      P("Where do you **live** in the U**ni**ted **States**?", "Bạn sống ở đâu bên Mỹ?", "que đu iu LIV in đơ iu-NAI-địt STÊITS", "So where are you guys from in the States?", "“the States” là cách người Mỹ gọi nước Mỹ."),
+      P("What do you **like** to **do** in your **free** time?", "Lúc rảnh bạn thích làm gì?", "guát đu iu LAIK tơ ĐU in io PHRI taim", "What do you like to do for fun?"),
+      P("We've **heard** so many **won**derful **things** about you.", "Chúng tôi đã nghe rất nhiều điều tốt đẹp về bạn.", "uiv HƠĐ sâu me-ni UẤN-đơ-phồ THINGZ ơ-BAO-chiu", "Linh has told us so much about you!", "things: đặt đầu lưỡi giữa hai hàm răng rồi thổi hơi nhẹ để ra âm “th”."),
+      P("My **Eng**lish isn't **per**fect, but I'm **learn**ing!", "Tiếng Anh của tôi chưa hoàn hảo, nhưng tôi đang học!", "mai ING-glish ỈZ-ần PƠ-phịct, bất am LƠ-ning", "I'm still learning English, so please be patient with me.", "Câu này giúp Mẹ thoải mái hơn. Người nghe sẽ nói chậm lại và kiên nhẫn với Mẹ."),
+      P("We **feel** so **luck**y to **have** you here.", "Chúng tôi thấy thật may mắn khi có bạn ở đây.", "ui PHIL sâu LẤ-ki tơ HEV iu hia", "We're so lucky you came all this way.")
+    ],
+    dialogue: [
+      D("H", "Mrs. Garcia, this is my husband.", "Thưa bà Garcia, đây là chồng tôi."),
+      D("G", "Nice to meet you! Please, call me Telma.", "Rất vui được gặp anh! Cứ gọi tôi là Telma nhé."),
+      D("H", "Thank you, Telma. Please call me Hằng. And this is my daughter, Linh.", "Cảm ơn chị Telma. Chị cứ gọi tôi là Hằng. Và đây là con gái tôi, Linh."),
+      D("G", "Oh, of course we know Linh! We've heard so many wonderful things about your family.", "Ồ, tất nhiên chúng tôi biết Linh rồi! Chúng tôi đã nghe rất nhiều điều tốt đẹp về gia đình chị."),
+      D("H", "Thank you! Where do you live in the United States?", "Cảm ơn chị! Chị sống ở đâu bên Mỹ?"),
+      D("G", "We live in a small town. It's quiet, but we love it.", "Chúng tôi sống ở một thị trấn nhỏ. Ở đó yên tĩnh, nhưng chúng tôi rất thích."),
+      D("H", "That sounds lovely. My English isn't perfect, but I'm learning!", "Nghe thật dễ chịu. Tiếng Anh của tôi chưa hoàn hảo, nhưng tôi đang học!"),
+      D("G", "Your English is great! Don't worry at all.", "Tiếng Anh của chị tốt mà! Đừng lo gì cả."),
+      D("H", "You're very kind. We feel so lucky to have you here.", "Chị thật tốt bụng. Chúng tôi thấy thật may mắn khi có mọi người ở đây.")
+    ],
+    roleplay: {
+      intro: "Gia đình hai bên gặp nhau lần đầu tại nhà hàng. Mẹ giới thiệu gia đình mình.",
+      steps: [
+        S("Hằng, is this your husband?", "And who's this?", "Hằng, đây là chồng chị phải không?", [["Yes, this is my husband.", "Vâng, đây là chồng tôi."], ["Yes! Let me introduce my husband.", "Vâng! Để tôi giới thiệu chồng tôi."]]),
+        S("Please, just call me Telma.", "Oh, you don't have to call me Mrs. Garcia!", "Chị cứ gọi tôi là Telma thôi.", [["Thank you, Telma. Please call me Hằng.", "Cảm ơn chị Telma. Chị cứ gọi tôi là Hằng nhé."], ["Okay, Telma! It's such a pleasure to meet your family.", "Vâng, chị Telma! Thật vui khi được gặp gia đình chị."]]),
+        S("So, what do you like to do in your free time?", "What do you do for fun?", "Vậy lúc rảnh chị thích làm gì?", [["I like cooking and gardening. How about you?", "Tôi thích nấu ăn và làm vườn. Còn chị thì sao?"], ["I love spending time with my family.", "Tôi thích dành thời gian cho gia đình."], ["What do you like to do in your free time?", "Lúc rảnh chị thích làm gì?"]])
+      ],
+      end: { en: "I can tell we're going to have a great time together!", vi: "Tôi biết chắc là chúng ta sẽ có khoảng thời gian thật vui bên nhau!" }
+    }
+  },
+
+  unit3: {
+    num: 3,
+    title: "Nhận phòng khách sạn",
+    titleEn: "Hotel or Villa Check-in",
+    description: "Mẹ giúp khách ổn định chỗ ở: phòng, mật khẩu Wi-Fi, giờ ăn sáng, phòng tắm, điều hòa và hỏi xem mọi thứ có thoải mái không.",
+    phrases: [
+      P("This is your **room**.", "Đây là phòng của bạn.", "đis ỉz io RUM", "And here's your room!", "Âm “r” của Mỹ: cong lưỡi về sau, không rung lưỡi."),
+      P("The **Wi**-Fi **pass**word is on this **card**.", "Mật khẩu Wi-Fi ở trên tấm thẻ này.", "đơ UAI-phai PES-uơd ỉz on đis CARD", "Here's the Wi-Fi password, it's on the card."),
+      P("**Break**fast is **served** from **sev**en to **ten**.", "Bữa sáng phục vụ từ 7 giờ đến 10 giờ.", "BRÉC-phơst ỉz SƠVD phrâm SE-vần tơ TEN", "They serve breakfast from seven to ten.", "Đây là câu mẫu. Mẹ hỏi khách sạn giờ ăn sáng thật rồi đổi số cho đúng nhé."),
+      P("The **bath**room is **o**ver **there**.", "Phòng tắm ở đằng kia.", "đơ BÉTH-rum ỉz ÂU-vơ ĐE", "The bathroom's right over there.", "bathroom có âm “th”: đầu lưỡi đặt nhẹ giữa hai hàm răng."),
+      P("Here's the re**mote** for the **air** con**di**tioning.", "Đây là điều khiển điều hòa.", "HIAZ đơ ri-MÂUT pho đi E cần-ĐI-shơ-ning", "Here's the AC remote.", "Người Mỹ hay nói tắt điều hòa là “A.C.” (ây-xi)."),
+      P("Is the **tem**perature o**kay** for you?", "Nhiệt độ phòng như vậy có ổn không?", "ỉz đơ TEM-prơ-chơ âu-KÊI pho iu", "Is it too cold in here?"),
+      P("Is **ev**erything **com**fortable?", "Mọi thứ có thoải mái không?", "ỉz EV-ri-thing CẤMF-tơ-bồ", "Are you all settled in?", "comfortable người Mỹ đọc gọn 3 âm: CẤMF-tơ-bồ."),
+      P("Would you like **ex**tra **tow**els or **pil**lows?", "Bạn có cần thêm khăn tắm hay gối không?", "gút-chu laik ÉCH-strơ TAO-ơlz o PI-lâuz", "Need any more towels?"),
+      P("If you **need** anything, just **call** me.", "Nếu cần gì, cứ gọi cho tôi nhé.", "if iu NID e-ni-thing, jất COL mi", "Just give me a call if you need anything."),
+      P("Let me **ask** the **front** **desk**.", "Để tôi hỏi lễ tân nhé.", "lét-mi ESK đơ PHRẤNT ĐESK", "I'll check with the front desk.", "desk kết thúc bằng hai âm “s-k”. Mẹ nói chậm: “đes-k”.")
+    ],
+    dialogue: [
+      D("H", "This is your room. Is everything comfortable?", "Đây là phòng của chị. Mọi thứ có thoải mái không?"),
+      D("G", "Oh, it's beautiful! Is there Wi-Fi?", "Ôi, đẹp quá! Ở đây có Wi-Fi không?"),
+      D("H", "Yes. The Wi-Fi password is on this card.", "Có. Mật khẩu Wi-Fi ở trên tấm thẻ này."),
+      D("G", "Perfect. What time is breakfast?", "Tuyệt quá. Mấy giờ ăn sáng vậy?"),
+      D("H", "Breakfast is served from seven to ten.", "Bữa sáng phục vụ từ 7 giờ đến 10 giờ."),
+      D("G", "Great. It's a little warm in here.", "Tốt quá. Trong phòng hơi nóng một chút."),
+      D("H", "Here's the remote for the air conditioning.", "Đây là điều khiển điều hòa."),
+      D("G", "Thank you so much.", "Cảm ơn chị nhiều."),
+      D("H", "If you need anything, just call me.", "Nếu cần gì, chị cứ gọi cho tôi nhé.")
+    ],
+    roleplay: {
+      intro: "Mẹ vừa đưa gia đình bà Telma lên phòng khách sạn.",
+      steps: [
+        S("What time is breakfast tomorrow?", "When do they serve breakfast?", "Sáng mai mấy giờ ăn sáng?", [["Breakfast is served from seven to ten.", "Bữa sáng phục vụ từ 7 giờ đến 10 giờ."], ["Let me ask the front desk.", "Để tôi hỏi lễ tân nhé."]]),
+        S("Do you know the Wi-Fi password?", "How do I get on the Wi-Fi?", "Chị có biết mật khẩu Wi-Fi không?", [["The Wi-Fi password is on this card.", "Mật khẩu Wi-Fi ở trên tấm thẻ này."], ["Just a moment, please. Let me check.", "Chờ tôi một chút. Để tôi kiểm tra."]]),
+        S("It's a bit hot in the room.", "The room feels kind of warm.", "Trong phòng hơi nóng.", [["Here's the remote for the air conditioning.", "Đây là điều khiển điều hòa."], ["Would you like me to ask the front desk for help?", "Chị có muốn tôi nhờ lễ tân giúp không?"]])
+      ],
+      end: { en: "Thanks, Hằng. Everything is perfect.", vi: "Cảm ơn Hằng. Mọi thứ đều tuyệt vời." }
+    }
+  },
+
+  unit4: {
+    num: 4,
+    title: "Món ăn Việt & nhà hàng",
+    titleEn: "Vietnamese Food & Restaurants",
+    description: "Mẹ giới thiệu Mì Quảng, Cao lầu, Bánh mì, Phở, Bánh xèo, Cà phê sữa đá; hỏi về độ cay và dị ứng. Khi khách bị dị ứng, Mẹ luôn hỏi lại nhà hàng, không tự đoán.",
+    phrases: [
+      P("Would you like to **try** some **lo**cal **food**?", "Bạn có muốn thử món ăn địa phương không?", "gút-chu laik tơ TRAI sấm LÂU-cồ PHUD", "Wanna try some local food?", "“Wanna” là cách nói nhanh của “want to”."),
+      P("This is a tra**di**tional **dish** from **Cen**tral Viet**nam**.", "Đây là món truyền thống của miền Trung Việt Nam.", "đis ỉz ơ trơ-ĐI-shơ-nồ ĐISH phrâm SEN-trồ vi-et-NAM", "This dish is from right here in Central Vietnam."),
+      P("It's **made** with **rice** **noo**dles and **fresh** **herbs**.", "Món này làm từ sợi bánh gạo và rau thơm tươi.", "its MÊID uýth RAIS NU-đồz en PHRESH ƠBZ", "It's got rice noodles and lots of fresh herbs.", "Người Mỹ đọc herbs là “ơbz”, không đọc âm “h”."),
+      P("**Mì Quảng** has **yel**low **noo**dles, **shrimp**, **pork**, and **pea**nuts.", "Mì Quảng có sợi mì vàng, tôm, thịt lợn và lạc.", "mì quảng hez IE-lâu NU-đồz, SHRIMP, POK, en PI-nấts", "Mì Quảng has just a little broth, so it's not really a soup.", "Mì Quảng có lạc. Nếu khách dị ứng lạc, Mẹ nhớ dặn nhà hàng."),
+      P("**Cao lầu** is a **spe**cial **noo**dle dish from Hội **An**.", "Cao lầu là món mì đặc biệt của Hội An.", "cao lầu ỉz ơ SPE-shồ NU-đồ đish phrâm hội AN", "You can really only find real cao lầu in Hội An."),
+      P("**Bánh mì** is a Vietnam**ese** **sand**wich.", "Bánh mì là bánh mì kẹp kiểu Việt Nam.", "banh mi ỉz ơ vi-et-nơ-MIZ SEN-uých", "Bánh mì is basically a Vietnamese sandwich, and the ones in Hội An are famous."),
+      P("**Bánh xèo** is a **cris**py **rice** **pan**cake.", "Bánh xèo là bánh gạo chiên giòn.", "banh xèo ỉz ơ CRÍS-pi RAIS PEN-kêik", "You wrap it in rice paper and dip it in the sauce.", "Mẹ có thể chỉ khách: “Wrap it in rice paper and dip it in the sauce.” (Cuốn với bánh đa nem rồi chấm nước chấm.)"),
+      P("**Phở** is a **rice** **noo**dle **soup** with **beef** or **chick**en.", "Phở là món bánh phở nước, ăn với thịt bò hoặc thịt gà.", "phở ỉz ơ RAIS NU-đồ SUP uýth BIF o CHÍ-kần", "Pho is a beef or chicken noodle soup. It's really comforting.", "Nhiều người Mỹ đọc “phở” giống “phơ” hoặc “phâu”. Mẹ nghe vậy là họ đang nói về phở đấy."),
+      P("**Cà phê sữa đá** is **iced** **cof**fee with con**densed** **milk**.", "Cà phê sữa đá là cà phê đá pha với sữa đặc.", "cà phê sữa đá ỉz AIST CO-phi uýth cần-ĐENST MILK", "It's really strong and sweet, and so refreshing.", "Ngoài Bắc, món này hay được gọi là “nâu đá”."),
+      P("Would you like it **spic**y or **mild**?", "Bạn muốn ăn cay hay ít cay?", "gút-chu LAIK it SPAI-si o MAILD", "Do you want it spicy, or not too spicy?", "mild kết thúc bằng “ld”: lưỡi chạm nướu rồi dừng."),
+      P("Is it **too** **spic**y?", "Có cay quá không?", "ỉz-it TU SPAI-si", "Too hot for you?", "Người Mỹ hay dùng “hot” với nghĩa “cay”."),
+      P("Do you have any **food** **al**lergies?", "Bạn có bị dị ứng thực phẩm nào không?", "đu iu hev e-ni PHUD E-lơ-jiz", "Is there anything you can't eat?", "Nếu khách bị dị ứng, Mẹ hỏi lại nhà hàng: “Does this dish have peanuts?” Đừng tự đoán món nào an toàn.")
+    ],
+    dialogue: [
+      D("H", "Would you like to try some local food?", "Chị có muốn thử món ăn địa phương không?"),
+      D("G", "Yes, I'd love to! What do you recommend?", "Có chứ, tôi rất muốn! Chị gợi ý món gì?"),
+      D("H", "This is Mì Quảng. It's a traditional dish from Central Vietnam.", "Đây là Mì Quảng. Đây là món truyền thống của miền Trung Việt Nam."),
+      D("G", "It looks delicious. What's in it?", "Trông ngon quá. Trong món này có gì?"),
+      D("H", "It's made with rice noodles and fresh herbs. It has shrimp, pork, and peanuts.", "Món này làm từ sợi bánh gạo và rau thơm tươi. Có tôm, thịt lợn và lạc."),
+      D("G", "Oh, I'm allergic to peanuts, actually.", "Ồ, thật ra tôi bị dị ứng lạc."),
+      D("H", "Thank you for telling me. Let me check with the restaurant and ask for no peanuts.", "Cảm ơn chị đã cho tôi biết. Để tôi hỏi lại nhà hàng và dặn không cho lạc."),
+      D("G", "Thank you. That's very kind.", "Cảm ơn chị. Chị thật chu đáo."),
+      D("H", "Would you like it spicy or mild?", "Chị muốn ăn cay hay ít cay?"),
+      D("G", "Mild, please.", "Ít cay thôi nhé."),
+      D("H", "Do you like it?", "Chị thấy có ngon không?"),
+      D("G", "I love it! It's delicious.", "Tôi thích lắm! Ngon tuyệt.")
+    ],
+    roleplay: {
+      intro: "Buổi tối đầu tiên, gia đình bà Telma muốn ăn món địa phương.",
+      steps: [
+        S("Would you recommend a good local restaurant?", "Where should we eat tonight?", "Chị có thể gợi ý một nhà hàng địa phương ngon không?", [["Of course! I'd love to take you to one of my favorite restaurants.", "Tất nhiên rồi! Tôi rất muốn đưa chị đến một trong những nhà hàng tôi thích nhất."], ["There are many great local restaurants nearby.", "Gần đây có nhiều nhà hàng địa phương rất ngon."], ["What kind of food would you like to try?", "Chị muốn thử món gì?"]]),
+        S("What's in this dish?", "What is this made of?", "Món này có những gì?", [["It's made with rice noodles and fresh herbs.", "Món này làm từ sợi bánh gạo và rau thơm tươi."], ["Let me ask the restaurant.", "Để tôi hỏi nhà hàng nhé."]]),
+        S("I can't eat peanuts. I have an allergy.", "Just so you know, I'm allergic to peanuts.", "Tôi không ăn được lạc. Tôi bị dị ứng.", [["Thank you for telling me. Let me check with the restaurant.", "Cảm ơn chị đã cho tôi biết. Để tôi hỏi lại nhà hàng."], ["No problem. We will ask them to make it without peanuts.", "Không sao. Mình sẽ nhờ họ làm món không có lạc."]]),
+        S("Wow, this is a little spicy!", "Whoa, that's hot!", "Ôi, món này hơi cay!", [["Is it too spicy? Would you like some water?", "Có cay quá không? Chị có muốn uống nước không?"], ["Sorry! Next time we'll order it mild.", "Xin lỗi chị! Lần sau mình gọi ít cay nhé."]])
+      ],
+      end: { en: "This is delicious. Thank you for bringing us here!", vi: "Ngon quá. Cảm ơn chị đã đưa chúng tôi đến đây!" }
+    }
+  },
+
+  unit5: {
+    num: 5,
+    title: "Khám phá phố cổ Hội An",
+    titleEn: "Exploring Hội An Ancient Town",
+    description: "Mẹ giới thiệu phố cổ, Chùa Cầu, đèn lồng, hiệu may, sông Thu Bồn, đi thuyền và thả hoa đăng; đề nghị chụp ảnh và giải thích giá.",
+    phrases: [
+      P("**This** is Hội **An** **An**cient **Town**.", "Đây là phố cổ Hội An.", "đis ỉz hội AN ÊIN-shần TAON", "Welcome to the Old Town!", "ancient đọc là “ÊIN-shần”."),
+      P("It was an im**por**tant **trad**ing **port** for **hun**dreds of **years**.", "Nơi đây từng là thương cảng quan trọng suốt hàng trăm năm.", "it uơz ơn im-PO-tần TRÊI-đing POT pho HẤN-đrịdz ơv IAZ", "Back in the day, ships came here from all over Asia and Europe."),
+      P("**Trad**ers came from Ja**pan**, **Chi**na, and **Eu**rope.", "Thương nhân đến từ Nhật Bản, Trung Quốc và châu Âu.", "TRÊI-đơz kêim phrâm jơ-PEN, CHAI-nơ, en IU-rợp", "That's why you see Japanese, Chinese, and Vietnamese styles here."),
+      P("The **old** **town** is a U**NES**CO **World** **Her**itage **Site**.", "Phố cổ là Di sản Văn hóa Thế giới được UNESCO công nhận.", "đi ÂULD TAON ỉz ơ iu-NES-câu UƠLD HE-ri-tịch SAIT", "It's been a World Heritage Site since 1999."),
+      P("This is the Japa**nese** **Cov**ered **Bridge**.", "Đây là Chùa Cầu, cây cầu có mái che của người Nhật.", "đis ỉz đơ je-pơ-NIZ CẤ-vơd BRIDG", "It's over four hundred years old, and it's on our money!", "Chùa Cầu được in trên tờ tiền 20.000 đồng. Khách sẽ rất thích chi tiết này."),
+      P("The **lan**terns are **beau**tiful at **night**.", "Đèn lồng buổi tối đẹp lắm.", "đơ LEN-tơnz a BIU-đơ-phồ ét NAIT", "Wait till you see the lanterns light up tonight."),
+      P("Would you like to take a **boat** **ride** on the **Thu Bồn** **Riv**er?", "Bạn có muốn đi thuyền trên sông Thu Bồn không?", "gút-chu laik tơ têik ơ BÂUT RAID on đơ thu bồn RI-vơ", "Wanna hop on a boat?"),
+      P("You can **make** a **wish** and re**lease** a **flow**er **lan**tern.", "Bạn có thể ước một điều và thả hoa đăng.", "iu cần MÊIK ơ UÍSH en ri-LIS ơ PHLAO-ơ LEN-tơn", "People float a little candle lantern on the river and make a wish."),
+      P("The **tai**lor **shops** can **make** **clothes** for you in a **day** or **two**.", "Các hiệu may ở đây có thể may đồ cho bạn trong một hai ngày.", "đơ TÊI-lơ SHOPS cần MÊIK CLÂUĐZ pho iu in ơ ĐÊI o TU", "You can get a dress made here really fast.", "clothes khó đọc. Mẹ có thể đọc gần như “clâuz” cũng được, người Mỹ vẫn hiểu."),
+      P("Would you like me to **take** a **pho**to of you?", "Bạn có muốn tôi chụp ảnh cho bạn không?", "gút-chu LAIK mi tơ TÊIK ơ PHÂU-đâu ơv iu", "Want me to take your picture?"),
+      P("It **costs** about **fif**ty **thou**sand **đồng**. That's about **two** **dol**lars.", "Giá khoảng 50.000 đồng, tức là khoảng 2 đô la Mỹ.", "it COSTS ơ-bao PHÍP-ti THAO-zần đồng. đets ơ-bao TU ĐA-lơz", "It's like fifty thousand đồng, so around two bucks.", "Đây là câu mẫu. Mẹ thay số tiền theo giá thực tế nhé. “bucks” là cách nói thân mật của “dollars”.")
+    ],
+    dialogue: [
+      D("H", "This is Hội An Ancient Town. It was an important trading port for hundreds of years.", "Đây là phố cổ Hội An. Nơi đây từng là thương cảng quan trọng suốt hàng trăm năm."),
+      D("G", "It's so charming! Who traded here?", "Đẹp và duyên dáng quá! Ai đã đến đây buôn bán vậy?"),
+      D("H", "Traders came from Japan, China, and Europe.", "Thương nhân đến từ Nhật Bản, Trung Quốc và châu Âu."),
+      D("G", "Is that the Japanese Covered Bridge?", "Kia có phải là Chùa Cầu không?"),
+      D("H", "Yes! It's over four hundred years old.", "Đúng rồi! Cây cầu đã hơn bốn trăm năm tuổi."),
+      D("G", "Amazing. Can we take pictures here?", "Tuyệt vời. Mình chụp ảnh ở đây được không?"),
+      D("H", "Of course. Would you like me to take a photo of you?", "Tất nhiên rồi. Chị có muốn tôi chụp ảnh cho chị không?"),
+      D("G", "Yes, please! And what can we do tonight?", "Có, cảm ơn chị! Còn tối nay mình làm gì?"),
+      D("H", "The lanterns are beautiful at night. We can take a boat ride on the Thu Bồn River.", "Đèn lồng buổi tối đẹp lắm. Mình có thể đi thuyền trên sông Thu Bồn."),
+      D("G", "That sounds magical.", "Nghe thật kỳ diệu.")
+    ],
+    roleplay: {
+      intro: "Mẹ và gia đình bà Telma đang đi dạo trong phố cổ Hội An.",
+      steps: [
+        S("Why is this town so famous?", "What's so special about Hội An?", "Sao thị trấn này nổi tiếng vậy?", [["It was an important trading port for hundreds of years.", "Nơi đây từng là thương cảng quan trọng suốt hàng trăm năm."], ["The old town is a UNESCO World Heritage Site.", "Phố cổ là Di sản Văn hóa Thế giới được UNESCO công nhận."]]),
+        S("Can you take a picture of us by the bridge?", "Could you snap a photo of us?", "Chị chụp giúp chúng tôi một tấm ảnh cạnh cây cầu được không?", [["Of course! Smile!", "Tất nhiên rồi! Cười lên nào!"], ["Sure! One, two, three!", "Được chứ! Một, hai, ba!"]]),
+        S("How much is the boat ride?", "What does the boat cost?", "Đi thuyền bao nhiêu tiền?", [["It costs about fifty thousand đồng. That's about two dollars.", "Khoảng 50.000 đồng, tức là khoảng 2 đô la."], ["Let me check the price for you.", "Để tôi hỏi giá giúp chị."]]),
+        S("What should we do tonight?", "Any plans for this evening?", "Tối nay mình nên làm gì?", [["The lanterns are beautiful at night.", "Đèn lồng buổi tối đẹp lắm."], ["You can make a wish and release a flower lantern.", "Chị có thể ước một điều và thả hoa đăng."]])
+      ],
+      end: { en: "I'm so glad we came here with you.", vi: "Tôi thật vui vì được đến đây cùng chị." }
+    }
+  },
+
+  unit6: {
+    num: 6,
+    title: "Khám phá Đà Nẵng",
+    titleEn: "Exploring Đà Nẵng",
+    description: "Mẹ giới thiệu bãi biển Mỹ Khê, Ngũ Hành Sơn, Cầu Rồng, Bà Nà Hills và Cầu Vàng; nói về khoảng cách, cảnh đẹp, thời tiết và lúc đông người.",
+    phrases: [
+      P("This is **Mỹ Khê** **Beach**.", "Đây là bãi biển Mỹ Khê.", "đis ỉz mỹ khê BIICH", "This is our favorite beach in Đà Nẵng.", "beach (bãi biển) có âm “i” dài: Mẹ kéo dài “biiich” và hơi căng môi như đang cười."),
+      P("The **wa**ter is **clear** and the **sand** is **soft**.", "Nước trong và cát mịn.", "đơ UA-đơ ỉz CLIA en đơ SEND ỉz SOFT", "It's perfect for a morning walk."),
+      P("These are the **Mar**ble **Moun**tains.", "Đây là Ngũ Hành Sơn.", "điz a đơ MAR-bồ MAON-tầnz", "Those are the Marble Mountains, Ngũ Hành Sơn.", "Người Mỹ thường đọc mountains rất nhẹ ở giữa: “MAON-ừnz”."),
+      P("There are **caves** and pa**go**das in**side**.", "Bên trong có hang động và chùa.", "đe a KÊIVZ en pơ-GÂU-đơz in-SAID", "We'll climb some stairs, so wear comfy shoes."),
+      P("The **Drag**on **Bridge** **breathes** **fire** on **week**end **nights**.", "Cầu Rồng phun lửa vào tối cuối tuần.", "đơ ĐRE-gần BRIDG BRIĐZ PHAI-ơ on UÍK-end NAITS", "On Saturday and Sunday nights, the dragon breathes fire and water!", "Cầu Rồng thường phun lửa và nước khoảng 9 giờ tối thứ Bảy và Chủ nhật. Mẹ kiểm tra lại lịch trước khi đi nhé."),
+      P("**Bà Nà** **Hills** is **up** in the **moun**tains.", "Bà Nà Hills nằm trên núi.", "bà nà HILZ ỉz ẤP in đơ MAON-tầnz", "It's like a little French village up in the clouds."),
+      P("We can **take** the **ca**ble **car** to the **top**.", "Mình có thể đi cáp treo lên đỉnh.", "ui cần TÊIK đơ KÊI-bồ CAR tơ đơ TOP", "The cable car ride is amazing."),
+      P("The **Gold**en **Bridge** is **held** up by two **gi**ant **stone** **hands**.", "Cầu Vàng được nâng đỡ bởi hai bàn tay đá khổng lồ.", "đơ GÂUL-đần BRIDG ỉz HELD ấp bai tu JAI-ần STÂUN HENDZ", "It looks like the mountain is holding the bridge!"),
+      P("It **takes** about **one** **hour** to get **there** by **car**.", "Đi ô tô đến đó mất khoảng một tiếng.", "it TÊIKS ơ-bao UẤN AO-ơ tơ get ĐE bai CAR", "It's about an hour's drive.", "hour không đọc âm “h”: “ao-ơ”."),
+      P("The **view** is **beau**tiful!", "Cảnh đẹp quá!", "đơ VIU ỉz BIU-đơ-phồ", "What a view!", "view bắt đầu bằng âm “v”: răng trên chạm nhẹ môi dưới."),
+      P("It's **less** **crowd**ed in the **morn**ing.", "Buổi sáng sẽ ít đông người hơn.", "its LES CRAO-địd in đơ MO-ning", "Let's go early to beat the crowds.")
+    ],
+    dialogue: [
+      D("H", "Good morning! Today we'll visit Bà Nà Hills.", "Chào buổi sáng! Hôm nay mình sẽ đi Bà Nà Hills."),
+      D("G", "Great! How far is it?", "Tuyệt quá! Ở đó xa không?"),
+      D("H", "It takes about one hour to get there by car. We can take the cable car to the top.", "Đi ô tô mất khoảng một tiếng. Mình có thể đi cáp treo lên đỉnh."),
+      D("G", "I've seen pictures of the Golden Bridge. Is it there?", "Tôi đã thấy ảnh Cầu Vàng. Cầu đó ở trên ấy à?"),
+      D("H", "Yes! The Golden Bridge is held up by two giant stone hands.", "Đúng rồi! Cầu Vàng được nâng đỡ bởi hai bàn tay đá khổng lồ."),
+      D("G", "Wow! Will it be crowded?", "Ồ! Ở đó có đông người không?"),
+      D("H", "It's less crowded in the morning, so let's go early.", "Buổi sáng ít đông người hơn, nên mình đi sớm nhé."),
+      D("G", "Good idea. And what can we do tonight?", "Ý hay đấy. Còn tối nay mình làm gì?"),
+      D("H", "The Dragon Bridge breathes fire on weekend nights.", "Cầu Rồng phun lửa vào tối cuối tuần."),
+      D("G", "I'd love to see that!", "Tôi rất muốn xem!")
+    ],
+    roleplay: {
+      intro: "Mẹ đang đưa gia đình bà Telma đi tham quan Đà Nẵng.",
+      steps: [
+        S("What's that mountain over there?", "What are those big rocks over there?", "Ngọn núi đằng kia là gì vậy?", [["These are the Marble Mountains.", "Đây là Ngũ Hành Sơn."], ["There are caves and pagodas inside.", "Bên trong có hang động và chùa."]]),
+        S("How long does it take to get to Bà Nà Hills?", "Is Bà Nà Hills far from here?", "Đi Bà Nà Hills mất bao lâu?", [["It takes about one hour to get there by car.", "Đi ô tô mất khoảng một tiếng."], ["Not too far. About one hour.", "Không xa lắm. Khoảng một tiếng."]]),
+        S("Is it going to be really busy?", "Will there be a lot of people?", "Ở đó có đông người lắm không?", [["It's less crowded in the morning.", "Buổi sáng sẽ ít đông người hơn."], ["Maybe. Let's go early!", "Có thể. Mình đi sớm nhé!"]]),
+        S("This view is incredible!", "Wow, look at this view!", "Cảnh đẹp không thể tin được!", [["The view is beautiful!", "Cảnh đẹp quá!"], ["Would you like me to take a photo of you?", "Chị có muốn tôi chụp ảnh cho chị không?"]])
+      ],
+      end: { en: "Đà Nẵng is so beautiful. I didn't expect this!", vi: "Đà Nẵng đẹp quá. Tôi không ngờ luôn!" }
+    }
+  },
+
+  unit7: {
+    num: 7,
+    title: "Mua sắm & đi chợ",
+    titleEn: "Shopping & Local Markets",
+    description: "Hỏi giá, trả giá lịch sự, so sánh hàng, trả tiền bằng tiền đồng (VND), tiền mặt hay thẻ, hỏi cỡ và cảm ơn người bán.",
+    phrases: [
+      P("**How** much is **this**?", "Cái này bao nhiêu tiền?", "HAO mấch ỉz ĐIS", "How much for this one?"),
+      P("Could you give me a **bet**ter **price**?", "Bạn bớt cho tôi một chút được không?", "cút-chu GHIV mi ơ BE-đơ PRAIS", "Can you do a little better on the price?", "price kết thúc bằng âm “s” nhẹ: “prais”."),
+      P("That's a **lit**tle ex**pen**sive.", "Hơi đắt một chút.", "đets ơ LI-đồ ịch-SPEN-xịv", "Hmm, that's a bit pricey."),
+      P("I'll **take** it.", "Tôi lấy cái này.", "ail TÊIK-it", "Okay, I'll get it."),
+      P("This is a **good** **price**.", "Giá này tốt đó.", "đis ỉz ơ GÚD PRAIS", "That's a really fair price."),
+      P("Do you ac**cept** **cards**?", "Ở đây có nhận thẻ không?", "đu iu ịc-SEPT CARDZ", "Can I pay by card?", "accept kết thúc bằng hai âm “p-t”. Mẹ nói chậm: “ịc-sep-t”."),
+      P("Do you have this in a **big**ger **size**?", "Có cỡ lớn hơn không?", "đu iu hev đis in ơ BI-gơ SAIZ", "Does this come in a larger size?"),
+      P("This one is **cheap**er, but **that** one is **pret**tier.", "Cái này rẻ hơn, nhưng cái kia đẹp hơn.", "đis uấn ỉz CHI-pơ, bất ĐET uấn ỉz PRI-đi-ơ", "This one's cheaper, but I like that one better."),
+      P("It's **one** **hun**dred **thou**sand **đồng**. That's about **four** **dol**lars.", "Giá 100.000 đồng, khoảng 4 đô la.", "its UẤN HẤN-đrịd THAO-zần đồng. đets ơ-bao PHO ĐA-lơz", "It's a hundred K, so about four bucks.", "Mẹo nhẩm: khoảng 25.000–26.000 đồng là 1 đô la (tỷ giá có thể thay đổi). Người Mỹ có thể nói “K” nghĩa là nghìn."),
+      P("In **mar**kets, it's **nor**mal to **bar**gain a **lit**tle.", "Ở chợ, trả giá một chút là chuyện bình thường.", "in MAR-kịts, its NO-mồ tơ BAR-gần ơ LI-đồ", "It's okay to bargain here, just keep it friendly.", "Mẹ nhắc khách trả giá vui vẻ, mỉm cười. Ở cửa hàng có giá niêm yết thì thường không trả giá."),
+      P("**Thank** you **so** much! Have a **nice** **day**!", "Cảm ơn nhiều nhé! Chúc một ngày vui vẻ!", "THENK-kiu SÂU mấch! hev ơ NAIS ĐÊI", "Thanks so much!")
+    ],
+    dialogue: [
+      D("G", "These scarves are so pretty!", "Mấy chiếc khăn này đẹp quá!"),
+      D("H", "They are! This one is silk.", "Đẹp thật! Chiếc này bằng lụa."),
+      D("G", "How much is this?", "Cái này bao nhiêu tiền?"),
+      D("H", "It's two hundred thousand đồng. That's about eight dollars.", "Giá 200.000 đồng, khoảng 8 đô la."),
+      D("G", "Hmm. Is that a good price?", "Hừm. Giá vậy có tốt không?"),
+      D("H", "In markets, it's normal to bargain a little. I'll ask for a better price.", "Ở chợ, trả giá một chút là chuyện bình thường. Để tôi hỏi bớt giá nhé."),
+      D("H", "Okay, she says one hundred fifty thousand. This is a good price.", "Rồi, cô ấy nói 150.000. Giá này tốt đó."),
+      D("G", "Great, I'll take it! Do they accept cards?", "Tuyệt, tôi lấy cái này! Ở đây có nhận thẻ không?"),
+      D("H", "Small shops usually prefer cash. Let me check.", "Các cửa hàng nhỏ thường thích tiền mặt hơn. Để tôi hỏi thử."),
+      D("G", "Thank you so much!", "Cảm ơn chị nhiều lắm!")
+    ],
+    roleplay: {
+      intro: "Mẹ đưa bà Telma đi chợ đêm Hội An mua quà.",
+      steps: [
+        S("How much is this bag?", "What's the price on this?", "Cái túi này bao nhiêu tiền?", [["Let me ask the seller for you.", "Để tôi hỏi người bán giúp chị."], ["It's two hundred thousand đồng. That's about eight dollars.", "Giá 200.000 đồng, khoảng 8 đô la."]]),
+        S("That seems a little expensive.", "Is that too much?", "Có vẻ hơi đắt.", [["In markets, it's normal to bargain a little.", "Ở chợ, trả giá một chút là chuyện bình thường."], ["I'll ask for a better price.", "Để tôi hỏi bớt giá nhé."]]),
+        S("Can I pay with my credit card?", "Do they take credit cards here?", "Tôi trả bằng thẻ tín dụng được không?", [["Let me check. Small shops usually prefer cash.", "Để tôi hỏi. Cửa hàng nhỏ thường thích tiền mặt hơn."], ["Just a moment, please. Let me ask.", "Chờ một chút nhé. Để tôi hỏi."]]),
+        S("Do they have this in a larger size?", "Is there a bigger one?", "Có cỡ lớn hơn không?", [["Let me ask if they have a bigger size.", "Để tôi hỏi xem có cỡ lớn hơn không."], ["Just a moment, please.", "Chờ một chút nhé."]])
+      ],
+      end: { en: "I love it. Thank you for helping me shop!", vi: "Tôi thích lắm. Cảm ơn chị đã giúp tôi mua sắm!" }
+    }
+  },
+
+  unit8: {
+    num: 8,
+    title: "Giới thiệu Tết Việt Nam",
+    titleEn: "Explaining Vietnamese Tết Culture",
+    description: "Bài quan trọng nhất! Khách đến ngay trước Tết (Tết năm 2027 là ngày 6/2). Mẹ giải thích Tết, bánh chưng, bánh tét, lì xì, mâm ngũ quả và cách cư xử khi đến thăm nhà. Phong tục mỗi vùng, mỗi nhà một khác.",
+    phrases: [
+      P("**Tết** is the Vietnam**ese** **Lu**nar **New** **Year**.", "Tết là Tết Nguyên đán, năm mới âm lịch của người Việt.", "tết ỉz đơ vi-et-nơ-MIZ LU-nơ NIU IA", "Tết is the biggest holiday of the year for us."),
+      P("This **year**, **Tết** is on **Feb**ruary **sixth**.", "Năm nay, Tết rơi vào ngày 6 tháng 2.", "đis IA, tết ỉz on PHÉP-ru-e-ri SIKSTH", "The New Year starts right after you leave!", "sixth rất khó, người bản xứ cũng nói nhanh. Mẹ nói chậm “siks-th” là đủ."),
+      P("Before **Tết**, **fam**ilies **clean** and **dec**orate their **homes**.", "Trước Tết, các gia đình dọn dẹp và trang trí nhà cửa.", "bi-PHO tết, PHE-mơ-liz CLIN en ĐE-cơ-rêit đe HÂUMZ", "Everyone's busy cleaning and getting ready right now."),
+      P("We **clean** to say good**bye** to the **old** **year** and **wel**come **good** **luck**.", "Chúng tôi dọn dẹp để tiễn năm cũ và đón may mắn.", "ui CLIN tơ sêi gút-BAI tơ đi ÂULD IA en UEL-cơm GÚD LẤCK", "It's like a fresh start for the new year."),
+      P("**Bánh chưng** and **bánh tét** are **stick**y **rice** **cakes**.", "Bánh chưng và bánh tét là bánh làm từ gạo nếp.", "bánh chưng en bánh tét a STÍ-ki RAIS KÊIKS", "They're wrapped in leaves, with pork and mung beans inside.", "Mẹ có thể nói thêm: “Bánh chưng is square, and bánh tét is long and round.” (Bánh chưng hình vuông, bánh tét hình trụ dài.)"),
+      P("**Giv**ing **luck**y **mon**ey is a **way** to **wish** someone **good** **luck**.", "Lì xì (mừng tuổi) là cách để chúc ai đó may mắn.", "GHI-ving LẤ-ki MẤ-ni ỉz ơ UÊI tơ UÍSH sấm-uấn GÚD LẤCK", "We put lucky money in little red envelopes, mostly for kids and older relatives."),
+      P("This is a **five**-**fruit** **tray**. It's for our **an**cestors.", "Đây là mâm ngũ quả, dùng để dâng lên tổ tiên.", "đis ỉz ơ PHAIV-PHRUT TRÊI. its pho ao EN-ses-tơz", "Each fruit has a special meaning, like a wish for the new year.", "Mỗi vùng chọn loại quả khác nhau. Mẹ có thể nói: “It's different in every region.”"),
+      P("We **us**ually **spend** **Tết** with our **fam**ily.", "Chúng tôi thường đón Tết cùng gia đình.", "ui IU-giu-ơ-li SPEND tết uýth ao PHE-mơ-li", "It's all about family. Everyone goes home for Tết."),
+      P("In **man**y **homes**, we **take** off our **shoes** at the **door**.", "Ở nhiều nhà, mọi người cởi giày ở cửa.", "in ME-ni HÂUMZ, ui TÊIK of ao SHUZ ét đơ ĐO", "Just follow what the family does, and you'll be fine.", "Đây là cách cư xử lịch sự khi khách đến thăm nhà người Việt. Mẹ có thể nhắc nhẹ nhàng, không cần bắt buộc."),
+      P("**Hap**py **Lu**nar **New** **Year**!", "Chúc mừng năm mới!", "HE-pi LU-nơ NIU IA", "Happy Tết, everyone!"),
+      P("**Wish**ing you **health**, **hap**piness, and **good** **for**tune.", "Chúc bạn sức khỏe, hạnh phúc và may mắn.", "UÍ-shing iu HELTH, HE-pi-nịs, en GÚD PHO-chần", "We wish you a year full of health and happiness.", "health kết thúc bằng âm “th”: thè nhẹ đầu lưỡi ra giữa hai hàm răng."),
+      P("**Cus**toms are **dif**ferent in **ev**ery **fam**ily and **re**gion.", "Phong tục mỗi gia đình, mỗi vùng miền mỗi khác.", "CẤS-tầmz a ĐÍ-phrần in EV-ri PHE-mơ-li en RI-jần", "Every family does it a little differently.")
+    ],
+    dialogue: [
+      D("G", "Everyone seems so busy. What's happening?", "Mọi người có vẻ bận rộn quá. Có chuyện gì vậy?"),
+      D("H", "Tết is coming! Tết is the Vietnamese Lunar New Year. This year, it's on February sixth.", "Sắp Tết rồi! Tết là năm mới âm lịch của người Việt. Năm nay Tết rơi vào ngày 6 tháng 2."),
+      D("G", "Oh, right after we leave! What do people do?", "Ồ, ngay sau khi chúng tôi về! Mọi người làm gì vào dịp này?"),
+      D("H", "Before Tết, families clean and decorate their homes. In the North, many families decorate with pink peach blossoms. In Central and Southern Vietnam, people use yellow apricot blossoms.", "Trước Tết, các gia đình dọn dẹp và trang trí nhà cửa. Ở miền Bắc, nhiều nhà chưng hoa đào hồng. Ở miền Trung và miền Nam, mọi người chưng hoa mai vàng."),
+      D("G", "What do you eat for Tết?", "Ngày Tết mọi người ăn gì?"),
+      D("H", "We eat bánh chưng and bánh tét. They are sticky rice cakes with pork and mung beans inside.", "Chúng tôi ăn bánh chưng và bánh tét. Đó là bánh gạo nếp, bên trong có thịt lợn và đậu xanh."),
+      D("G", "And what is that tray of fruit?", "Còn mâm hoa quả kia là gì vậy?"),
+      D("H", "This is a five-fruit tray. It's for our ancestors.", "Đây là mâm ngũ quả, dùng để dâng lên tổ tiên."),
+      D("G", "That's beautiful. Do you give gifts?", "Đẹp quá. Mọi người có tặng quà không?"),
+      D("H", "Giving lucky money is a way to wish someone good luck. But customs are different in every family and region.", "Lì xì là cách để chúc ai đó may mắn. Nhưng phong tục mỗi gia đình, mỗi vùng miền mỗi khác."),
+      D("G", "I love that. Happy Lunar New Year!", "Tôi thích điều đó. Chúc mừng năm mới!"),
+      D("H", "Happy Lunar New Year! Wishing you health, happiness, and good fortune.", "Chúc mừng năm mới! Chúc chị sức khỏe, hạnh phúc và may mắn.")
+    ],
+    roleplay: {
+      intro: "Đường phố đang trang trí đón Tết. Gia đình bà Telma rất tò mò.",
+      steps: [
+        S("What exactly is Tết?", "So what's this Tết holiday everyone's talking about?", "Tết chính xác là gì vậy?", [["Tết is the Vietnamese Lunar New Year.", "Tết là năm mới âm lịch của người Việt."], ["It's our biggest holiday. We usually spend Tết with our family.", "Đó là ngày lễ lớn nhất của chúng tôi. Chúng tôi thường đón Tết cùng gia đình."]]),
+        S("Why is everyone cleaning their houses?", "Why's everybody so busy cleaning?", "Sao ai cũng dọn dẹp nhà cửa vậy?", [["We clean to say goodbye to the old year and welcome good luck.", "Chúng tôi dọn dẹp để tiễn năm cũ và đón may mắn."], ["Before Tết, families clean and decorate their homes.", "Trước Tết, các gia đình dọn dẹp và trang trí nhà cửa."]]),
+        S("What are those red envelopes for?", "What's in the little red envelopes?", "Những phong bao đỏ kia để làm gì?", [["Giving lucky money is a way to wish someone good luck.", "Lì xì (mừng tuổi) là cách để chúc ai đó may mắn."], ["It's lucky money. We call it lì xì.", "Đó là tiền mừng tuổi. Chúng tôi gọi là lì xì."]]),
+        S("Should I do anything special when we visit your relatives?", "Is there anything I should know before we visit your family?", "Khi đến thăm họ hàng nhà chị, tôi có cần lưu ý gì không?", [["In many homes, we take off our shoes at the door.", "Ở nhiều nhà, mọi người cởi giày ở cửa."], ["Just smile and say “Happy New Year.” They will love it!", "Chị chỉ cần mỉm cười và nói “Chúc mừng năm mới”. Mọi người sẽ rất thích!"]])
+      ],
+      end: { en: "Thank you for teaching us. I feel like part of the family!", vi: "Cảm ơn chị đã chỉ cho chúng tôi. Tôi thấy mình như người trong nhà vậy!" }
+    }
+  },
+
+  unit9: {
+    num: 9,
+    title: "Chỉ đường, đi lại & lịch trình",
+    titleEn: "Directions, Transportation & Scheduling",
+    description: "Hẹn giờ đi, nói thời gian di chuyển, chỗ đón, đặt xe Grab, giải thích chuyện tắc đường, nhờ khách chờ và đổi kế hoạch một cách lịch sự.",
+    phrases: [
+      P("We will **leave** at **eight** a.**m**.", "Mình sẽ đi lúc 8 giờ sáng.", "ui uiu LIV ét ÊIT ây-EM", "We're heading out at eight.", "leave (đi) có âm “i” dài; live (sống) có âm “i” ngắn."),
+      P("It **takes** about **twen**ty **min**utes to get **there**.", "Đến đó mất khoảng 20 phút.", "it TÊIKS ơ-bao TUEN-ni MI-nịts tơ get ĐE", "It's like a twenty-minute ride.", "Người Mỹ thường đọc twenty là “tuen-ni”."),
+      P("Let's **meet** in the ho**tel** **lob**by.", "Mình gặp nhau ở sảnh khách sạn nhé.", "lets MIT in đơ hâu-TEL LA-bi", "I'll meet you guys downstairs in the lobby."),
+      P("I'll **book** a **Grab** for us.", "Tôi sẽ đặt xe Grab cho mình.", "ail BÚK ơ GREB pho ấs", "Let me get us a Grab.", "Grab là ứng dụng gọi xe ở Việt Nam, giống Uber ở Mỹ."),
+      P("The **driv**er will **pick** us **up** **here**.", "Tài xế sẽ đón mình ở đây.", "đơ ĐRAI-vơ uiu PI-kơ-SẤP HIA", "The driver's coming to pick us up right here.", "“pick us up” nói liền: “pi-kơ-sấp”."),
+      P("The **traf**fic is a **lit**tle **heav**y.", "Đường hơi tắc một chút.", "đơ TRE-phịk ỉz ơ LI-đồ HE-vi", "Traffic's kinda bad right now."),
+      P("Please **wait** **here** for a **mo**ment.", "Mọi người đợi ở đây một chút nhé.", "pliz UÊIT HIA pho ơ MÂU-mần", "Can you guys hang on here for a sec?"),
+      P("Would you like to **stop** somewhere a**long** the **way**?", "Bạn có muốn dừng lại ở đâu trên đường không?", "gút-chu laik tơ STOP sấm-que ơ-LONG đơ UÊI", "Want to stop anywhere on the way?"),
+      P("**Sor**ry, there's a **change** of **plans**.", "Xin lỗi, kế hoạch có chút thay đổi.", "SO-ri, đez ơ CHÊINJ ơv PLENZ", "Heads up, we need to change the plan a little."),
+      P("Is it o**kay** if we **go** to**mor**row in**stead**?", "Mình đổi sang đi vào ngày mai có được không?", "ỉz it âu-KÊI if ui GÂU tơ-MA-râu in-STED", "Would tomorrow work better?"),
+      P("**Go** **straight**, then turn **left**.", "Đi thẳng, rồi rẽ trái.", "GÂU STRÊIT, đen tơn LEFT", "Keep going straight and make a left.", "left (trái) bắt đầu bằng “l”; right (phải) bắt đầu bằng “r”. Hai từ này rất quan trọng!")
+    ],
+    dialogue: [
+      D("H", "Good morning! We will leave at eight a.m.", "Chào buổi sáng! Mình sẽ đi lúc 8 giờ sáng."),
+      D("G", "Okay! How far is Hội An?", "Được! Hội An cách đây bao xa?"),
+      D("H", "It takes about forty-five minutes to get there.", "Đến đó mất khoảng 45 phút."),
+      D("G", "Should we meet at the front door?", "Mình có nên gặp nhau ở cửa trước không?"),
+      D("H", "Let's meet in the hotel lobby. I'll book a Grab for us.", "Mình gặp nhau ở sảnh khách sạn nhé. Tôi sẽ đặt xe Grab cho mình."),
+      D("G", "Perfect.", "Tuyệt."),
+      D("H", "Sorry, the traffic is a little heavy. The driver will be here in five minutes.", "Xin lỗi, đường hơi tắc. Năm phút nữa tài xế sẽ đến."),
+      D("G", "No problem at all.", "Không sao đâu."),
+      D("H", "Would you like to stop somewhere along the way?", "Chị có muốn dừng lại ở đâu trên đường không?"),
+      D("G", "Maybe for coffee?", "Có lẽ dừng lại uống cà phê?"),
+      D("H", "Great idea! I know a nice café.", "Ý hay quá! Tôi biết một quán cà phê rất xinh.")
+    ],
+    roleplay: {
+      intro: "Buổi tối, mọi người bàn kế hoạch cho ngày mai.",
+      steps: [
+        S("What time are we leaving tomorrow?", "When do we need to be ready?", "Mai mấy giờ mình đi?", [["We will leave at eight a.m.", "Mình sẽ đi lúc 8 giờ sáng."], ["Let's meet in the hotel lobby at eight.", "Mình gặp nhau ở sảnh khách sạn lúc 8 giờ nhé."]]),
+        S("How long is the drive?", "Is it a long ride?", "Đi xe mất bao lâu?", [["It takes about twenty minutes to get there.", "Đến đó mất khoảng 20 phút."], ["Not long. About twenty minutes.", "Không lâu đâu. Khoảng 20 phút."]]),
+        S("Where's our car? It's been a while.", "Is the driver coming soon?", "Xe của mình đâu rồi? Đợi lâu quá.", [["The traffic is a little heavy. Please wait here for a moment.", "Đường hơi kẹt xe. Mọi người đợi ở đây một chút nhé."], ["Let me check. Just a moment, please.", "Để tôi kiểm tra. Chờ một chút nhé."]]),
+        S("Could we go to the beach today instead?", "Any chance we could go to the beach today?", "Hôm nay mình đổi sang đi biển được không?", [["Of course! Let me change the plans.", "Tất nhiên rồi! Để tôi đổi kế hoạch."], ["Let me check, and I'll tell you soon.", "Để tôi kiểm tra rồi báo chị ngay nhé."]])
+      ],
+      end: { en: "Thanks for taking care of everything, Hằng!", vi: "Cảm ơn Hằng đã lo chu đáo mọi thứ!" }
+    }
+  },
+
+  unit10: {
+    num: 10,
+    title: "Thời tiết, trang phục & nghỉ ngơi",
+    titleEn: "Weather, Clothing & Comfort",
+    description: "Đầu tháng 2, Đà Nẵng thường mát mẻ, có thể có mưa nhỏ. Mẹ nói về thời tiết, gợi ý trang phục, hỏi khách có mệt không, mời nước và đề nghị nghỉ.",
+    phrases: [
+      P("It's **quite** **warm** to**day**.", "Hôm nay trời khá ấm.", "its QUAIT UOM tơ-ĐÊI", "It's pretty warm out today."),
+      P("It might **rain** this after**noon**.", "Chiều nay có thể mưa.", "it mait RÊIN đis ép-tơ-NUN", "Looks like it could rain later."),
+      P("In the **eve**ning, it can be a **lit**tle **cool**.", "Buổi tối trời có thể hơi mát.", "in đi IV-ning, it cần bi ơ LI-đồ CUL", "It gets a bit chilly at night.", "cool kết thúc bằng âm “l”: đầu lưỡi chạm nướu răng trên."),
+      P("You might want to **bring** a **hat**.", "Bạn nên mang theo mũ.", "iu mait UAN-nơ BRING ơ HET", "Don't forget a hat and sunscreen!", "“want to” khi nói nhanh nghe như “wanna”."),
+      P("You might want to **bring** an um**brel**la.", "Bạn nên mang theo ô.", "iu mait UAN-nơ BRING ơn ầm-BRE-lơ", "Grab an umbrella, just in case."),
+      P("You can **wear** **light** **clothes** and **com**fortable **shoes**.", "Bạn có thể mặc đồ nhẹ và đi giày thoải mái.", "iu cần UE LAIT CLÂUZ en CẤMF-tơ-bồ SHUZ", "Wear something light and comfy."),
+      P("Are you **tired**?", "Bạn có mệt không?", "a iu TAI-ơd", "You guys doing okay?"),
+      P("Would you like to **take** a **break**?", "Bạn có muốn nghỉ một chút không?", "gút-chu laik tơ TÊIK ơ BRÊIK", "Let's take a quick break."),
+      P("Do you **need** some **wa**ter?", "Bạn có cần uống nước không?", "đu iu NID sấm UA-đơ", "Want some water?", "Người Mỹ đọc water gần như “ua-đơr”."),
+      P("Let's **sit** in the **shade** for a **while**.", "Mình ngồi chỗ bóng mát một lúc nhé.", "lets SIT in đơ SHÊID pho ơ UAIL", "Let's find some shade."),
+      P("**Please** let me **know** if you **need** **an**ything.", "Nếu cần gì thì cứ nói với tôi nhé.", "PLIZ lét-mi NÂU if iu NID E-ni-thing", "Just let me know if you need anything at all.")
+    ],
+    dialogue: [
+      D("H", "Good morning! It's quite warm today.", "Chào buổi sáng! Hôm nay trời khá ấm."),
+      D("G", "Should I wear a jacket?", "Tôi có nên mặc áo khoác không?"),
+      D("H", "You can wear light clothes and comfortable shoes. You might want to bring a hat.", "Chị có thể mặc đồ nhẹ và đi giày thoải mái. Chị nên mang theo mũ."),
+      D("G", "Okay! Will it rain?", "Được! Trời có mưa không?"),
+      D("H", "It might rain this afternoon, so let's bring an umbrella too.", "Chiều nay có thể mưa, nên mình mang theo ô nữa nhé."),
+      D("H", "Are you tired? Would you like to take a break?", "Chị có mệt không? Chị có muốn nghỉ một chút không?"),
+      D("G", "Yes, I'm a little tired.", "Có, tôi hơi mệt."),
+      D("H", "Let's sit in the shade for a while. Do you need some water?", "Mình ngồi chỗ bóng mát một lúc nhé. Chị có cần uống nước không?"),
+      D("G", "Yes, please. Thank you, Hằng.", "Có, cảm ơn chị. Cảm ơn Hằng."),
+      D("H", "Please let me know if you need anything.", "Nếu cần gì thì chị cứ nói với tôi nhé.")
+    ],
+    roleplay: {
+      intro: "Buổi sáng, mọi người chuẩn bị đi tham quan cả ngày.",
+      steps: [
+        S("What's the weather going to be like today?", "Is it going to be hot today?", "Hôm nay thời tiết thế nào?", [["It's quite warm today.", "Hôm nay trời khá ấm."], ["It might rain this afternoon.", "Chiều nay có thể mưa."]]),
+        S("What should I wear?", "Do I need a jacket?", "Tôi nên mặc gì?", [["You can wear light clothes and comfortable shoes.", "Chị có thể mặc đồ nhẹ và đi giày thoải mái."], ["You might want to bring a hat.", "Chị nên mang theo mũ."]]),
+        S("Whew, I need to sit down for a minute.", "My feet are killing me!", "Phù, tôi cần ngồi xuống một lát.", [["Would you like to take a break?", "Chị có muốn nghỉ một chút không?"], ["Let's sit in the shade for a while. Do you need some water?", "Mình ngồi chỗ bóng mát một lúc nhé. Chị có cần uống nước không?"]])
+      ],
+      end: { en: "That's much better. Thank you for taking care of us.", vi: "Đỡ hơn nhiều rồi. Cảm ơn chị đã chăm sóc chúng tôi." }
+    }
+  },
+
+  unit11: {
+    num: 11,
+    title: "Sự cố & tình huống khẩn cấp",
+    titleEn: "Problems & Emergencies",
+    description: "Câu ngắn, rõ ràng cho lúc cần: khách bị mệt, đau, mất đồ, tìm hiệu thuốc, đi bệnh viện, gọi cấp cứu (115) và gọi người nhà.",
+    phrases: [
+      P("Are you **feel**ing o**kay**?", "Bạn thấy trong người ổn không?", "a iu PHI-ling âu-KÊI", "You alright?"),
+      P("Do you **need** a **doc**tor?", "Bạn có cần bác sĩ không?", "đu iu NID ơ ĐAK-tơ", "Should we get you to a doctor?"),
+      P("Where does it **hurt**?", "Bạn đau ở đâu?", "que đơz it HƠT", "Where's the pain?"),
+      P("Let's **find** a **phar**macy.", "Mình đi tìm hiệu thuốc nhé.", "lets PHAIND ơ PHAR-mơ-si", "There's a pharmacy just down the street."),
+      P("I'll **help** you.", "Tôi sẽ giúp bạn.", "ail HEL-piu", "Don't worry, I've got you."),
+      P("Can you **tell** me what **hap**pened?", "Bạn kể tôi nghe chuyện gì đã xảy ra được không?", "cần iu TEL mi guát HE-pần", "What happened?"),
+      P("**Please** **stay** here while I get **help**.", "Bạn ở lại đây nhé, tôi đi tìm người giúp.", "PLIZ STÊI hia uail ai get HELP", "Stay right here. I'll be right back with help."),
+      P("What did you **lose**?", "Bạn bị mất gì vậy?", "guát đít-chu LUZ", "What's missing?", "lose (làm mất) đọc là “luz”."),
+      P("Let's **go** **back** and **look** for it.", "Mình quay lại tìm thử nhé.", "lets GÂU BEK en LÚK pho it", "Let's retrace our steps."),
+      P("I'm **call**ing an **am**bulance **now**.", "Tôi đang gọi xe cấp cứu đây.", "am CO-ling ơn EM-biu-lần NAO", "I'm calling 115. That's the ambulance number here.", "Số khẩn cấp ở Việt Nam: 115 cấp cứu, 113 công an, 114 cứu hỏa."),
+      P("I'll **call** your **fam**ily **right** a**way**.", "Tôi sẽ gọi cho gia đình bạn ngay.", "ail COL io PHE-mơ-li RAIT ơ-UÊI", "Do you want me to call someone for you?"),
+      P("**Breathe** **slow**ly. **Help** is **com**ing.", "Hít thở chậm thôi. Người giúp đang tới.", "BRIĐ SLÂU-li. HELP ỉz CẤ-ming", "Just breathe. Help is on the way.")
+    ],
+    dialogue: [
+      D("H", "Are you feeling okay? You look pale.", "Chị thấy trong người ổn không? Trông chị xanh xao quá."),
+      D("G", "I don't feel well. My stomach hurts.", "Tôi thấy không khỏe. Tôi bị đau bụng."),
+      D("H", "I'm sorry. Where does it hurt?", "Khổ thân chị quá. Chị đau ở đâu?"),
+      D("G", "Right here. I think it was something I ate.", "Ngay chỗ này. Chắc là do món gì tôi ăn."),
+      D("H", "Let's find a pharmacy. There's one near the hotel.", "Mình đi tìm hiệu thuốc nhé. Gần khách sạn có một hiệu thuốc."),
+      D("G", "Thank you. Should I see a doctor?", "Cảm ơn chị. Tôi có nên đi khám bác sĩ không?"),
+      D("H", "If you feel worse, we will go to the hospital. I'll help you.", "Nếu chị thấy tệ hơn, mình sẽ đi bệnh viện. Tôi sẽ giúp chị."),
+      D("G", "I really appreciate it.", "Tôi thật sự cảm kích."),
+      D("H", "Please stay here while I get some water.", "Chị ở lại đây nhé, tôi đi lấy nước.")
+    ],
+    roleplay: {
+      intro: "Trong lúc đi chơi, có chuyện bất ngờ xảy ra. Mẹ bình tĩnh nhé, câu ngắn là đủ.",
+      steps: [
+        S("Hằng, I don't feel very well.", "I'm feeling kind of sick.", "Hằng ơi, tôi thấy không được khỏe lắm.", [["Are you feeling okay? Do you need a doctor?", "Chị thấy ổn không? Chị có cần bác sĩ không?"], ["I'm sorry. Can you tell me what happened?", "Khổ thân chị quá. Chị kể tôi nghe chuyện gì đã xảy ra được không?"]]),
+        S("I think I left my phone in the car!", "Oh no, my phone is gone!", "Hình như tôi để quên điện thoại trên xe rồi!", [["Don't worry. I'll help you. Let me contact the Grab driver.", "Đừng lo. Tôi sẽ giúp chị. Để tôi liên lạc với tài xế Grab."], ["Let's go back and look for it.", "Mình quay lại tìm thử nhé."]]),
+        S("My head hurts a lot.", "I've got a really bad headache.", "Tôi đau đầu quá.", [["Let's find a pharmacy.", "Mình đi tìm hiệu thuốc nhé."], ["Please sit down. Do you need some water?", "Chị ngồi xuống đi. Chị có cần uống nước không?"]])
+      ],
+      end: { en: "Thank you, Hằng. I feel much better knowing you're here.", vi: "Cảm ơn Hằng. Có chị ở đây, tôi thấy yên tâm hơn nhiều." }
+    }
+  },
+
+  unit12: {
+    num: 12,
+    title: "Chia tay & giữ liên lạc",
+    titleEn: "Saying Goodbye & Keeping in Touch",
+    description: "Cảm ơn khách, nói về những kỷ niệm đẹp, chúc thượng lộ bình an, hẹn giữ liên lạc và mời khách quay lại.",
+    phrases: [
+      P("We had **such** a **won**derful **time** to**geth**er.", "Chúng ta đã có quãng thời gian thật tuyệt vời bên nhau.", "ui HED sấch ơ UẤN-đơ-phồ TAIM tơ-GHE-đơ", "We had the best time with you guys.", "together có âm “th” rung: đầu lưỡi giữa hai hàm răng, cổ họng rung nhẹ."),
+      P("Thank you for **vis**iting Viet**nam**.", "Cảm ơn mọi người đã đến thăm Việt Nam.", "THENK-kiu pho VI-zi-đing vi-et-NAM", "Thanks so much for coming all this way."),
+      P("I **hope** you en**joyed** your **trip**.", "Tôi mong mọi người đã có chuyến đi vui vẻ.", "ai HÂUP iu in-JOID io TRIP", "I hope you had fun!", "enjoyed kết thúc bằng âm “d” nhẹ."),
+      P("My **fa**vorite **mo**ment was the **lan**tern **night** in Hội **An**.", "Khoảnh khắc tôi thích nhất là đêm đèn lồng ở Hội An.", "mai PHÊI-vơ-rịt MÂU-mần uơz đơ LEN-tơn NAIT in hội AN", "I'll never forget the lanterns in Hội An."),
+      P("It was a **real** **pleas**ure to **meet** your **fam**ily.", "Thật vui khi được gặp gia đình bạn.", "it uơz ơ RIL PLE-giơ tơ MIT io PHE-mơ-li", "It was so great getting to know you all."),
+      P("**Thank** you for the **love**ly **gift**.", "Cảm ơn món quà xinh xắn nhé.", "THENK-kiu pho đơ LẤV-li GHIFT", "Aw, you didn't have to! Thank you."),
+      P("Have a **safe** **flight** **home**.", "Chúc mọi người bay về an toàn.", "hev ơ SÊIF PHLAIT HÂUM", "Safe travels!"),
+      P("**Please** **keep** in **touch**.", "Nhớ giữ liên lạc nhé.", "PLIZ KIP in TẤCH", "Let's stay in touch!"),
+      P("**Send** us a **mes**sage when you get **home**.", "Về đến nhà thì nhắn cho chúng tôi nhé.", "SEN-đơ-sơ ME-sịch uen iu get HÂUM", "Text us when you land, okay?"),
+      P("We **hope** to **see** you a**gain**!", "Mong sớm gặp lại mọi người!", "ui HÂUP tơ SI iu ơ-GHEN", "Come back and see us soon!"),
+      P("You are **al**ways **wel**come in **our** **home**.", "Nhà chúng tôi luôn chào đón mọi người.", "iu a OL-uêiz UEL-cơm in AO HÂUM", "Our door is always open.")
+    ],
+    dialogue: [
+      D("G", "Hằng, I can't believe it's time to go home.", "Hằng ơi, tôi không tin là đã đến lúc phải về rồi."),
+      D("H", "I know. We had such a wonderful time together.", "Tôi biết. Chúng ta đã có quãng thời gian thật tuyệt vời bên nhau."),
+      D("G", "Thank you for everything. You took such good care of us.", "Cảm ơn chị vì tất cả. Chị đã chăm sóc chúng tôi thật chu đáo."),
+      D("H", "Thank you for visiting Vietnam. I hope you enjoyed your trip.", "Cảm ơn mọi người đã đến thăm Việt Nam. Tôi mong mọi người đã có chuyến đi vui vẻ."),
+      D("G", "We loved it! The food, the beaches, the lanterns... everything.", "Chúng tôi thích lắm! Đồ ăn, bãi biển, đèn lồng... mọi thứ."),
+      D("H", "My favorite moment was the lantern night in Hội An.", "Khoảnh khắc tôi thích nhất là đêm đèn lồng ở Hội An."),
+      D("G", "Mine too! Please keep in touch.", "Tôi cũng vậy! Nhớ giữ liên lạc nhé."),
+      D("H", "Of course. Send us a message when you get home.", "Tất nhiên rồi. Về đến nhà thì nhắn cho chúng tôi nhé."),
+      D("G", "We will. And you have to visit us in America!", "Chắc chắn rồi. Và chị nhất định phải sang Mỹ thăm chúng tôi đấy!"),
+      D("H", "We hope to see you again! Have a safe flight home.", "Mong sớm gặp lại mọi người! Chúc mọi người bay về an toàn.")
+    ],
+    roleplay: {
+      intro: "Ngày cuối cùng ở sân bay Đà Nẵng. Đã đến lúc chia tay.",
+      steps: [
+        S("Thank you so much for everything, Hằng.", "We can't thank you enough!", "Cảm ơn Hằng rất nhiều vì tất cả.", [["Thank you for visiting Vietnam.", "Cảm ơn mọi người đã đến thăm Việt Nam."], ["We had such a wonderful time together.", "Chúng ta đã có quãng thời gian thật tuyệt vời bên nhau."]]),
+        S("What was your favorite part of the trip?", "What will you remember most?", "Chị thích nhất điều gì trong chuyến đi?", [["My favorite moment was the lantern night in Hội An.", "Khoảnh khắc tôi thích nhất là đêm đèn lồng ở Hội An."], ["I loved spending time with your family. What about you?", "Tôi thích được ở bên gia đình chị. Còn chị thì sao?"]]),
+        S("You have to come visit us in the US!", "Next time, you should come see us!", "Chị nhất định phải sang Mỹ thăm chúng tôi nhé!", [["Thank you! We would love to visit.", "Cảm ơn chị! Chúng tôi rất muốn sang thăm."], ["We hope to see you again! Please keep in touch.", "Mong sớm gặp lại mọi người! Nhớ giữ liên lạc nhé."]]),
+        S("Well, I guess this is goodbye.", "It's time for us to go.", "Thôi, chắc đến lúc chia tay rồi.", [["Have a safe flight home.", "Chúc mọi người bay về an toàn."], ["You are always welcome in our home.", "Nhà chúng tôi luôn chào đón mọi người."]])
+      ],
+      end: { en: "We'll miss you! Goodbye, Hằng!", vi: "Chúng tôi sẽ nhớ chị lắm! Tạm biệt Hằng!" }
+    }
+  }
+};
+
+/* ---------- QUICK HELP: 30 phrases in 6 groups ---------- */
+const QUICK = [
+  { title: "Chào hỏi", items: [
+    P("**Hel**lo! **Wel**come!", "Xin chào! Chào mừng!", "he-LÂU! UEL-cơm"),
+    P("**Nice** to **meet** you.", "Rất vui được gặp bạn.", "NAIS tơ MÍT-chiu"),
+    P("Good **morn**ing!", "Chào buổi sáng!", "gúd MO-ning"),
+    P("**Thank** you **so** much.", "Cảm ơn bạn rất nhiều.", "THENK-kiu SÂU mấch"),
+    P("You're **wel**come.", "Không có gì.", "io UEL-cơm")
+  ]},
+  { title: "Ăn uống & nhà hàng", items: [
+    P("Would you like to **try** this?", "Bạn có muốn thử món này không?", "gút-chu laik tơ TRAI đis"),
+    P("Is it **too** **spic**y?", "Có cay quá không?", "ỉz-it TU SPAI-si"),
+    P("Do you have any **food** **al**lergies?", "Bạn có bị dị ứng thực phẩm nào không?", "đu iu hev e-ni PHUD E-lơ-jiz"),
+    P("Let me **ask** if this has **pea**nuts.", "Để tôi hỏi xem món này có lạc không.", "lét-mi ESK if đis hez PI-nấts"),
+    P("Do you **like** it?", "Bạn thấy có ngon không?", "đu iu LAIK-it")
+  ]},
+  { title: "Chỉ đường & đi lại", items: [
+    P("Let's **go**!", "Mình đi thôi!", "lets GÂU"),
+    P("Please **wait** **here**.", "Bạn đợi ở đây nhé.", "pliz UÊIT HIA"),
+    P("I'll **book** a **Grab** for us.", "Tôi sẽ đặt xe Grab cho mình.", "ail BÚK ơ GREB pho ấs"),
+    P("It **takes** about **twen**ty **min**utes.", "Mất khoảng 20 phút.", "it TÊIKS ơ-bao TUEN-ni MI-nịts"),
+    P("Let's **meet** in the ho**tel** **lob**by.", "Mình gặp nhau ở sảnh khách sạn nhé.", "lets MIT in đơ hâu-TEL LA-bi")
+  ]},
+  { title: "Mua sắm", items: [
+    P("**How** much is **this**?", "Cái này bao nhiêu tiền?", "HAO mấch ỉz ĐIS"),
+    P("Could you give me a **bet**ter **price**?", "Bớt cho tôi một chút được không?", "cút-chu GHIV mi ơ BE-đơ PRAIS"),
+    P("I'll **take** it.", "Tôi lấy cái này.", "ail TÊIK-it"),
+    P("Do you ac**cept** **cards**?", "Ở đây có nhận thẻ không?", "đu iu ịc-SEPT CARDZ")
+  ]},
+  { title: "Sức khỏe & khẩn cấp", items: [
+    P("Are you o**kay**?", "Bạn có ổn không?", "a iu âu-KÊI"),
+    P("Do you **need** some **wa**ter?", "Bạn có cần uống nước không?", "đu iu NID sấm UA-đơ"),
+    P("Do you **need** a **doc**tor?", "Bạn có cần bác sĩ không?", "đu iu NID ơ ĐAK-tơ"),
+    P("Let's **find** a **phar**macy.", "Mình đi tìm hiệu thuốc nhé.", "lets PHAIND ơ PHAR-mơ-si")
+  ]},
+  { title: "Khi Mẹ chưa hiểu", items: [
+    P("**Sor**ry, could you **say** that a**gain** more **slow**ly?", "Xin lỗi, bạn nói lại chậm hơn được không?", "SO-ri, cút-chu SÊI đet ơ-GHEN mo SLÂU-li"),
+    P("Do you **mean**…?", "Ý bạn là…?", "đu iu MIN…", "", "Mẹ nói “Do you mean” rồi nói thêm từ Mẹ đoán, ví dụ: “Do you mean the beach?”"),
+    P("I'm not **sure** I under**stand**.", "Tôi không chắc là mình hiểu.", "am not SHUA ai ấn-đơ-STEND"),
+    P("Let me **show** you on my **phone**.", "Để tôi chỉ cho bạn trên điện thoại.", "lét-mi SHÂU iu on mai PHÂUN"),
+    P("Could you **speak** a **lit**tle **loud**er?", "Bạn nói to hơn một chút được không?", "cút-chu SPIK ơ LI-đồ LAO-đơ"),
+    P("Just a **mo**ment, **please**.", "Chờ một chút nhé.", "jất ơ MÂU-mần, PLIZ"),
+    P("Let me **check**.", "Để tôi kiểm tra.", "lét-mi CHECK")
+  ]}
+];
+
+/* ---------- PRONUNCIATION MINI-UNIT ---------- */
+const SOUNDS = [
+  { title: "1. Âm cuối: -t, -d, -s, -ed",
+    why: "Tiếng Việt hay “nuốt” âm cuối, nên người Việt dễ bỏ mất âm cuối khi nói tiếng Anh. Nhưng trong tiếng Anh, âm cuối giúp người nghe phân biệt từ: “flight” (chuyến bay) khác “fly” (bay).",
+    mouth: [
+      "Âm “t”: đầu lưỡi chạm vào phần nướu ngay sau răng cửa trên, chặn hơi lại rồi buông nhẹ. Không cần bật mạnh.",
+      "Âm “d”: giống “t” nhưng cổ họng rung nhẹ.",
+      "Âm “s”: hai hàm răng gần khép, thổi hơi ra như tiếng “xì” rất nhẹ.",
+      "Đuôi “-ed” có 3 cách đọc: “t” (helped, walked), “d” (enjoyed, cleaned), “ịd” (wanted, visited)."
+    ],
+    examples: [["fly / flight", "bay / chuyến bay"], ["bag / bags", "một túi / nhiều túi"], ["help / helped", "giúp / đã giúp"], ["enjoy / enjoyed", "thích / đã thích"], ["visit / visited", "thăm / đã thăm"], ["nice rice", "cơm ngon"]] },
+  { title: "2. Âm TH",
+    why: "Tiếng Việt không có âm này. Nếu đọc “th” thành “t” hoặc “s”, người Mỹ vẫn thường hiểu, nhưng tập âm này sẽ giúp Mẹ nói rõ hơn.",
+    mouth: [
+      "Đặt đầu lưỡi nhẹ nhàng giữa hai hàm răng (thè ra một chút xíu).",
+      "Thổi hơi nhẹ qua lưỡi: thank, three, think (không rung cổ).",
+      "Với this, that, mother, together: làm giống vậy nhưng cổ họng rung nhẹ."
+    ],
+    examples: [["thank you", "cảm ơn"], ["three / tree", "số ba / cái cây"], ["think / sink", "nghĩ / bồn rửa"], ["this / that", "cái này / cái kia"], ["together", "cùng nhau"], ["mother", "mẹ"]] },
+  { title: "3. Âm R và L",
+    why: "“right” (phải) và “light” (đèn) nghe khác nhau chỉ vì R và L. Khi chỉ đường, hai âm này rất quan trọng.",
+    mouth: [
+      "Âm R: cong nhẹ đầu lưỡi về phía sau, lưỡi KHÔNG chạm vòm miệng, môi hơi tròn. Không rung lưỡi.",
+      "Âm L: đầu lưỡi chạm nướu ngay sau răng cửa trên.",
+      "L ở cuối từ (hotel, feel, cool): giữ đầu lưỡi chạm nướu, đừng đọc thành “n” hay “u”."
+    ],
+    examples: [["right / light", "phải / đèn"], ["rice / lice", "cơm / chấy (nói “rice” cho rõ nhé!)"], ["fry / fly", "chiên / bay"], ["road / load", "con đường / chở hàng"], ["hotel", "khách sạn"], ["feel", "cảm thấy"]] },
+  { title: "4. Nguyên âm dài và ngắn",
+    why: "Tiếng Anh có những cặp nguyên âm gần giống nhau. Kéo dài hay không sẽ làm đổi nghĩa.",
+    mouth: [
+      "“i” dài (sheep, leave, beach): căng môi như đang cười, kéo dài âm.",
+      "“i” ngắn (ship, live, sit): thả lỏng miệng, đọc ngắn, gần với “ư-i”.",
+      "Âm “æ” (bag, thank, bad): mở miệng rộng hơn chữ “e” của tiếng Việt, hạ hàm xuống.",
+      "“u” dài (food, fool) và “u” ngắn (good, full)."
+    ],
+    examples: [["sheep / ship", "con cừu / con tàu"], ["leave / live", "rời đi / sống"], ["beach", "bãi biển (kéo dài “iii”)"], ["bed / bad", "giường / tệ"], ["food / good", "đồ ăn / tốt"], ["full / fool", "no / ngốc"]] },
+  { title: "5. Trọng âm của từ",
+    why: "Mỗi từ dài có một âm được nói mạnh hơn, dài hơn và cao hơn. Đặt đúng trọng âm giúp người Mỹ nhận ra từ rất nhanh. Trong ứng dụng này, phần in đậm là phần cần nhấn mạnh.",
+    mouth: [
+      "Âm được nhấn: nói to hơn, dài hơn một chút.",
+      "Các âm còn lại: nói nhẹ, nhanh, thường đọc thành “ơ”.",
+      "Đừng nói đều đều từng âm như tiếng Việt. Hãy để có “lên” và “xuống”."
+    ],
+    examples: [["ho**tel**", "khách sạn (hâu-TEL)"], ["**beau**tiful", "đẹp (BIU-đơ-phồ)"], ["va**ca**tion", "kỳ nghỉ (vây-KÊI-shần)"], ["ba**na**na", "chuối (bơ-NE-nơ)"], ["**pho**tograph", "bức ảnh (PHÂU-đơ-grép)"], ["Viet**nam**", "Việt Nam (vi-et-NAM)"]] },
+  { title: "6. Nối âm khi nói nhanh",
+    why: "Người Mỹ nói nối các từ với nhau. Mẹ không cần nói giống hệt, nhưng biết trước sẽ giúp Mẹ NGHE HIỂU dễ hơn nhiều.",
+    mouth: [
+      "“Let me” nghe như “lem-mi”.",
+      "“Would you / Did you” nghe như “wu-dju / đi-dju”.",
+      "“want to” → “wanna”; “going to” → “gonna”.",
+      "“pick it up” nghe như “pi-ki-đấp”."
+    ],
+    examples: [["Let me help you.", "Để tôi giúp bạn. (lem-mi HEL-piu)"], ["Would you like some water?", "Bạn có muốn uống nước không? (wu-dju laik…)"], ["Did you eat?", "Bạn ăn chưa? (đi-dju IT)"], ["I want to go.", "Tôi muốn đi. (ai wanna GÂU)"], ["I'm going to rest.", "Tôi sẽ nghỉ ngơi. (am gonna REST)"], ["Nice to meet you.", "Rất vui được gặp bạn. (nais-tơ-MÍT-chiu)"]] },
+  { title: "7. Lưu ý riêng cho người nói giọng Bắc",
+    why: "Giọng Bắc rất rõ ràng và dễ nghe. Chỉ có vài chữ tiếng Việt giọng Bắc đọc khác, nên khi chuyển sang tiếng Anh Mẹ chú ý thêm một chút.",
+    mouth: [
+      "Chữ “r”: giọng Bắc đọc “r” tiếng Việt giống “d/z” (ví dụ “rau” nghe như “dau”). Âm R tiếng Anh khác hẳn: cong đầu lưỡi về sau, lưỡi không chạm vòm miệng, không rung. Trong phần “Cách đọc gần đúng”, chữ “r” luôn là âm R tiếng Anh này.",
+      "Âm “s” và “sh”: tiếng Anh phân biệt “s” (see, so) và “sh” (she, show). Với “sh”, Mẹ chu môi tròn ra trước và thổi hơi dày hơn.",
+      "Nếu Mẹ thấy mình đôi khi lẫn “l” và “n”: âm L thì đầu lưỡi chạm nướu, hơi đi ra hai bên lưỡi; âm N thì hơi đi qua mũi. Thử bịt nhẹ mũi khi nói “light”: vẫn nói được là đúng âm L.",
+      "Trong phần “Cách đọc gần đúng”: “j” đọc như “dj” trong chữ “jeans”; chữ “i” ở đầu (iu, io, ia) đọc như “i” trong “ia”, không đọc thành “d”."
+    ],
+    examples: [["rice / red / right", "cơm / màu đỏ / bên phải (âm R tiếng Anh)"], ["see / she", "nhìn thấy / cô ấy"], ["so / show", "vì vậy / cho xem"], ["light / night", "đèn / buổi tối"], ["low / no", "thấp / không"], ["you / your / year", "bạn / của bạn / năm (đọc “iu, io, ia”)"]] }
+];
+
+/* ---------- 12-WEEK ROADMAP ---------- */
+const ROADMAP = [
+  { week: 1, stage: "Tuần 1–2: Xây dựng sự tự tin", title: "Chào đón ở sân bay", units: [1], tasks: ["Học Bài 1 từng câu: nghe chậm → nghe tự nhiên → nói theo", "Đọc phần Âm khó: Âm cuối", "Mỗi ngày 5 câu “Nghe và chọn nghĩa”"] },
+  { week: 2, stage: "Tuần 1–2: Xây dựng sự tự tin", title: "Giới thiệu gia đình", units: [2], tasks: ["Học Bài 2", "Đọc phần Âm khó: TH, R và L", "Tập 7 câu “Khi Mẹ chưa hiểu” trong Cứu nguy nhanh"] },
+  { week: 3, stage: "Tuần 3–4: Hội thoại hằng ngày", title: "Nhận phòng khách sạn", units: [3], tasks: ["Học Bài 3", "Nhập vai Bài 1–3", "Ôn các câu cần luyện"] },
+  { week: 4, stage: "Tuần 3–4: Hội thoại hằng ngày", title: "Món ăn & nhà hàng", units: [4], tasks: ["Học Bài 4", "Luyện “Họ vừa nói gì?” với Bài 4", "Tập hỏi về dị ứng thật kỹ"] },
+  { week: 5, stage: "Tuần 5–6: Giới thiệu Việt Nam", title: "Hội An & Đà Nẵng", units: [5, 6], tasks: ["Học Bài 5 và Bài 6", "Nghe hội thoại Bài 5 với chữ tiếng Anh ẩn đi", "Đọc phần Âm khó: Trọng âm"] },
+  { week: 6, stage: "Tuần 5–6: Giới thiệu Việt Nam", title: "Tết Việt Nam", units: [8], tasks: ["Học Bài 8 (bài quan trọng nhất)", "Tập kể về Tết của gia đình mình bằng 3–4 câu", "Nhập vai Bài 8 hai lần"] },
+  { week: 7, stage: "Tuần 7–8: Giao tiếp thực tế", title: "Mua sắm & đi chợ", units: [7], tasks: ["Học Bài 7", "Tập nói giá tiền bằng tiếng Anh", "Ôn các câu cần luyện"] },
+  { week: 8, stage: "Tuần 7–8: Giao tiếp thực tế", title: "Đi lại & thời tiết", units: [9, 10], tasks: ["Học Bài 9 và Bài 10", "Đọc phần Âm khó: Nguyên âm", "Nhập vai Bài 9 và Bài 10"] },
+  { week: 9, stage: "Tuần 9–10: Tình huống bất ngờ", title: "Sự cố & khẩn cấp", units: [11], tasks: ["Học Bài 11", "Thuộc số khẩn cấp: 115, 113, 114", "Tập lại 7 câu “Khi Mẹ chưa hiểu”"] },
+  { week: 10, stage: "Tuần 9–10: Tình huống bất ngờ", title: "Nghe câu hỏi lạ", units: [12], tasks: ["Học Bài 12", "Luyện “Họ vừa nói gì?” với Tất cả các bài", "Đọc phần Âm khó: Nối âm"] },
+  { week: 11, stage: "Tuần 11–12: Mô phỏng chuyến đi", title: "Mô phỏng chuyến đi (phần 1)", units: [], tasks: ["Làm “Mô phỏng chuyến đi” mỗi ngày", "Nghe với nhiều giọng khác nhau (nếu máy có)", "Ôn các câu cần luyện"] },
+  { week: 12, stage: "Tuần 11–12: Mô phỏng chuyến đi", title: "Sẵn sàng đón khách!", units: [], tasks: ["Làm “Mô phỏng chuyến đi” với cách hỏi khác", "Mở thử Cứu nguy nhanh bằng một tay", "Ôn các câu yêu thích. Mẹ đã sẵn sàng!"] }
+];
+
+const MOTIVATION = [
+  "Mẹ giỏi lắm! Mỗi ngày một chút nhé!",
+  "Không cần nói hoàn hảo, chỉ cần tự tin!",
+  "Mẹ đã tiến bộ hơn hôm qua rồi!",
+  "Đừng lo nếu chưa hiểu hết. Mẹ có thể hỏi lại!",
+  "Mẹ đang chuẩn bị những kỷ niệm thật đẹp cùng gia đình!",
+  "Giọng Việt của Mẹ rất dễ thương. Quan trọng là khách hiểu Mẹ!",
+  "Nói sai một chút cũng không sao. Người Mỹ rất thân thiện!"
+];
+
+</script>
+<script>
+/* ============================================================
+   APP — English with Mẹ Hằng
+   ============================================================ */
+(function () {
+  "use strict";
+
+  /* ---------- helpers ---------- */
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function plain(s) { return String(s || "").replace(/\*\*/g, ""); }
+  function fmt(s) { return esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>"); }
+  function stripDia(s) {
+    s = String(s || "");
+    if (typeof s.normalize === "function") s = s.normalize("NFD").replace(/[̀-ͯ]/g, "");
+    return s.replace(/đ/g, "d").replace(/Đ/g, "D");
+  }
+  function forSpeech(s) { return stripDia(plain(s)).replace(/…/g, "..."); }
+  function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
+  function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function wait(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+
+  var FLAGS = (function () {
+    var q = {};
+    try { var u = new URLSearchParams(location.search); q.nosr = u.has("nosr"); q.nomic = u.has("nomic"); q.nostorage = u.has("nostorage"); q.notts = u.has("notts"); } catch (e) {}
+    return q;
+  })();
+
+  /* ---------- dates ---------- */
+  function localDay(d) { d = d || new Date(); return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
+  function parseDay(s) { var p = s.split("-").map(Number); return Date.UTC(p[0], p[1] - 1, p[2]); }
+  function addDays(s, n) { return new Date(parseDay(s) + n * 86400000).toISOString().slice(0, 10); }
+  function dayDiff(a, b) { return Math.round((parseDay(b) - parseDay(a)) / 86400000); }
+  function hcmToday(now) {
+    now = now || new Date();
+    try {
+      var parts = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Ho_Chi_Minh", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(now);
+      var o = {}; parts.forEach(function (p) { o[p.type] = p.value; });
+      if (o.year && o.month && o.day) return o.year + "-" + o.month + "-" + o.day;
+    } catch (e) {}
+    return new Date(now.getTime() + 7 * 3600000).toISOString().slice(0, 10);
+  }
+  var ARRIVAL = "2027-01-31", DEPARTURE = "2027-02-05";
+  function daysUntilArrival(now) { return dayDiff(hcmToday(now), ARRIVAL); }
+  function currentWeek() { var d = daysUntilArrival(); var w = 12 - Math.ceil(d / 7) + 1; return Math.max(1, Math.min(12, w)); }
+
+  /* ---------- storage ---------- */
+  var KEY = "englishWithMeHang.v1";
+  var Store = {
+    ok: false,
+    init: function () {
+      if (FLAGS.nostorage) { this.ok = false; return; }
+      try { localStorage.setItem("__mh_t", "1"); localStorage.removeItem("__mh_t"); this.ok = true; } catch (e) { this.ok = false; }
+    },
+    load: function () { if (!this.ok) return null; try { var s = localStorage.getItem(KEY); return s ? JSON.parse(s) : null; } catch (e) { return null; } },
+    save: function (o) {
+      if (!this.ok) return false;
+      try { localStorage.setItem(KEY, JSON.stringify(o)); return true; } catch (e) { this.ok = false; showStorageBanner(); return false; }
+    },
+    clear: function () { try { localStorage.removeItem(KEY); } catch (e) {} }
+  };
+  var DEFAULTS = function () {
+    return { status: {}, review: {}, fav: [], days: {}, goal: 10, speed: 0.85, voiceURI: "", lessonsDone: [],
+      listenCount: 0, roleplayCount: 0, micExplained: false, showHints: true, firstDay: localDay() };
+  };
+  var state = DEFAULTS();
+  function loadState() {
+    Store.init();
+    var s = Store.load();
+    if (s && typeof s === "object") { var d = DEFAULTS(); for (var k in d) if (s[k] === undefined) s[k] = d[k]; state = s; }
+    state.speed = state.speed >= 0.95 ? 1.0 : state.speed >= 0.78 ? 0.85 : 0.7;
+  }
+  function save() { Store.save(state); }
+
+  /* ---------- content index ---------- */
+  var UNITS = Object.keys(LESSONS).map(function (k) { var u = LESSONS[k]; u.key = k; return u; }).sort(function (a, b) { return a.num - b.num; });
+  var PH = {}; var ALLP = [];
+  UNITS.forEach(function (u) {
+    u.phrases.forEach(function (p, i) { p.id = "u" + u.num + "-" + i; p.unit = u.num; p.idx = i; PH[p.id] = p; ALLP.push(p); });
+  });
+  var QALL = [];
+  QUICK.forEach(function (c, ci) { c.items.forEach(function (p, i) { p.id = "q" + ci + "-" + i; p.quick = true; PH[p.id] = p; QALL.push(p); }); });
+  function unitByNum(n) { return UNITS[n - 1] || null; }
+
+  /* ---------- progress helpers ---------- */
+  function today() { var d = localDay(); if (!state.days[d]) state.days[d] = { p: [], a: 0 }; return state.days[d]; }
+  function markPracticed(id) { var t = today(); if (t.p.indexOf(id) < 0) { t.p.push(id); var before = t.p.length - 1; save(); if (before < state.goal && t.p.length >= state.goal) toast("🎉 Mẹ đã đạt mục tiêu hôm nay: " + state.goal + " câu! Giỏi quá!"); } else save(); }
+  function markActivity() { today().a++; save(); }
+  function studied(d) { var x = state.days[d]; return !!(x && ((x.p && x.p.length) || x.a)); }
+  function streak() { var d = localDay(); if (!studied(d)) d = addDays(d, -1); var n = 0; while (studied(d)) { n++; d = addDays(d, -1); } return n; }
+  function totalDays() { return Object.keys(state.days).filter(studied).length; }
+  var INTERVALS = [0, 1, 2, 4, 7, 14];
+  function setStatus(id, st) {
+    state.status[id] = st;
+    var r = state.review[id] || { box: 0 };
+    if (st === "comfortable") { r.box = Math.max(r.box || 0, 2); r.due = addDays(localDay(), INTERVALS[r.box]); }
+    else { r.box = 0; r.due = localDay(); }
+    state.review[id] = r; markPracticed(id);
+  }
+  function reviewRate(id, easy) {
+    var r = state.review[id] || { box: 0 };
+    if (easy) { r.box = Math.min((r.box || 0) + 1, 5); r.due = addDays(localDay(), INTERVALS[r.box]); if (r.box >= 2) state.status[id] = "comfortable"; }
+    else { r.box = 0; r.due = addDays(localDay(), 1); state.status[id] = "practice"; }
+    state.review[id] = r; markPracticed(id);
+  }
+  function addToReview(id) { if (!state.review[id]) { state.review[id] = { box: 0, due: localDay() }; save(); } }
+  function dueList() {
+    var t = localDay();
+    return Object.keys(state.review).filter(function (id) { return PH[id] && state.review[id].due <= t; })
+      .sort(function (a, b) { return (state.review[a].box || 0) - (state.review[b].box || 0); });
+  }
+  function practiceList() { return Object.keys(state.status).filter(function (id) { return PH[id] && state.status[id] === "practice"; }); }
+  function isFav(id) { return state.fav.indexOf(id) >= 0; }
+  function unitDone(n) { return state.lessonsDone.indexOf(n) >= 0; }
+  function comfortableIn(u) { return u.phrases.filter(function (p) { return state.status[p.id] === "comfortable"; }).length; }
+
+  /* ---------- toast ---------- */
+  var toastT;
+  function toast(msg) { var t = $("#toast"); if (!t) return; t.textContent = msg; t.classList.add("show"); clearTimeout(toastT); toastT = setTimeout(function () { t.classList.remove("show"); }, 4200); }
+  function showStorageBanner() {
+    var b = $("#banner"); if (!b) return;
+    b.innerHTML = '<div class="info small">📌 Máy đang không cho lưu tiến độ. Mẹ vẫn học bình thường, nhưng khi đóng trang thì tiến độ, câu yêu thích và cài đặt có thể không được giữ lại.</div>';
+  }
+
+  /* ============================================================
+     SPEECH SYNTHESIS (listening)
+     ============================================================ */
+  var SEQ = 0;
+  /* Safari 16.4+: after the microphone is used, iPhone may route page audio to the quiet earpiece.
+     Asking for "playback" sends speech back to the main speaker. Ignored where unsupported. */
+  function setAudioSession(t) { try { if (navigator.audioSession && navigator.audioSession.type !== t) navigator.audioSession.type = t; } catch (e) {} }
+  var IS_APPLE = /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent || "");
+  var NOVELTY = /\b(albert|bad news|bahh|bells|boing|bubbles|cellos|good news|jester|organ|superstar|trinoids|whisper|wobble|zarvox|junior|ralph|fred|kathy|grandma|grandpa|eddy|flo|reed|rocko|sandy|shelley|hysterical|deranged|pipe organ)\b/i;
+  function voiceQuality(x) {
+    var n = x.name || "", u = x.voiceURI || "";
+    if (/premium/i.test(n + u)) return 3;
+    if (/enhanced|natural|neural|online/i.test(n + u) || /^Google US English/i.test(n)) return 2;
+    if (/siri/i.test(n + u)) return 2;
+    return 1;
+  }
+  function voiceScore(x) {
+    var s = 0, n = x.name || "";
+    if (/^en[-_]US/i.test(x.lang)) s += 100;
+    s += voiceQuality(x) * 30;
+    if (/\b(samantha|ava|zoe|allison|susan|evan|nathan|tom|joelle|noelle|nicky|aaron|jenny|aria|guy|michelle)\b/i.test(n)) s += 15;
+    if (x.localService) s += 5;
+    return s;
+  }
+  function voiceLabel(x) { var q = voiceQuality(x); return q === 3 ? " – rất rõ ⭐⭐⭐" : q === 2 ? " – rõ ⭐⭐" : ""; }
+  function bestQuality() { return TTS.en.reduce(function (m, v) { return Math.max(m, voiceQuality(v)); }, 0); }
+  function voiceTip() {
+    if (!TTS.ok || !TTS.en.length || (TTS.primary() && voiceQuality(TTS.primary()) >= 2)) return "";
+    return '<div class="card hl"><b>🔊 Giọng đọc nghe chưa rõ?</b><p class="small">' + (IS_APPLE
+      ? "Mẹ tải giọng Mỹ chất lượng cao (miễn phí) để nghe rõ và tự nhiên hơn: <b>Cài đặt → Trợ năng → Nội dung được đọc → Giọng nói → Tiếng Anh</b> → chọn <b>Ava</b>, <b>Zoe</b> hoặc <b>Evan</b> → bấm tải bản <b>Cao cấp (Premium)</b> hoặc <b>Nâng cao (Enhanced)</b>. Tải xong, mở lại trang và chọn giọng đó trong Cài đặt."
+      : "Mẹ vào Cài đặt của trang để thử và chọn giọng nghe rõ nhất.") + '</p><a class="btn soft block" href="#/settings">⚙️ Chọn giọng đọc</a></div>';
+  }
+  var TTS = {
+    ok: !FLAGS.notts && ("speechSynthesis" in window) && typeof window.SpeechSynthesisUtterance !== "undefined",
+    en: [], loaded: false, errorShown: false,
+    init: function () {
+      if (!this.ok) return;
+      var self = this; this.load();
+      try { window.speechSynthesis.addEventListener("voiceschanged", function () { self.load(); }); }
+      catch (e) { try { window.speechSynthesis.onvoiceschanged = function () { self.load(); }; } catch (e2) {} }
+      var n = 0; var t = setInterval(function () { n++; self.load(); if (self.en.length || n > 25) clearInterval(t); }, 300);
+    },
+    load: function () {
+      var v = []; try { v = window.speechSynthesis.getVoices() || []; } catch (e) {}
+      if (v.length) this.loaded = true;
+      var en = v.filter(function (x) { return /^en([-_]|$)/i.test(x.lang || ""); });
+      /* hide Apple novelty & robotic voices (Albert, Bubbles, Zarvox, Eloquence voices…) unless nothing else exists */
+      var clean = en.filter(function (x) { return !NOVELTY.test(x.name || ""); });
+      if (clean.length) en = clean;
+      en.sort(function (a, b) { return voiceScore(b) - voiceScore(a); });
+      var changed = en.length !== this.en.length; this.en = en;
+      if (changed) document.dispatchEvent(new Event("mh-voices"));
+    },
+    primary: function () {
+      if (!this.en.length) return null;
+      var saved = state.voiceURI && this.en.filter(function (v) { return v.voiceURI === state.voiceURI; })[0];
+      return saved || this.en[0];
+    },
+    secondary: function () {
+      var p = this.primary(); if (!p) return null;
+      var o = this.en.filter(function (v) { return v.voiceURI !== p.voiceURI; });
+      var us = o.filter(function (v) { return /^en[-_]US/i.test(v.lang); });
+      return us[0] || o[0] || null;
+    },
+    random: function () { return this.en.length ? pick(this.en) : null; },
+    cancelAt: 0, ticket: 0,
+    busy: function () { try { return !!(window.speechSynthesis.speaking || window.speechSynthesis.pending); } catch (e) { return false; } },
+    hardCancel: function () { if (this.busy()) { try { window.speechSynthesis.cancel(); } catch (e) {} this.cancelAt = Date.now(); } },
+    /* iPhone Safari bug: speak() right after cancel() can play with the PREVIOUS sentence's speed/voice,
+       or very quietly. So we only cancel when something is really playing, then wait until the engine is
+       idle AND at least 300 ms have passed before speaking. A first sound with nothing playing is spoken
+       immediately, inside the tap, so iOS allows audio. */
+    speak: function (text, opt) {
+      opt = opt || {}; var self = this;
+      return new Promise(function (resolve) {
+        if (!self.ok) { toast("Máy này chưa đọc được tiếng Anh. Mẹ đọc chữ trên màn hình nhé (xem Hướng dẫn)."); resolve(false); return; }
+        var my = ++self.ticket, say = forSpeech(text), rate = opt.rate || 1, v = opt.voice || self.primary();
+        self.hardCancel();
+        function go() {
+          if (my !== self.ticket) { resolve(false); return; }
+          setAudioSession("playback");
+          var u = new SpeechSynthesisUtterance(say);
+          if (v) { u.voice = v; u.lang = v.lang; } else u.lang = "en-US";
+          u.rate = rate; u.pitch = 1; u.volume = 1;
+          var done = false, wd;
+          function fin(ok) { if (done) return; done = true; clearTimeout(wd); resolve(ok); }
+          u.onend = function () { fin(true); };
+          u.onerror = function (e) {
+            var er = e && e.error;
+            if (er && er !== "interrupted" && er !== "canceled" && !self.errorShown) { self.errorShown = true; toast("Máy chưa phát được âm thanh. Mẹ tăng âm lượng, tắt chế độ im lặng rồi bấm lại nhé."); setTimeout(function () { self.errorShown = false; }, 8000); }
+            fin(false);
+          };
+          wd = setTimeout(function () { fin(true); }, say.split(/\s+/).length * 800 / rate + 6000);
+          self.lastRate = rate;
+          try { if (window.speechSynthesis.paused) window.speechSynthesis.resume(); window.speechSynthesis.speak(u); }
+          catch (e) { fin(false); }
+        }
+        if (!self.busy() && Date.now() - self.cancelAt >= 300) { go(); return; }
+        var tries = 0;
+        (function waitIdle() {
+          tries++;
+          if (my !== self.ticket) { resolve(false); return; }
+          if (self.busy() && tries < 40) { try { window.speechSynthesis.cancel(); } catch (e) {} self.cancelAt = Date.now(); setTimeout(waitIdle, 50); return; }
+          var left = 300 - (Date.now() - self.cancelAt);
+          if (left > 0) { setTimeout(waitIdle, left); return; }
+          go();
+        })();
+      });
+    },
+    stop: function () { SEQ++; this.ticket++; if (this.ok) this.hardCancel(); }
+  };
+  function rateFor(mode) {
+    if (mode === "vslow") return 0.7;
+    if (mode === "slow") return state.speed < 1 ? state.speed : 0.85;
+    if (mode === "normal") return 1.0;
+    if (typeof mode === "number") return mode;
+    return state.speed;
+  }
+
+  /* registry of texts for play buttons, rebuilt each render */
+  var REG = [];
+  function reg(text, voiceKind) { REG.push({ t: text, v: voiceKind || "" }); return REG.length - 1; }
+  function playBtn(text, label, mode, cls, voiceKind) {
+    return '<button class="btn ' + (cls || "") + '" data-act="play" data-r="' + reg(text, voiceKind) + '" data-mode="' + (mode || "sel") + '">' + label + "</button>";
+  }
+  function voiceOf(kind) { if (kind === "guest") return TTS.secondary() || TTS.primary(); if (kind === "random") return TTS.random(); return TTS.primary(); }
+
+  /* ============================================================
+     SPEECH RECOGNITION + RECORDING (speaking)
+     ============================================================ */
+  var SRClass = FLAGS.nosr ? null : (window.SpeechRecognition || window.webkitSpeechRecognition || null);
+  var REC_OK = !FLAGS.nomic && !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) && typeof window.MediaRecorder !== "undefined";
+  var curRec = null;
+  function stopRecognition() { try { if (curRec) curRec.abort(); } catch (e) {} curRec = null; }
+  function recognizeOnce() {
+    return new Promise(function (resolve) {
+      var rec;
+      try { rec = new SRClass(); } catch (e) { resolve({ alts: [], error: "init" }); return; }
+      rec.lang = "en-US"; rec.continuous = false; rec.interimResults = false; rec.maxAlternatives = 3;
+      var alts = [], err = null, done = false, t;
+      function fin() { if (done) return; done = true; clearTimeout(t); curRec = null; setAudioSession("playback"); resolve({ alts: alts, error: alts.length ? null : (err || "no-speech") }); }
+      rec.onresult = function (e) {
+        for (var i = 0; i < e.results.length; i++) { var r = e.results[i]; for (var j = 0; j < r.length; j++) if (r[j] && r[j].transcript) alts.push(r[j].transcript); }
+      };
+      rec.onerror = function (e) { err = (e && e.error) || "unknown"; };
+      rec.onend = fin;
+      t = setTimeout(function () { try { rec.stop(); } catch (e) {} setTimeout(fin, 1500); }, 10000);
+      curRec = rec; setAudioSession("play-and-record");
+      try { rec.start(); } catch (e) { err = "start"; fin(); }
+    });
+  }
+  function srErrorText(er) {
+    if (er === "not-allowed" || er === "service-not-allowed") return "Máy chưa cho phép ứng dụng dùng micro. Không sao cả! Mẹ có thể luyện bằng cách ghi âm hoặc nói theo. Cách bật micro có trong phần Hướng dẫn.";
+    if (er === "no-speech") return "Ứng dụng chưa nghe thấy giọng Mẹ. Mẹ nói to hơn và để điện thoại gần miệng hơn một chút nhé.";
+    if (er === "network") return "Phần nhận diện giọng nói cần có Internet. Mẹ kiểm tra Wi-Fi, hoặc dùng cách ghi âm nhé.";
+    if (er === "audio-capture") return "Ứng dụng không tìm thấy micro. Mẹ thử dùng cách nói theo nhé.";
+    if (er === "aborted") return "Đã dừng nghe. Mẹ bấm nút để thử lại nhé.";
+    return "Lần này ứng dụng chưa nghe được. Không sao, Mẹ thử lại hoặc dùng cách ghi âm nhé.";
+  }
+  var Recorder = {
+    mr: null, stream: null, chunks: [], timer: null, url: null,
+    start: function (onStop, onError) {
+      var self = this;
+      setAudioSession("play-and-record");
+      navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+        self.stream = stream; self.chunks = [];
+        var types = ["audio/mp4", "audio/webm;codecs=opus", "audio/webm", "audio/ogg"], mime = "";
+        try { for (var i = 0; i < types.length; i++) if (MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported(types[i])) { mime = types[i]; break; } } catch (e) {}
+        var mr;
+        try { mr = mime ? new MediaRecorder(stream, { mimeType: mime }) : new MediaRecorder(stream); }
+        catch (e) { self.cleanup(); onError("init"); return; }
+        self.mr = mr;
+        mr.ondataavailable = function (e) { if (e.data && e.data.size) self.chunks.push(e.data); };
+        mr.onerror = function () { self.cleanup(); onError("record"); };
+        mr.onstop = function () {
+          var blob = new Blob(self.chunks, { type: mr.mimeType || mime || "audio/mp4" });
+          if (self.url) { try { URL.revokeObjectURL(self.url); } catch (e) {} }
+          self.url = blob.size ? URL.createObjectURL(blob) : null;
+          self.cleanup(); onStop(self.url);
+        };
+        mr.start();
+        self.timer = setTimeout(function () { self.stop(); }, 15000);
+      }).catch(function (e) { onError(e && e.name === "NotAllowedError" ? "not-allowed" : "record"); });
+    },
+    stop: function () { clearTimeout(this.timer); try { if (this.mr && this.mr.state !== "inactive") this.mr.stop(); } catch (e) { this.cleanup(); } },
+    cleanup: function () { clearTimeout(this.timer); setAudioSession("playback"); try { if (this.stream) this.stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {} this.stream = null; this.mr = null; },
+    active: function () { return !!(this.mr && this.mr.state === "recording"); }
+  };
+
+  /* ---------- lenient fuzzy matching ---------- */
+  var CONTR = { "i'm": "i am", "you're": "you are", "we're": "we are", "they're": "they are", "it's": "it is", "that's": "that is", "there's": "there is", "here's": "here is", "let's": "let us", "i'll": "i will", "we'll": "we will", "you'll": "you will", "isn't": "is not", "don't": "do not", "can't": "can not", "cannot": "can not", "won't": "will not", "what's": "what is", "where's": "where is", "i'd": "i would", "we've": "we have", "you've": "you have", "didn't": "did not", "doesn't": "does not", "wanna": "want to", "gonna": "going to", "how's": "how is", "she's": "she is", "he's": "he is", "who's": "who is" };
+  var FILLERS = { um: 1, uh: 1, er: 1, erm: 1, ah: 1, hmm: 1, mm: 1, uhm: 1 };
+  var STOP = {}; "a an the to of and or is are am be was were in on at for with you your my me i we us our it its this that these those do does did so some any just very there here can will would could please not let up by".split(" ").forEach(function (w) { STOP[w] = 1; });
+  var NAMES = { linh: 1, telma: 1, garcia: 1, hang: 1 };
+  var ONES = "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen".split(" ");
+  var TENS = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+  function numWords(n) {
+    if (n < 20) return ONES[n];
+    if (n < 100) return TENS[Math.floor(n / 10)] + (n % 10 ? " " + ONES[n % 10] : "");
+    if (n < 1000) return ONES[Math.floor(n / 100)] + " hundred" + (n % 100 ? " " + numWords(n % 100) : "");
+    if (n < 1000000) return numWords(Math.floor(n / 1000)) + " thousand" + (n % 1000 ? " " + numWords(n % 1000) : "");
+    return String(n);
+  }
+  function normWord(w) {
+    w = stripDia(w).toLowerCase().replace(/[’‘`´]/g, "'");
+    if (/^a\.?m\.?$/.test(w) && w.indexOf(".") >= 0) return ["am"];
+    if (/^p\.?m\.?$/.test(w) && w.indexOf(".") >= 0) return ["pm"];
+    w = w.replace(/(\d),(\d{3})/g, "$1$2").replace(/[^a-z0-9']+/g, " ").trim();
+    var out = [];
+    w.split(/\s+/).forEach(function (x) {
+      x = x.replace(/^'+|'+$/g, ""); if (!x) return;
+      if (CONTR[x]) { out.push.apply(out, CONTR[x].split(" ")); return; }
+      if (/^\d+$/.test(x)) { out.push.apply(out, numWords(parseInt(x, 10)).split(" ")); return; }
+      x = x.replace(/'s$/, "").replace(/'/g, "");
+      if (x && !FILLERS[x]) out.push(x);
+    });
+    return out;
+  }
+  function targetTokens(text) {
+    var words = plain(text).replace(/…/g, " ").split(/\s+/).filter(Boolean), list = [];
+    words.forEach(function (w, wi) {
+      var hasDia = stripDia(w) !== w;
+      normWord(w).forEach(function (t) { list.push({ t: t, wi: wi, key: !hasDia && !STOP[t] && !NAMES[t] }); });
+    });
+    if (!list.some(function (x) { return x.key; })) list.forEach(function (x) { x.key = true; });
+    return { words: words, list: list };
+  }
+  function lev(a, b) {
+    var m = a.length, n = b.length; if (!m) return n; if (!n) return m;
+    var prev = []; for (var j = 0; j <= n; j++) prev[j] = j;
+    for (var i = 1; i <= m; i++) { var cur = [i]; for (j = 1; j <= n; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); prev = cur; }
+    return prev[n];
+  }
+  function stem(w) { return w.length > 4 ? w.replace(/(ing|ed|es|s)$/, "") : w; }
+  function similar(a, b) { if (a === b) return true; if (stem(a) === stem(b)) return true; var L = Math.max(a.length, b.length); if (L >= 4 && lev(a, b) <= 1) return true; if (L >= 7 && lev(a, b) <= 2) return true; return false; }
+  function analyze(target, alts) {
+    var T = targetTokens(target), best = null;
+    (alts.length ? alts : [""]).forEach(function (alt) {
+      var rec = []; alt.split(/\s+/).forEach(function (w) { rec.push.apply(rec, normWord(w)); });
+      var keys = 0, hit = 0, marks = T.list.map(function (x) {
+        var m = rec.some(function (r) { return similar(x.t, r); });
+        if (x.key) { keys++; if (m) hit++; }
+        return m;
+      });
+      var score = keys ? hit / keys : 0;
+      if (!best || score > best.score) best = { score: score, marks: marks, heard: alt };
+    });
+    var wordState = T.words.map(function (w, wi) {
+      var toks = T.list.map(function (x, i) { return { x: x, m: best.marks[i] }; }).filter(function (o) { return o.x.wi === wi; });
+      var keyT = toks.filter(function (o) { return o.x.key; });
+      if (!keyT.length) return { w: w, c: toks.some(function (o) { return o.m; }) ? "ok" : "" };
+      return { w: w, c: keyT.every(function (o) { return o.m; }) ? "ok" : "miss" };
+    });
+    best.words = wordState; return best;
+  }
+  function feedbackHtml(res, target) {
+    var cls, msg;
+    if (res.score >= 0.7) { cls = "good"; msg = pick(["Great! They will understand you. 😊", "Very good, Mẹ! 🌟", "Tuyệt vời! Khách sẽ hiểu Mẹ đó!"]); }
+    else if (res.score >= 0.4) { cls = "almost"; msg = pick(["Almost! Let's try once more.", "Gần được rồi! Mẹ thử thêm một lần nữa nhé."]); }
+    else { cls = "almost"; msg = pick(["Không sao, Mẹ thử lại nhé!", "Mẹ đang tiến bộ từng ngày! Mình nghe mẫu rồi thử lại nhé."]); }
+    var words = res.words.map(function (o) { return '<span class="w ' + o.c + '">' + esc(o.w) + "</span>"; }).join(" ");
+    var miss = res.words.filter(function (o) { return o.c === "miss"; }).length;
+    return '<div class="' + cls + '">' + esc(msg) + "</div>" +
+      '<div class="card"><div class="small muted">Ứng dụng nghe được:</div><div>“' + esc(res.heard || "…") + '”</div>' +
+      '<div class="small muted" style="margin-top:8px">Câu mẫu (xanh = Mẹ đã nói rõ' + (miss ? ", cam = từ nên luyện thêm" : "") + "):</div>" +
+      '<div class="en">' + words + "</div>" +
+      '<div class="small muted">Máy nhận diện đôi khi nghe nhầm giọng người Việt. Nếu người thật hiểu Mẹ, thế là thành công!</div></div>';
+  }
+
+  /* ---------- practice panel (shadow + speak/record) ---------- */
+  var PRAC = { id: null };
+  function micIntro() {
+    return '<div class="info small">🎙️ Mẹ hãy nhấn nút bên dưới để cho phép ứng dụng sử dụng micro. Ứng dụng cần nghe giọng nói của Mẹ để nhận diện câu tiếng Anh. Mẹ có thể bỏ qua và luyện nói bằng cách ghi âm.</div>';
+  }
+  function secureNote() {
+    return (window.isSecureContext === false || location.protocol === "file:") ?
+      '<div class="info small">Lưu ý: Mẹ đang mở trang từ một tệp trên máy. Trên iPhone, micro hoạt động tốt nhất khi mở bằng đường link bắt đầu bằng “https://”. Nếu micro không chạy, Mẹ dùng cách nói theo nhé.</div>' : "";
+  }
+  function practicePanel(p) {
+    PRAC.id = p.id;
+    var h = '<div class="card" id="prac">';
+    h += '<div class="steph"><span class="stepnum">3</span>Nói theo (shadowing)</div>';
+    h += '<p class="small muted">Ứng dụng đọc câu 3 lần. Sau mỗi lần, Mẹ nói theo ngay. Không cần micro.</p>';
+    h += '<button class="btn primary block" data-act="shadow" data-id="' + p.id + '">🔁 Nghe rồi nói theo 3 lần</button>';
+    h += '<div id="shadow-msg" class="small" aria-live="polite"></div>';
+    h += '<div class="steph" style="margin-top:16px"><span class="stepnum">★</span>Nói và kiểm tra</div>';
+    h += secureNote();
+    if (SRClass) {
+      h += (state.micExplained ? "" : micIntro());
+      h += '<button class="btn primary block" data-act="sr" data-id="' + p.id + '">🎙️ ' + (state.micExplained ? "Bấm rồi nói câu này" : "Cho phép micro và bắt đầu nói") + "</button>";
+      if (REC_OK) h += '<button class="toggle" data-act="showrec">Bỏ qua, luyện bằng cách ghi âm</button>';
+    } else if (REC_OK) {
+      h += '<div class="info small">Trình duyệt này chưa tự nhận diện được giọng nói. Mẹ có thể ghi âm giọng mình, nghe lại và so với giọng mẫu. Ghi âm chỉ để Mẹ tự nghe, ứng dụng không tự chấm phát âm.</div>';
+      h += (state.micExplained ? "" : micIntro());
+    } else {
+      h += '<div class="info small">Máy này chưa dùng được micro trong trang web. Không sao cả! Mẹ luyện bằng nút “Nghe rồi nói theo 3 lần” ở trên là rất tốt rồi.</div>';
+    }
+    h += '<div id="sr-res" aria-live="polite"></div>';
+    h += '<div id="recbox" class="' + (SRClass || !REC_OK ? "hidden" : "") + '">' + recBoxInner(p) + "</div>";
+    h += "</div>";
+    h += rateBox(p.id);
+    return h;
+  }
+  function recBoxInner(p) {
+    return '<div class="row"><button class="btn" data-act="rec" data-id="' + p.id + '">⏺️ Ghi âm giọng Mẹ</button>' +
+      playBtn(p.en, "▶ Nghe giọng mẫu", "slow") + "</div><div id=\"rec-out\" aria-live=\"polite\"></div>";
+  }
+  function selfCheck() {
+    return '<div class="info small"><b>Mẹ tự nghe lại và kiểm tra nhẹ nhàng:</b><ul class="clean"><li>Mẹ có nói đủ âm cuối (t, d, s) không?</li><li>Phần in đậm có được nhấn mạnh hơn không?</li><li>Nếu là khách, mình có hiểu câu này không? Nếu có, vậy là đạt rồi!</li></ul></div>';
+  }
+  function rateBox(id) {
+    var s = state.status[id] || "new";
+    function b(v, l) { return '<button class="btn ' + (s === v ? "on" : "ghost") + '" data-act="rate" data-id="' + id + '" data-v="' + v + '">' + l + "</button>"; }
+    return '<div class="card" id="ratebox"><div class="steph">Mẹ thấy câu này thế nào?</div><div class="stack">' +
+      b("comfortable", "😊 Đã quen: Mẹ hiểu và nói được") + b("practice", "💪 Cần luyện thêm: hiểu nhưng nói còn khó") + b("new", "🌱 Còn mới: cần nghe thêm") + "</div></div>";
+  }
+
+  async function doShadow(id) {
+    var p = PH[id], box = $("#shadow-msg"); if (!p || !box) return;
+    TTS.stop(); var my = SEQ;
+    var gap = Math.max(2200, plain(p.en).split(/\s+/).length * 650 + 1200);
+    if (!TTS.ok) { box.innerHTML = '<div class="info">Máy chưa đọc được âm thanh. Mẹ nhìn câu và đọc to 3 lần nhé. Mẹ giỏi lắm!</div>'; markPracticed(id); return; }
+    for (var i = 1; i <= 3; i++) {
+      box.innerHTML = '<div class="info">Lượt ' + i + "/3: Mẹ lắng nghe…</div>";
+      await TTS.speak(p.en, { rate: i === 3 ? 0.9 : rateFor("slow") });
+      if (my !== SEQ) return;
+      box.innerHTML = '<div class="good">Lượt ' + i + "/3: Bây giờ Mẹ nói theo nhé! 🗣️</div>";
+      await wait(gap * (i === 3 ? 0.9 : 1.1));
+      if (my !== SEQ) return;
+    }
+    box.innerHTML = '<div class="good">' + esc(pick(["Mẹ giỏi lắm! Mỗi ngày một chút nhé!", "Very good, Mẹ!", "Mẹ đang tiến bộ từng ngày!"])) + "</div>";
+    markPracticed(id);
+  }
+  async function doSR(id, btn, onResult) {
+    var target = PH[id] ? PH[id].en : id; var out = $("#sr-res");
+    state.micExplained = true; save();
+    TTS.stop(); stopRecognition();
+    if (btn) { btn.disabled = true; btn.innerHTML = "👂 Đang nghe… Mẹ nói đi ạ"; }
+    var r = await recognizeOnce();
+    if (btn) { btn.disabled = false; btn.innerHTML = "🎙️ Bấm rồi nói lại"; }
+    if (onResult) { onResult(r); return; }
+    if (r.error) {
+      out.innerHTML = '<div class="almost">' + esc(srErrorText(r.error)) + "</div>";
+      if ((r.error === "not-allowed" || r.error === "service-not-allowed" || r.error === "network" || r.error === "init" || r.error === "start") && REC_OK) { var rb = $("#recbox"); if (rb) rb.classList.remove("hidden"); }
+      return;
+    }
+    var res = analyze(target, r.alts);
+    out.innerHTML = feedbackHtml(res, target) + '<div class="row">' + playBtn(target, "▶ Nghe lại giọng mẫu", "slow") + "</div>";
+    if (PH[id]) markPracticed(id);
+  }
+  function doRecord(id, btn) {
+    var out = $("#rec-out");
+    if (Recorder.active()) { Recorder.stop(); return; }
+    state.micExplained = true; save(); TTS.stop();
+    btn.innerHTML = "⏹️ Dừng ghi âm"; btn.classList.add("primary");
+    out.innerHTML = '<div class="info">🔴 Đang ghi âm… Mẹ nói câu tiếng Anh, rồi bấm “Dừng ghi âm”.</div>';
+    Recorder.start(function (url) {
+      btn.innerHTML = "⏺️ Ghi âm lại"; btn.classList.remove("primary");
+      if (!url) { out.innerHTML = '<div class="almost">Chưa ghi được âm thanh. Mẹ thử lại nhé.</div>'; return; }
+      out.innerHTML = '<div class="good">Mẹ đã ghi âm xong! Bấm ▶ trên thanh bên dưới để nghe lại giọng mình.</div><audio controls src="' + url + '"></audio>' + selfCheck();
+      if (PH[id]) markPracticed(id);
+    }, function (er) {
+      btn.innerHTML = "⏺️ Ghi âm giọng Mẹ"; btn.classList.remove("primary");
+      out.innerHTML = '<div class="almost">' + esc(er === "not-allowed" ? "Máy chưa cho phép dùng micro. Mẹ luyện bằng nút “Nghe rồi nói theo” nhé. Cách bật micro có trong phần Hướng dẫn." : "Chưa ghi âm được trên máy này. Mẹ luyện bằng nút “Nghe rồi nói theo” nhé.") + "</div>";
+    });
+  }
+
+  /* ============================================================
+     SMALL UI PIECES
+     ============================================================ */
+  var STATUS_LABEL = { comfortable: "😊 Đã quen", practice: "💪 Cần luyện thêm", "new": "🌱 Mới" };
+  function chip(id) { var s = state.status[id] || "new"; return '<span class="chip ' + s + '">' + STATUS_LABEL[s] + "</span>"; }
+  function favBtn(id) { var f = isFav(id); return '<button class="btn ' + (f ? "soft" : "ghost") + '" data-act="fav" data-id="' + id + '">' + (f ? "★ Đã lưu" : "☆ Lưu yêu thích") + "</button>"; }
+  function hintHtml(p) { return state.showHints && p.pr ? '<div class="hint"><span class="lbl">Cách đọc gần đúng:</span> ' + esc(p.pr) + "</div>" : ""; }
+  function speedRow() {
+    var sp = [[0.7, "🐢 Rất chậm"], [0.85, "Chậm"], [1.0, "Bình thường"]];
+    return '<div class="row" role="group" aria-label="Tốc độ đọc">' + sp.map(function (s) { return '<button class="btn ' + (state.speed === s[0] ? "on" : "ghost") + '" data-act="speed" data-v="' + s[0] + '">' + s[1] + "</button>"; }).join("") + "</div>";
+  }
+  function voiceNote() {
+    if (!TTS.ok) return '<div class="info small">Máy này chưa hỗ trợ đọc tiếng Anh. Mẹ vẫn đọc được bài học và câu dịch. Xem phần Hướng dẫn nhé.</div>';
+    if (TTS.loaded && !TTS.en.length) return '<div class="info small">Máy chưa có giọng đọc tiếng Anh. Mẹ có thể tải giọng English (US) trong Cài đặt của iPhone (xem Hướng dẫn).</div>';
+    return "";
+  }
+  function phraseCard(p) {
+    return '<div class="card">' +
+      '<div class="en">' + fmt(p.en) + "</div>" +
+      '<div class="vi">' + esc(p.vi) + "</div>" + hintHtml(p) +
+      (p.tip ? '<div class="tip">💡 ' + esc(p.tip) + "</div>" : "") +
+      '<div class="row">' + playBtn(p.en, "🐢 Nghe chậm", "slow") + playBtn(p.en, "▶ Nghe tự nhiên", "normal") + "</div>" +
+      '<div class="row">' + (p.quick ? "" : '<a class="btn soft" href="#/unit/' + p.unit + "/p/" + p.idx + '">🗣️ Học & nói câu này</a>') + favBtn(p.id) + "</div>" +
+      (p.quick ? "" : chip(p.id)) + "</div>";
+  }
+  function nextUnit() {
+    var w = ROADMAP[currentWeek() - 1];
+    for (var i = 0; i < w.units.length; i++) if (!unitDone(w.units[i])) return w.units[i];
+    for (i = 1; i <= 12; i++) if (!unitDone(i)) return i;
+    return w.units[0] || 1;
+  }
+
+  /* ============================================================
+     PAGES
+     ============================================================ */
+  function pageHome() {
+    var d = daysUntilArrival(), t = today(), pct = Math.min(100, Math.round(t.p.length / state.goal * 100)), s = streak(), tot = totalDays();
+    var msg = MOTIVATION[(parseDay(localDay()) / 86400000) % MOTIVATION.length];
+    var count;
+    if (d > 0) count = '<div class="count">' + d + '</div><div>ngày nữa gia đình bà Telma Garcia đến Đà Nẵng (31/1/2027).</div>';
+    else if (dayDiff(hcmToday(), DEPARTURE) >= 0) count = '<div class="count">🏮</div><div><b>Gia đình bà Telma đang ở Việt Nam!</b> Mẹ mở “Cứu nguy nhanh” khi cần nhé.</div>';
+    else count = '<div class="count">💛</div><div>Chuyến đi đã qua. Mẹ vẫn có thể ôn tập để trò chuyện qua video với gia đình bà Telma!</div>';
+    var nu = unitByNum(nextUnit());
+    var h = '<div class="card hero"><div class="lanterns" aria-hidden="true"><span class="lantern"></span><span class="lantern l2"></span><span class="lantern l3"></span></div>' +
+      '<div class="muted small">English with Mẹ Hằng</div><h1>Chào Mẹ Hằng! 🌸</h1><div class="msg">' + esc(msg) + "</div></div>";
+    h += '<div class="card">' + count + "</div>";
+    h += '<a class="btn primary big" href="#/unit/' + nu.num + '">▶ Học tiếp: Bài ' + nu.num + " – " + esc(nu.title) + "</a>";
+    h += '<a class="btn big" style="margin-top:10px;border-color:var(--red);color:var(--red)" href="#/quick">🆘 Cứu nguy nhanh (dùng khi đi chơi)</a>';
+    h += '<div class="card"><div class="stat"><span>Mục tiêu hôm nay</span><b>' + t.p.length + " / " + state.goal + " câu</b></div>" +
+      '<div class="bar" role="progressbar" aria-valuenow="' + pct + '" aria-valuemin="0" aria-valuemax="100"><i style="width:' + pct + '%"></i></div>' +
+      (t.p.length >= state.goal ? '<div class="good">🎉 Mẹ đã đạt mục tiêu hôm nay! Giỏi quá!</div>' : "") +
+      '<div class="stat"><span>Chuỗi ngày học liên tiếp</span><b>' + (s ? "🔥 " + s + " ngày" : "Bắt đầu hôm nay nhé!") + "</b></div>" +
+      (s === 0 && tot > 0 ? '<div class="small muted">Chào mừng Mẹ quay lại! Mẹ đã học tổng cộng ' + tot + " ngày. Mình học tiếp nhẹ nhàng nhé.</div>" : "") +
+      "</div>";
+    var dl = dueList().length;
+    h += '<div class="grid2">' +
+      '<a class="btn" href="#/units"><span class="ic">📚</span>Bài học (12 bài)</a>' +
+      '<a class="btn" href="#/listen"><span class="ic">🎧</span>Luyện nghe</a>' +
+      '<a class="btn" href="#/speak"><span class="ic">🗣️</span>Luyện nói</a>' +
+      '<a class="btn" href="#/review"><span class="ic">🔁</span>Ôn tập' + (dl ? " (" + dl + ")" : "") + "</a>" +
+      '<a class="btn" href="#/fav"><span class="ic">⭐</span>Câu yêu thích</a>' +
+      '<a class="btn" href="#/progress"><span class="ic">📈</span>Tiến độ</a>' +
+      '<a class="btn" href="#/roadmap"><span class="ic">🗓️</span>Lộ trình 12 tuần</a>' +
+      '<a class="btn" href="#/sounds"><span class="ic">👄</span>Âm khó</a>' +
+      '<a class="btn" href="#/guide"><span class="ic">❓</span>Hướng dẫn</a>' +
+      '<a class="btn" href="#/settings"><span class="ic">⚙️</span>Cài đặt</a></div>';
+    var rpUnit = nu.num;
+    h += '<h2>20 phút mỗi ngày</h2><div class="card"><p class="small muted">Tuần ' + currentWeek() + " / 12 – " + esc(ROADMAP[currentWeek() - 1].title) + "</p>" +
+      '<div class="stack">' +
+      '<a class="btn ghost block" href="#/listen/choose">1. 🎧 5 phút: Luyện nghe</a>' +
+      '<a class="btn ghost block" href="#/unit/' + nu.num + '/p/0">2. 🔁 5 phút: Nghe và nói theo</a>' +
+      '<a class="btn ghost block" href="#/unit/' + rpUnit + '/roleplay">3. 🎭 5 phút: Nói và nhập vai</a>' +
+      '<a class="btn ghost block" href="#/review">4. 📝 5 phút: Ôn câu cũ</a></div></div>';
+    h += voiceNote();
+    return { title: "Trang chủ", nav: "home", html: voiceTip() + h };
+  }
+
+  function pageUnits() {
+    var h = "<h1>Bài học</h1><p>12 bài học cho chuyến đi. Mẹ có thể học theo thứ tự hoặc chọn bất kỳ bài nào.</p>";
+    UNITS.forEach(function (u) {
+      var c = comfortableIn(u);
+      h += '<a class="btn block ghost" style="flex-direction:column;align-items:flex-start;text-align:left;margin:10px 0;padding:14px" href="#/unit/' + u.num + '">' +
+        '<span><span class="unitnum">Bài ' + u.num + "</span> " + (unitDone(u.num) ? '<span class="done">✓ Đã học xong</span>' : "") + "</span>" +
+        '<span style="font-size:20px;margin-top:4px">' + esc(u.title) + '</span><span class="small muted" style="font-weight:500">' + esc(u.titleEn) + " · " + u.phrases.length + " câu · " + c + " câu đã quen</span></a>";
+    });
+    h += '<a class="btn block soft" href="#/sounds">👄 Bài phụ: Những âm người Việt thường gặp khó khăn</a>';
+    return { title: "Bài học", nav: "units", html: h };
+  }
+
+  function pageUnit(n) {
+    var u = unitByNum(n); if (!u) return pageUnits();
+    var h = '<span class="unitnum">Bài ' + u.num + " / 12</span><h1>" + esc(u.title) + '</h1><p class="muted small">' + esc(u.titleEn) + "</p><p>" + esc(u.description) + "</p>";
+    h += '<div class="info small"><b>Cách học mỗi câu:</b> 1. Nghe chậm → 2. Nghe tự nhiên → 3. Nói theo → 4. Thử trong hội thoại.<br>Phần <b>in đậm</b> và CHỮ IN HOA trong cách đọc là chỗ cần nhấn mạnh.<br>Cách đọc viết theo giọng Bắc: “r” là âm R tiếng Anh (cong lưỡi, không đọc thành “d”); “j” đọc như “dj” trong “jeans”; “iu, io, ia” đọc bằng âm “i”.</div>';
+    h += '<a class="btn primary big" href="#/unit/' + n + '/p/0">▶ Bắt đầu học từng câu</a>';
+    h += '<div class="row"><a class="btn" href="#/unit/' + n + '/roleplay">🎭 Nhập vai</a><a class="btn" href="#/unit/' + n + '/review">📝 Ôn tập bài này</a></div>';
+    h += "<h2>Các câu trong bài (" + u.phrases.length + ")</h2>";
+    u.phrases.forEach(function (p) { h += phraseCard(p); });
+    h += '<h2 id="dialogue">Hội thoại mẫu</h2><div class="card"><div class="row">' +
+      '<button class="btn primary" data-act="dialog" data-n="' + n + '" data-mode="slow">▶ Nghe cả bài (chậm)</button>' +
+      '<button class="btn" data-act="dialog" data-n="' + n + '" data-mode="normal">▶ Nghe cả bài (tự nhiên)</button>' +
+      '<button class="btn ghost" data-act="stop">⏹️ Dừng</button></div>' +
+      (TTS.ok && TTS.en.length < 2 ? '<p class="small muted">Máy của Mẹ chỉ có một giọng tiếng Anh, nên hai người trong hội thoại dùng cùng một giọng.</p>' : "") +
+      '<button class="toggle" data-act="togglevi" data-target="dlg">Ẩn / hiện tiếng Việt</button><div id="dlg">';
+    u.dialogue.forEach(function (l, i) {
+      h += '<div class="dl" id="dl-' + i + '"><div class="who">' + (l.who === "H" ? "Mẹ Hằng" : "Telma Garcia") + '</div><div class="en">' + esc(l.en) + '</div><div class="vi tv">' + esc(l.vi) + '</div><div class="row">' +
+        playBtn(l.en, "🐢 Chậm", "slow", "ghost", l.who === "H" ? "" : "guest") + playBtn(l.en, "▶ Tự nhiên", "normal", "ghost", l.who === "H" ? "" : "guest") + "</div></div>";
+    });
+    h += "</div></div>";
+    h += '<div class="card hl"><h3 style="margin-top:0">Sẵn sàng thử chưa, Mẹ?</h3><div class="stack"><a class="btn primary block" href="#/unit/' + n + '/roleplay">🎭 Nhập vai với khách</a><a class="btn block" href="#/unit/' + n + '/review">📝 Ôn tập ngắn</a>' +
+      '<button class="btn ghost block" data-act="done" data-n="' + n + '">' + (unitDone(n) ? "✓ Đã đánh dấu học xong (bấm để bỏ)" : "✓ Đánh dấu đã học xong bài này") + "</button></div></div>";
+    h += '<div class="row">' + (n > 1 ? '<a class="btn ghost" href="#/unit/' + (n - 1) + '">← Bài ' + (n - 1) + "</a>" : "") + (n < 12 ? '<a class="btn ghost" href="#/unit/' + (n + 1) + '">Bài ' + (n + 1) + " →</a>" : "") + "</div>";
+    return { title: "Bài " + n + ": " + u.title, nav: "units", html: h };
+  }
+
+  var REAL_SHOW = false;
+  function pageStudy(n, i) {
+    var u = unitByNum(n); if (!u) return pageUnits();
+    i = Math.max(0, Math.min(u.phrases.length - 1, i)); var p = u.phrases[i]; REAL_SHOW = false;
+    var h = '<span class="unitnum">Bài ' + n + " · Câu " + (i + 1) + "/" + u.phrases.length + "</span>";
+    h += '<div class="card"><div class="en xl">' + fmt(p.en) + '</div><div class="vi">' + esc(p.vi) + "</div>" + hintHtml(p) + (p.tip ? '<div class="tip">💡 ' + esc(p.tip) + "</div>" : "") + '<div class="row">' + favBtn(p.id) + "</div></div>";
+    h += '<div class="card"><div class="steph"><span class="stepnum">1</span>Nghe rõ, chậm</div>' + playBtn(p.en, "🐢 Nghe chậm", "slow", "primary block") +
+      '<button class="btn ghost block" style="margin-top:8px" data-act="play" data-r="' + reg(p.en) + '" data-mode="vslow">🐢🐢 Nghe rất chậm</button></div>';
+    h += '<div class="card"><div class="steph"><span class="stepnum">2</span>Nghe tự nhiên</div>' + playBtn(p.en, "▶ Nghe tốc độ bình thường", "normal", "primary block") +
+      '<h3>🎧 Nghe kiểu đời thường</h3><p class="small muted">Người Mỹ có thể nói khác đi một chút. Mẹ nghe thử, đoán ý, rồi bấm “Hiện câu” để xem.</p>' +
+      '<div class="row">' + playBtn(p.real, "▶ Nghe câu đời thường", "normal", "", "guest") + '<button class="btn ghost" data-act="showreal">👀 Hiện câu</button></div>' +
+      '<div id="realtxt" class="hidden"><div class="en">' + esc(p.real) + '</div><div class="small muted">Ý gần giống câu: ' + esc(plain(p.en)) + "</div></div></div>";
+    h += practicePanel(p);
+    h += '<div class="card"><div class="steph"><span class="stepnum">4</span>Thử trong hội thoại</div><p class="small">Mẹ dùng câu này khi nói chuyện với khách trong phần nhập vai.</p><a class="btn block" href="#/unit/' + n + '/roleplay">🎭 Nhập vai Bài ' + n + "</a></div>";
+    h += '<div class="row">' + (i > 0 ? '<a class="btn ghost" href="#/unit/' + n + "/p/" + (i - 1) + '">← Câu trước</a>' : "") +
+      (i < u.phrases.length - 1 ? '<a class="btn primary" href="#/unit/' + n + "/p/" + (i + 1) + '">Câu tiếp →</a>' : '<a class="btn primary" href="#/unit/' + n + '/roleplay">Xong! Nhập vai →</a>') + "</div>";
+    h += '<a class="btn ghost block" href="#/unit/' + n + '">↩ Về Bài ' + n + "</a>";
+    return { title: "Bài " + n + " · Câu " + (i + 1), nav: "units", html: h };
+  }
+
+  /* ----- role-play ----- */
+  var RP = null;
+  function startRP(n, opts) {
+    opts = opts || {};
+    if (opts.sim) {
+      var pool = []; UNITS.forEach(function (u) { u.roleplay.steps.forEach(function (s) { pool.push({ s: s, u: u.num }); }); });
+      var steps = shuffle(pool).slice(0, 5).map(function (o) { return o.s; });
+      RP = { n: 0, sim: true, steps: steps, i: 0, useAlt: true, showEn: true, showVi: false, end: { en: "This was such a fun day. Thank you, Hằng!", vi: "Hôm nay vui quá. Cảm ơn Hằng!" }, voice: "random", fb: "" };
+    } else {
+      var u = unitByNum(n);
+      RP = { n: n, sim: false, steps: u.roleplay.steps, i: 0, useAlt: !!opts.alt, showEn: true, showVi: false, end: u.roleplay.end, intro: u.roleplay.intro, voice: "guest", fb: "" };
+    }
+    RP.curVoice = voiceOf(RP.voice);
+  }
+  function rpGuestText() { var s = RP.steps[RP.i]; return RP.useAlt && s.alt ? (RP.sim ? (Math.random() < 0.5 ? s.alt : s.guest) : s.alt) : s.guest; }
+  function rpRender() {
+    var h = "";
+    if (RP.sim) h += '<h1>Mô phỏng chuyến đi</h1><p class="small">5 câu hỏi ngẫu nhiên từ cả 12 bài, có thể được hỏi theo cách khác. Giống như nói chuyện thật!</p>';
+    else h += '<span class="unitnum">Bài ' + RP.n + '</span><h1>Nhập vai</h1><p class="small">' + esc(RP.intro) + "</p>" + (RP.useAlt ? '<div class="info small">Lần này khách hỏi theo cách khác một chút. Mẹ cứ bình tĩnh nhé!</div>' : "");
+    if (RP.i >= RP.steps.length) {
+      h += '<div class="bubble guest"><div class="who">Telma Garcia</div><div class="en">' + esc(RP.end.en) + '</div><div class="vi">' + esc(RP.end.vi) + "</div>" + playBtn(RP.end.en, "▶ Nghe lại", "normal", "ghost", RP.voice) + "</div>";
+      h += '<div class="good">🎉 Mẹ đã hoàn thành cuộc hội thoại! Khách rất vui khi nói chuyện với Mẹ.</div>';
+      h += RP.sim ? '<div class="stack"><button class="btn primary block" data-act="rpagain">🎲 Thử 5 câu hỏi mới</button><a class="btn ghost block" href="#/speak">↩ Về Luyện nói</a></div>'
+        : '<div class="stack"><button class="btn primary block" data-act="rpagain">🔁 Làm lại</button><button class="btn block" data-act="rpalt">🎲 Thử lại với câu hỏi khác kiểu</button><a class="btn ghost block" href="#/unit/' + RP.n + '">↩ Về Bài ' + RP.n + "</a></div>";
+      return h;
+    }
+    var s = RP.steps[RP.i], g = RP.gText || (RP.gText = rpGuestText());
+    h += '<p class="small muted">Lượt ' + (RP.i + 1) + " / " + RP.steps.length + "</p>";
+    h += '<div class="bubble guest"><div class="who">Telma Garcia nói:</div>' +
+      '<div class="en ' + (RP.showEn ? "" : "hidden") + '" id="g-en">' + esc(g) + "</div>" + (RP.showEn ? "" : '<div class="small muted">(Chữ tiếng Anh đang ẩn để Mẹ luyện nghe)</div>') +
+      '<div class="vi ' + (RP.showVi ? "" : "hidden") + '">' + esc(s.vi) + "</div>" +
+      '<div class="row">' + playBtn(g, "▶ Nghe khách nói", "normal", "primary", RP.voice) + playBtn(g, "🐢 Nghe chậm", "slow", "", RP.voice) + "</div>" +
+      '<div class="row"><button class="btn ghost" data-act="rpen">' + (RP.showEn ? "🙈 Ẩn chữ tiếng Anh" : "👀 Hiện chữ tiếng Anh") + '</button><button class="btn ghost" data-act="rpvi">' + (RP.showVi ? "Ẩn nghĩa tiếng Việt" : "🇻🇳 Xem nghĩa tiếng Việt") + "</button></div>" +
+      '<button class="btn soft block" data-act="rphelp">😊 Mẹ chưa hiểu? Nói: “Sorry, could you say that again more slowly?”</button></div>';
+    h += '<h3>Mẹ trả lời (chọn một câu, rồi nói to):</h3><div class="stack">';
+    s.options.forEach(function (o, k) {
+      h += '<button class="btn opt" data-act="rpopt" data-k="' + k + '"><span><span class="en" style="font-size:20px;display:block">' + esc(o.en) + '</span><span class="vi small" style="display:block;font-weight:500">' + esc(o.vi) + "</span></span></button>";
+    });
+    h += "</div>";
+    if (SRClass) {
+      h += (state.micExplained ? "" : micIntro()) + '<button class="btn primary block" data-act="rpsr">🎙️ ' + (state.micExplained ? "Hoặc nói câu trả lời của Mẹ" : "Cho phép micro và nói câu trả lời") + "</button>";
+    } else if (REC_OK) {
+      h += (state.micExplained ? "" : micIntro()) + '<button class="btn block" data-act="rprec">⏺️ Ghi âm câu trả lời của Mẹ</button>';
+    }
+    h += '<div id="rp-fb" aria-live="polite">' + (RP.fb || "") + "</div>";
+    if (RP.fb) h += '<button class="btn primary big" data-act="rpnext">Tiếp tục →</button>';
+    return h;
+  }
+  function rpShow(autoplay) {
+    var c = $("#rp"); if (!c) return; REG = []; c.innerHTML = rpRender();
+    if (autoplay && RP.i < RP.steps.length) { TTS.stop(); TTS.speak(RP.gText, { rate: rateFor("normal"), voice: RP.curVoice }); }
+    else if (autoplay) { TTS.stop(); TTS.speak(RP.end.en, { rate: rateFor("normal"), voice: RP.curVoice }); }
+  }
+  function pageRoleplay(n) {
+    if (!unitByNum(n)) return pageUnits();
+    startRP(n); RP.gText = null;
+    var h = '<div id="rp">' + rpRender() + "</div>";
+    h = '<div class="info small">Bấm “▶ Nghe khách nói” để nghe khách nói. Mẹ chọn câu trả lời, nghe mẫu, rồi nói to theo. Không có câu trả lời sai!</div>' + h;
+    return { title: "Nhập vai · Bài " + n, nav: "speak", html: h };
+  }
+  function pageSim() { startRP(0, { sim: true }); RP.gText = null; return { title: "Mô phỏng chuyến đi", nav: "speak", html: '<div id="rp">' + rpRender() + "</div>" }; }
+
+  /* ----- listening practice ----- */
+  var LQ = { unit: "all", mode: "choose", q: null, answered: false, showEn: false, n: 0, voice: null, mixVoices: false };
+  function lqPool() { return LQ.unit === "all" ? ALLP : (unitByNum(+LQ.unit) || UNITS[0]).phrases; }
+  function lqNew() {
+    var pool = lqPool(), p = pick(pool), others = shuffle(ALLP.filter(function (x) { return x.id !== p.id && x.vi !== p.vi; })).slice(0, 2);
+    var near = shuffle(pool.filter(function (x) { return x.id !== p.id; })).slice(0, 2); if (near.length === 2) others = near;
+    LQ.q = { p: p, opts: shuffle([p].concat(others)) }; LQ.answered = false; LQ.showEn = false; LQ.chosen = null; LQ.n++;
+    LQ.voice = LQ.mixVoices ? TTS.random() : (LQ.mode === "what" ? (TTS.secondary() || TTS.primary()) : TTS.primary());
+  }
+  function lqText() { return LQ.mode === "what" ? LQ.q.p.real : LQ.q.p.en; }
+  function lqRender() {
+    var q = LQ.q, p = q.p, t = lqText(), h = "";
+    h += '<p class="small muted">Câu hỏi số ' + LQ.n + "</p>";
+    h += '<div class="card"><p>' + (LQ.mode === "what" ? "Khách nói một câu tự nhiên, có thể khác câu trong bài. <b>Ý của họ gần nhất với câu nào?</b>" : "Mẹ nghe câu tiếng Anh, rồi <b>chọn nghĩa tiếng Việt đúng</b>.") + "</p>" +
+      '<div class="row"><button class="btn primary" data-act="lqplay" data-mode="normal">▶ Nghe</button><button class="btn" data-act="lqplay" data-mode="slow">🐢 Nghe chậm</button></div>' +
+      '<button class="toggle" data-act="lqen">' + (LQ.showEn || LQ.answered ? "" : "👀 Hiện chữ tiếng Anh") + "</button>" +
+      ((LQ.showEn || LQ.answered) ? '<div class="en">' + esc(plain(t)) + "</div>" : "") + "</div>";
+    h += '<div class="stack">';
+    q.opts.forEach(function (o, k) {
+      var cls = "";
+      if (LQ.answered) { if (o.id === p.id) cls = "right"; else if (k === LQ.chosen) cls = "other"; }
+      var label = LQ.mode === "what" ? esc(plain(o.en)) + '<span class="vi small" style="display:block;font-weight:500">' + (LQ.answered ? esc(o.vi) : "") + "</span>" : esc(o.vi);
+      h += '<button class="btn opt ' + cls + '" data-act="lqans" data-k="' + k + '" ' + (LQ.answered ? "disabled" : "") + "><span>" + label + "</span></button>";
+    });
+    h += "</div>";
+    if (LQ.answered) {
+      var ok = q.opts[LQ.chosen].id === p.id;
+      h += ok ? '<div class="good">' + esc(pick(["Chính xác! Mẹ nghe giỏi lắm!", "Very good, Mẹ! 🌟", "Mẹ hiểu rồi đó! Tuyệt vời!"])) + "</div>"
+        : '<div class="almost">Gần đúng rồi! Câu màu xanh là đáp án. Mẹ nghe lại một lần nữa nhé. Câu này đã được thêm vào danh sách ôn tập.</div>';
+      h += '<div class="card"><div class="en">' + fmt(p.en) + '</div><div class="vi">' + esc(p.vi) + '</div><div class="row">' + playBtn(t, "▶ Nghe lại", "normal") + playBtn(p.en, "🐢 Câu trong bài", "slow") + "</div></div>";
+      h += '<button class="btn primary big" data-act="lqnext">Câu tiếp theo →</button>';
+    }
+    return h;
+  }
+  function lqShow() { var c = $("#lq"); if (c) { REG = []; c.innerHTML = lqRender(); } }
+  function unitSelect(cur, act) {
+    var h = '<label class="lbl" for="usel">Chọn bài để luyện:</label><select id="usel" data-change="' + act + '"><option value="all"' + (cur === "all" ? " selected" : "") + ">Tất cả 12 bài</option>";
+    UNITS.forEach(function (u) { h += '<option value="' + u.num + '"' + (String(cur) === String(u.num) ? " selected" : "") + ">Bài " + u.num + ": " + esc(u.title) + "</option>"; });
+    return h + "</select>";
+  }
+  function pageListen() {
+    var h = "<h1>Luyện nghe</h1><p>Nghe trước, nói sau. Mẹ không cần hiểu hết từng từ, chỉ cần hiểu ý chính.</p>" + speedRow() + voiceNote();
+    h += '<div class="stack"><a class="btn primary big" href="#/listen/choose">🎧 Nghe và chọn nghĩa</a><a class="btn big" href="#/listen/what">❓ Họ vừa nói gì?</a></div>';
+    h += '<p class="small muted">“Họ vừa nói gì?” dùng cách nói đời thường của người Mỹ (nói tắt, nói nhanh) để Mẹ quen với tiếng Anh thật.</p>';
+    h += '<h2>Nghe hội thoại</h2><div class="stack">';
+    UNITS.forEach(function (u) { h += '<a class="btn ghost block" href="#/unit/' + u.num + '" data-scroll="dialogue">Bài ' + u.num + ": " + esc(u.title) + "</a>"; });
+    h += "</div>";
+    return { title: "Luyện nghe", nav: "listen", html: h };
+  }
+  function pageListenQuiz(mode) {
+    LQ.mode = mode; LQ.n = 0; lqNew();
+    var h = "<h1>" + (mode === "what" ? "Họ vừa nói gì?" : "Nghe và chọn nghĩa") + "</h1>" + unitSelect(LQ.unit, "lqunit") + speedRow();
+    if (TTS.en.length > 1) h += '<div class="row"><button class="btn ' + (LQ.mixVoices ? "on" : "ghost") + '" data-act="lqmix">🎙️ ' + (LQ.mixVoices ? "Đang đổi giọng ngẫu nhiên" : "Nghe nhiều giọng khác nhau") + "</button></div>";
+    else if (TTS.ok && TTS.loaded) h += '<p class="small muted">Máy của Mẹ chỉ có một giọng tiếng Anh, nên tất cả câu dùng cùng một giọng.</p>';
+    h += voiceNote() + '<div id="lq">' + lqRender() + "</div>";
+    return { title: mode === "what" ? "Họ vừa nói gì?" : "Nghe và chọn nghĩa", nav: "listen", html: h };
+  }
+
+  /* ----- speaking page ----- */
+  var SP = { id: null, unit: "all" };
+  function pageSpeak() {
+    if (!SP.id || !PH[SP.id]) SP.id = (practiceList()[0]) || ALLP[0].id;
+    var p = PH[SP.id];
+    var h = "<h1>Luyện nói</h1><p>Mẹ đừng lo về giọng Việt. Quan trọng nhất là khách hiểu Mẹ, và Mẹ thấy vui khi nói!</p>";
+    h += '<h2>🎭 Nhập vai với khách</h2><a class="btn primary big" href="#/sim">🌏 Mô phỏng chuyến đi (5 câu ngẫu nhiên)</a><div class="grid2">';
+    UNITS.forEach(function (u) { h += '<a class="btn" href="#/unit/' + u.num + '/roleplay"><span class="ic">🎭</span>Bài ' + u.num + "</a>"; });
+    h += "</div>";
+    h += '<h2>🗣️ Luyện từng câu</h2>' + unitSelect(SP.unit, "spunit") +
+      '<div class="row"><button class="btn" data-act="spnext">🎲 Câu khác</button>' + (practiceList().length ? '<button class="btn" data-act="sppractice">💪 Câu cần luyện (' + practiceList().length + ")</button>" : "") + "</div>";
+    h += '<div class="card"><span class="unitnum">' + (p.quick ? "Cứu nguy nhanh" : "Bài " + p.unit) + '</span><div class="en xl">' + fmt(p.en) + '</div><div class="vi">' + esc(p.vi) + "</div>" + hintHtml(p) +
+      '<div class="row">' + playBtn(p.en, "🐢 Nghe chậm", "slow") + playBtn(p.en, "▶ Nghe tự nhiên", "normal") + "</div></div>";
+    h += practicePanel(p);
+    h += '<a class="btn ghost block" href="#/guide" data-scroll="mic">🔧 Micro không hoạt động? Xem cách khắc phục</a>';
+    return { title: "Luyện nói", nav: "speak", html: h };
+  }
+
+  /* ----- quick help ----- */
+  function pageQuick() {
+    var h = '<h1>Cứu nguy nhanh</h1><p class="small">Chạm vào câu để nghe ngay. Mẹ có thể đưa điện thoại cho khách xem chữ.</p>' + speedRow();
+    h += '<div class="row">' + QUICK.map(function (c, ci) { return '<button class="btn ghost" data-act="jump" data-t="qc' + ci + '">' + esc(c.title) + "</button>"; }).join("") + "</div>";
+    h += '<button class="toggle" data-act="hints">' + (state.showHints ? "Ẩn cách đọc" : "Hiện cách đọc") + "</button>";
+    QUICK.forEach(function (c, ci) {
+      h += '<h2 class="quickcat" id="qc' + ci + '">' + (ci === 5 ? "🙋 " : "") + esc(c.title) + "</h2><div class=\"stack\">";
+      c.items.forEach(function (p) {
+        h += '<div><button class="btn qbtn" data-act="play" data-r="' + reg(p.en) + '" data-mode="sel"><span class="play">▶ Chạm để nghe</span><span class="en">' + fmt(p.en) + '</span><span class="vi">' + esc(p.vi) + "</span>" +
+          (state.showHints ? '<span class="small muted" style="font-weight:500">Cách đọc: ' + esc(p.pr) + "</span>" : "") + (p.tip ? '<span class="small" style="font-weight:500">💡 ' + esc(p.tip) + "</span>" : "") + "</button>" +
+          '<div style="text-align:right">' + '<button class="toggle" data-act="fav" data-id="' + p.id + '">' + (isFav(p.id) ? "★ Đã lưu" : "☆ Lưu yêu thích") + "</button></div></div>";
+      });
+      h += "</div>";
+    });
+    h += voiceNote();
+    return { title: "Cứu nguy nhanh", nav: "quick", html: h };
+  }
+
+  /* ----- favorites ----- */
+  function pageFav() {
+    var list = state.fav.filter(function (id) { return PH[id]; });
+    var h = "<h1>Câu yêu thích</h1>";
+    if (!list.length) h += '<div class="card">Mẹ chưa lưu câu nào. Khi học, Mẹ bấm <b>“☆ Lưu yêu thích”</b> để lưu những câu hay dùng vào đây nhé.</div>';
+    else { h += '<a class="btn primary block" href="#/review" data-review="fav">🔁 Ôn các câu yêu thích (' + list.length + ")</a>"; list.forEach(function (id) { h += phraseCard(PH[id]); }); }
+    return { title: "Câu yêu thích", nav: "home", html: h };
+  }
+
+  /* ----- review (spaced repetition) ----- */
+  var RV = null;
+  function startReview(kind) {
+    var ids;
+    if (kind === "fav") ids = state.fav.filter(function (id) { return PH[id]; });
+    else if (kind === "practice") ids = practiceList();
+    else if (kind === "all") ids = shuffle(ALLP.map(function (p) { return p.id; })).slice(0, 10);
+    else ids = dueList();
+    RV = { kind: kind, ids: ids.slice(0, 20), i: 0, again: [], showEn: true, done: 0 };
+  }
+  function rvRender() {
+    if (!RV.ids.length) return '<div class="card">Hôm nay không có câu nào cần ôn. Mẹ giỏi quá! 🌟<br>Mẹ có thể chọn “Ôn ngẫu nhiên” để ôn thêm.</div>';
+    if (RV.i >= RV.ids.length) return '<div class="good">🎉 Mẹ đã ôn xong ' + RV.done + " câu! Mẹ đã tiến bộ hơn hôm qua rồi!</div>" + '<a class="btn primary block" href="#/home">🏠 Về trang chủ</a>';
+    var p = PH[RV.ids[RV.i]];
+    return '<p class="small muted">Câu ' + (RV.i + 1) + " / " + RV.ids.length + "</p>" +
+      '<div class="card"><span class="unitnum">' + (p.quick ? "Cứu nguy nhanh" : "Bài " + p.unit) + '</span><div class="en xl">' + fmt(p.en) + '</div><div class="vi">' + esc(p.vi) + "</div>" + hintHtml(p) +
+      '<div class="row">' + playBtn(p.en, "🐢 Nghe chậm", "slow") + playBtn(p.en, "▶ Nghe tự nhiên", "normal") + "</div>" +
+      '<p class="small">Mẹ nghe rồi nói to câu này 2 lần. Sau đó chọn:</p>' +
+      '<div class="stack"><button class="btn primary block" data-act="rv" data-v="1">😊 Dễ rồi</button><button class="btn block" data-act="rv" data-v="0">💪 Cần ôn thêm</button></div></div>';
+  }
+  function rvShow() { var c = $("#rv"); if (c) { REG = []; c.innerHTML = rvRender(); } }
+  var pendingReviewKind = null;
+  function pageReview() {
+    var due = dueList().length, pr = practiceList().length;
+    startReview(pendingReviewKind || "due"); pendingReviewKind = null;
+    var h = '<h1>Ôn tập</h1><p class="small">Câu khó sẽ được ôn thường xuyên hơn. Câu đã quen sẽ được ôn ít hơn.</p>' +
+      '<div class="row"><button class="btn ' + (RV.kind === "due" ? "on" : "ghost") + '" data-act="rvkind" data-v="due">Hôm nay (' + due + ')</button><button class="btn ' + (RV.kind === "practice" ? "on" : "ghost") + '" data-act="rvkind" data-v="practice">Cần luyện (' + pr + ")</button>" +
+      '<button class="btn ' + (RV.kind === "fav" ? "on" : "ghost") + '" data-act="rvkind" data-v="fav">Yêu thích (' + state.fav.length + ')</button><button class="btn ' + (RV.kind === "all" ? "on" : "ghost") + '" data-act="rvkind" data-v="all">🎲 Ôn ngẫu nhiên</button></div>' +
+      '<div id="rv">' + rvRender() + "</div>";
+    if (pr) {
+      h += "<h2>Danh sách câu cần luyện</h2>";
+      practiceList().forEach(function (id) { var p = PH[id]; h += '<div class="card"><div class="en">' + fmt(p.en) + '</div><div class="vi">' + esc(p.vi) + '</div><div class="row">' + playBtn(p.en, "🐢 Nghe", "slow") + (p.quick ? "" : '<a class="btn soft" href="#/unit/' + p.unit + "/p/" + p.idx + '">🗣️ Luyện câu này</a>') + "</div></div>"; });
+    }
+    return { title: "Ôn tập", nav: "home", html: h };
+  }
+
+  /* ----- unit review activity ----- */
+  var UR = null;
+  function urNew(n) {
+    var u = unitByNum(n), ps = shuffle(u.phrases).slice(0, 5);
+    UR = { n: n, i: 0, qs: ps.map(function (p, k) {
+      var others = shuffle(u.phrases.filter(function (x) { return x.id !== p.id; })).slice(0, 2);
+      return { p: p, type: k % 2 ? "listen" : "read", opts: shuffle([p].concat(others)) };
+    }), answered: false, chosen: null, right: 0 };
+  }
+  function urRender() {
+    if (UR.i >= UR.qs.length) {
+      return '<div class="good">🎉 Mẹ đã ôn xong Bài ' + UR.n + "! Mẹ hiểu được " + UR.right + " / " + UR.qs.length + " câu ngay lần đầu. Mẹ giỏi lắm!</div>" +
+        '<div class="stack"><button class="btn primary block" data-act="uragain">🔁 Ôn lại lần nữa</button><a class="btn block" href="#/unit/' + UR.n + '/roleplay">🎭 Nhập vai</a>' + (UR.n < 12 ? '<a class="btn ghost block" href="#/unit/' + (UR.n + 1) + '">Sang Bài ' + (UR.n + 1) + " →</a>" : "") + "</div>";
+    }
+    var q = UR.qs[UR.i], h = '<p class="small muted">Câu ' + (UR.i + 1) + " / " + UR.qs.length + "</p><div class=\"card\">";
+    if (q.type === "read") h += "<p>Câu tiếng Anh nào có nghĩa là:</p><div class=\"en\">“" + esc(q.p.vi) + "”</div>";
+    else h += "<p>Mẹ nghe câu tiếng Anh và chọn nghĩa đúng:</p>" + '<div class="row">' + playBtn(q.p.en, "▶ Nghe", "normal", "primary") + playBtn(q.p.en, "🐢 Nghe chậm", "slow") + "</div>";
+    h += '</div><div class="stack">';
+    q.opts.forEach(function (o, k) {
+      var cls = UR.answered ? (o.id === q.p.id ? "right" : (k === UR.chosen ? "other" : "")) : "";
+      h += '<button class="btn opt ' + cls + '" data-act="urans" data-k="' + k + '" ' + (UR.answered ? "disabled" : "") + "><span>" + (q.type === "read" ? esc(plain(o.en)) : esc(o.vi)) + "</span></button>";
+    });
+    h += "</div>";
+    if (UR.answered) {
+      var ok = q.opts[UR.chosen].id === q.p.id;
+      h += ok ? '<div class="good">' + esc(pick(["Very good, Mẹ!", "Chính xác! Mẹ giỏi lắm!", "Great! 🌟"])) + "</div>" : '<div class="almost">Gần đúng rồi! Đáp án là câu màu xanh. Không sao, Mẹ đã nhớ thêm một câu!</div>';
+      h += '<div class="card"><div class="en">' + fmt(q.p.en) + '</div><div class="vi">' + esc(q.p.vi) + "</div>" + playBtn(q.p.en, "▶ Nghe", "slow", "ghost") + "</div>";
+      h += '<button class="btn primary big" data-act="urnext">Tiếp tục →</button>';
+    }
+    return h;
+  }
+  function urShow() { var c = $("#ur"); if (c) { REG = []; c.innerHTML = urRender(); } }
+  function pageUnitReview(n) {
+    if (!unitByNum(n)) return pageUnits(); urNew(n);
+    return { title: "Ôn tập · Bài " + n, nav: "units", html: '<span class="unitnum">Bài ' + n + "</span><h1>Ôn tập ngắn</h1><p class=\"small\">5 câu hỏi nhẹ nhàng. Không chấm điểm, chỉ để Mẹ nhớ lâu hơn.</p><div id=\"ur\">" + urRender() + "</div>" };
+  }
+
+  /* ----- progress ----- */
+  function pageProgress() {
+    var t = today(), s = streak(), tot = totalDays();
+    var practiced = {}; Object.keys(state.days).forEach(function (d) { (state.days[d].p || []).forEach(function (id) { practiced[id] = 1; }); });
+    var cnt = { comfortable: 0, practice: 0 }; Object.keys(state.status).forEach(function (id) { if (PH[id] && cnt[state.status[id]] !== undefined) cnt[state.status[id]]++; });
+    var unitPhr = ALLP.length;
+    var h = "<h1>Tiến độ của Mẹ</h1>";
+    h += '<div class="card"><div class="steph">Mục tiêu mỗi ngày</div><div class="row"><button class="btn" data-act="goal" data-v="-1" aria-label="Giảm mục tiêu">− Bớt</button><div class="count" style="flex:0 0 auto;align-self:center;padding:0 10px">' + state.goal + '</div><button class="btn" data-act="goal" data-v="1" aria-label="Tăng mục tiêu">+ Thêm</button></div><p class="small">câu mỗi ngày · Hôm nay Mẹ đã luyện <b>' + t.p.length + "</b> câu.</p></div>";
+    h += '<div class="card"><div class="steph">7 ngày gần đây</div><div class="dots">';
+    for (var i = 6; i >= 0; i--) { var d = addDays(localDay(), -i); h += '<div class="dot"><i class="' + (studied(d) ? "on" : "") + '"></i>' + d.slice(8) + "/" + d.slice(5, 7) + "</div>"; }
+    h += '</div><div class="stat"><span>Chuỗi ngày liên tiếp</span><b>' + s + " ngày</b></div><div class=\"stat\"><span>Tổng số ngày đã học</span><b>" + tot + ' ngày</b></div><p class="small muted">Nghỉ một ngày cũng không sao. Mẹ học tiếp là được!</p></div>';
+    h += '<div class="card"><div class="stat"><span>Số câu đã luyện</span><b>' + Object.keys(practiced).length + "</b></div>" +
+      '<div class="stat"><span>Bài đã học xong</span><b>' + state.lessonsDone.length + " / 12</b></div>" +
+      '<div class="stat"><span>Bài luyện nghe đã làm</span><b>' + state.listenCount + "</b></div>" +
+      '<div class="stat"><span>Lần nhập vai</span><b>' + state.roleplayCount + "</b></div>" +
+      '<div class="stat"><span>😊 Câu đã quen</span><b>' + cnt.comfortable + " / " + unitPhr + "</b></div>" +
+      '<div class="stat"><span>💪 Câu cần luyện thêm</span><b>' + cnt.practice + "</b></div></div>";
+    h += "<h2>Từng bài</h2>";
+    UNITS.forEach(function (u) { var c = comfortableIn(u), pct = Math.round(c / u.phrases.length * 100); h += '<a href="#/unit/' + u.num + '" class="card" style="display:block;text-decoration:none;color:inherit"><b>Bài ' + u.num + ": " + esc(u.title) + "</b> " + (unitDone(u.num) ? '<span class="done">✓</span>' : "") + '<div class="bar"><i style="width:' + pct + '%"></i></div><span class="small muted">' + c + " / " + u.phrases.length + " câu đã quen</span></a>"; });
+    return { title: "Tiến độ", nav: "home", html: h };
+  }
+
+  /* ----- roadmap ----- */
+  function pageRoadmap() {
+    var cw = currentWeek(), h = '<h1>Lộ trình 12 tuần</h1><div class="card hl"><b>Mỗi ngày 20 phút:</b><ul class="clean"><li>5 phút: Luyện nghe</li><li>5 phút: Nghe và nói theo</li><li>5 phút: Nói và nhập vai</li><li>5 phút: Ôn câu cũ</li></ul><span class="small">Cuối mỗi tuần: một buổi ôn tập. Mẹ có thể bỏ qua hoặc học lại bất kỳ bài nào.</span></div>';
+    var last = "";
+    ROADMAP.forEach(function (w) {
+      if (w.stage !== last) { h += "<h2>" + esc(w.stage) + "</h2>"; last = w.stage; }
+      h += '<div class="card weekcard ' + (w.week === cw ? "now" : "") + '"><b>Tuần ' + w.week + ": " + esc(w.title) + "</b>" + (w.week === cw ? ' <span class="chip comfortable">Tuần này</span>' : "") +
+        '<ul class="clean">' + w.tasks.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + '</ul><div class="row">' +
+        w.units.map(function (n) { return '<a class="btn soft" href="#/unit/' + n + '">Bài ' + n + (unitDone(n) ? " ✓" : "") + "</a>"; }).join("") +
+        (w.week >= 11 ? '<a class="btn soft" href="#/sim">🌏 Mô phỏng</a>' : "") + '<a class="btn ghost" href="#/review">🔁 Ôn cuối tuần</a></div></div>';
+    });
+    return { title: "Lộ trình 12 tuần", nav: "home", html: h };
+  }
+
+  /* ----- pronunciation mini-unit ----- */
+  function pageSounds() {
+    var h = '<h1>Những âm người Việt thường gặp khó khăn</h1><p>Giọng Việt không phải là điều xấu! Mẹ chỉ cần chú ý vài âm để người nghe hiểu rõ hơn. Cách đọc bằng chữ Việt chỉ để tham khảo, nghe mới là quan trọng nhất.</p>';
+    SOUNDS.forEach(function (s) {
+      h += '<div class="card"><h2 style="margin-top:0">' + esc(s.title) + "</h2><p>" + esc(s.why) + '</p><div class="tip"><b>Khẩu hình miệng:</b><ul class="clean">' + s.mouth.map(function (m) { return "<li>" + esc(m) + "</li>"; }).join("") + "</ul></div>";
+      s.examples.forEach(function (e) {
+        h += '<div class="dl"><div class="en st">' + fmt(e[0]) + '</div><div class="vi small">' + esc(e[1]) + '</div><div class="row">' + playBtn(e[0].replace(/ \/ /g, ". "), "🐢 Nghe chậm", "vslow", "ghost") + playBtn(e[0].replace(/ \/ /g, ". "), "▶ Bình thường", "normal", "ghost") + "</div></div>";
+      });
+      h += "</div>";
+    });
+    return { title: "Âm khó", nav: "units", html: h };
+  }
+
+  /* ----- settings ----- */
+  var resetArmed = false;
+  function pageSettings() {
+    resetArmed = false;
+    var h = "<h1>Cài đặt</h1>" +
+      '<h2>🔊 Kiểm tra âm thanh</h2><p class="small">Bấm nút dưới đây. Máy sẽ đọc một câu <b>chậm</b>, rồi đọc lại câu đó với tốc độ <b>bình thường</b>. Nếu lần thứ hai không nhanh hơn, hoặc tiếng nhỏ như thì thầm, Mẹ xem mục 10 trong Hướng dẫn.</p>' +
+      '<button class="btn primary block" data-act="soundcheck">🔊 Nghe thử: chậm rồi bình thường</button><div id="sc-msg" class="small" aria-live="polite"></div>' +
+      "<h2>Tốc độ đọc</h2>" + speedRow();
+    h += '<h2>Giọng đọc tiếng Anh</h2><div id="voices">' + voicesHtml() + "</div>";
+    h += '<h2>Cách đọc gần đúng</h2><button class="btn block ' + (state.showHints ? "on" : "ghost") + '" data-act="hints">' + (state.showHints ? "Đang hiện cách đọc (bấm để ẩn)" : "Đang ẩn cách đọc (bấm để hiện)") + "</button>";
+    h += '<h2>Lưu tiến độ</h2><div class="info small">' + (Store.ok ? "✅ Tiến độ của Mẹ được lưu trên máy này (trong trình duyệt)." : "📌 Máy đang không cho lưu. Mẹ vẫn học bình thường, nhưng tiến độ có thể mất khi đóng trang.") + "</div>";
+    h += '<h2>Bắt đầu lại từ đầu</h2><p class="small">Xóa toàn bộ tiến độ, câu yêu thích và cài đặt.</p><button class="btn ghost block" data-act="reset" id="resetbtn">Xóa tiến độ</button>';
+    return { title: "Cài đặt", nav: "home", html: h };
+  }
+  function voicesHtml() {
+    if (!TTS.ok) return '<div class="info small">Trình duyệt này chưa hỗ trợ đọc tiếng Anh.</div>';
+    if (!TTS.en.length) return '<div class="info small">' + (TTS.loaded ? "Máy chưa có giọng tiếng Anh. Xem phần Hướng dẫn để tải giọng English (US)." : "Đang tìm giọng đọc…") + "</div>";
+    var p = TTS.primary(), h = voiceTip() + '<p class="small">Mẹ bấm “▶ Thử” để nghe từng giọng, rồi chọn giọng nghe rõ nhất. Giọng Mỹ (en-US) và giọng có ⭐ thường rõ hơn. Nghe bằng tai nghe cũng sẽ rõ hơn loa ngoài.</p><div class="stack">';
+    TTS.en.slice(0, 20).forEach(function (v, i) {
+      var on = p && v.voiceURI === p.voiceURI;
+      h += '<div class="row" style="margin:0"><button class="btn ' + (on ? "on" : "ghost") + '" style="flex:2 1 180px" data-act="voice" data-i="' + i + '">' + (on ? "✓ " : "") + esc(v.name) + " (" + esc(v.lang) + ")" + voiceLabel(v) + '</button><button class="btn ghost" style="flex:1 1 90px" data-act="tryvoice" data-i="' + i + '">▶ Thử</button></div>';
+    });
+    return h + "</div>";
+  }
+
+  /* ----- guide ----- */
+  function pageGuide() {
+    var h = '<h1>Hướng dẫn cho Mẹ</h1>';
+    function sec(id, t, body) { h += '<div class="card" id="g-' + id + '"><h2 style="margin-top:0">' + t + "</h2>" + body + "</div>"; }
+    sec("open", "1. Mở trang học", "<ul class=\"clean\"><li>Mẹ bấm vào đường link Linh gửi (qua Zalo, Messenger hoặc tin nhắn).</li><li>Trên iPhone, Mẹ nên mở bằng <b>Safari</b> (biểu tượng la bàn màu xanh).</li><li>Nếu link mở trong Zalo/Messenger, Mẹ bấm nút “…” rồi chọn “Mở bằng Safari” hoặc “Mở trong trình duyệt”.</li><li>Trên máy tính, Mẹ mở bằng Chrome, Edge hoặc Safari.</li></ul>");
+    sec("home", "2. Đưa trang học ra màn hình chính iPhone", "<ol class=\"clean\"><li>Mở trang học bằng Safari.</li><li>Bấm nút <b>Chia sẻ</b> (hình vuông có mũi tên chỉ lên, ở dưới hoặc trên màn hình).</li><li>Kéo xuống, chọn <b>“Thêm vào MH chính”</b> (Add to Home Screen).</li><li>Bấm <b>“Thêm”</b>. Từ nay Mẹ chỉ cần chạm vào biểu tượng trên màn hình là học được.</li></ol>");
+    sec("daily", "3. 20 phút mỗi ngày", "<ul class=\"clean\"><li>Ở Trang chủ có 4 bước: Nghe → Nói theo → Nhập vai → Ôn tập, mỗi bước 5 phút.</li><li>Nút lớn <b>“Học tiếp”</b> đưa Mẹ đến đúng bài của tuần này.</li><li>Nghỉ một ngày cũng không sao. Mẹ học tiếp là được!</li></ul>");
+    sec("audio", "4. Nghe tiếng Anh", "<ul class=\"clean\"><li>Bấm <b>🐢 Nghe chậm</b> hoặc <b>▶ Nghe tự nhiên</b>.</li><li>Chọn tốc độ: Rất chậm, Chậm hoặc Bình thường.</li><li>Phần <b>in đậm</b> là chỗ cần nhấn giọng.</li><li>Bản dịch dùng “bạn” hoặc “chị” để Mẹ dễ hiểu nghĩa. Tiếng Anh chỉ có một từ “you” cho tất cả.</li></ul>");
+    sec("speak", "5. Luyện nói", "<ul class=\"clean\"><li><b>Nghe rồi nói theo 3 lần</b>: không cần micro, máy nào cũng dùng được.</li><li><b>Bấm rồi nói</b>: máy nghe Mẹ nói và tô màu xanh những từ Mẹ đã nói rõ, màu cam những từ nên luyện thêm.</li><li><b>Ghi âm</b>: Mẹ ghi giọng mình, nghe lại và so với giọng mẫu.</li><li>Nhập vai: khách hỏi, Mẹ chọn câu trả lời rồi nói to. Không có câu trả lời sai!</li></ul>");
+    sec("quick", "6. Cứu nguy nhanh khi đi chơi", "<ul class=\"clean\"><li>Bấm nút <b>🆘 Cứu nguy</b> ở góc dưới bên phải màn hình.</li><li>Chạm vào câu là máy đọc ngay. Mẹ cũng có thể đưa điện thoại cho khách đọc chữ.</li><li>Khi chưa hiểu, Mẹ dùng nhóm <b>“Khi Mẹ chưa hiểu”</b>, ví dụ: “Sorry, could you say that again more slowly?”</li></ul>");
+    sec("fav", "7. Lưu câu yêu thích", "<ul class=\"clean\"><li>Bấm <b>☆ Lưu yêu thích</b> dưới mỗi câu.</li><li>Xem lại ở Trang chủ → <b>⭐ Câu yêu thích</b>.</li></ul>");
+    sec("review", "8. Ôn những câu khó", "<ul class=\"clean\"><li>Sau mỗi câu, Mẹ chọn: 😊 Đã quen, 💪 Cần luyện thêm hoặc 🌱 Còn mới.</li><li>Câu “cần luyện thêm” sẽ tự động vào phần <b>🔁 Ôn tập</b> và được nhắc lại thường xuyên hơn.</li></ul>");
+    sec("mic", "9. Micro không hoạt động?", "<ol class=\"clean\"><li>Khi máy hỏi “Cho phép dùng micro?”, Mẹ bấm <b>Cho phép</b>.</li><li>Nếu lỡ bấm “Không cho phép”: vào <b>Cài đặt → Safari → Micrô</b>, chọn “Hỏi” hoặc “Cho phép”, rồi mở lại trang.</li><li>Trên iPhone, Mẹ mở trang bằng đường link bắt đầu bằng <b>https://</b>. Mở tệp trực tiếp trên máy có thể khiến micro không chạy.</li><li>Phần “Bấm rồi nói” cần có Internet. Mẹ kiểm tra Wi-Fi hoặc 4G.</li><li>Nếu vẫn chưa được, Mẹ thử bật <b>Đọc chính tả</b> trong Cài đặt → Cài đặt chung → Bàn phím.</li><li>Vẫn không sao cả! Mẹ dùng <b>Ghi âm</b> hoặc <b>Nghe rồi nói theo 3 lần</b>. Cách này rất hiệu quả.</li></ol>");
+    sec("sound", "10. Không nghe thấy tiếng, hoặc tiếng khó nghe?", "<ol class=\"clean\"><li>Tăng âm lượng bằng nút bên hông iPhone.</li><li>Tắt chế độ im lặng (công tắc nhỏ bên hông máy, hoặc nút Tác vụ).</li><li>Nếu giọng đọc bị rè, khó nghe hoặc giọng lạ: <b>Cài đặt → Trợ năng → Nội dung được đọc → Giọng nói → Tiếng Anh</b>, chọn <b>Ava</b>, <b>Zoe</b> hoặc <b>Evan</b> (Mỹ) và tải bản <b>Cao cấp/Premium</b> hoặc <b>Nâng cao/Enhanced</b>. Sau đó vào trang học → ⚙️ Cài đặt → chọn giọng đó.</li><li>Nghe bằng tai nghe sẽ rõ hơn nhiều so với loa ngoài.</li><li>Nếu tiếng nhỏ như thì thầm sau khi dùng micro: Mẹ vuốt đóng hẳn Safari rồi mở lại trang học. Tiếng sẽ phát ra loa chính như bình thường.</li><li>Vào ⚙️ Cài đặt → bấm <b>“Nghe thử: chậm rồi bình thường”</b> để kiểm tra.</li></ol>");
+    sec("about", "Về trang học này", "<p class=\"small\">Tiến độ được lưu ngay trên điện thoại của Mẹ, không cần tài khoản, không có quảng cáo. Nếu Mẹ xóa lịch sử Safari, tiến độ có thể bị xóa theo. Bài học và phần đọc chữ dùng được cả khi không có mạng (nếu máy có sẵn giọng tiếng Anh); riêng phần nhận diện giọng nói thường cần Internet.</p>");
+    return { title: "Hướng dẫn", nav: "home", html: h };
+  }
+
+  /* ============================================================
+     ROUTER
+     ============================================================ */
+  var ROUTES = [
+    [/^\/?(home)?$/, function () { return pageHome(); }],
+    [/^\/units$/, function () { return pageUnits(); }],
+    [/^\/unit\/(\d+)$/, function (m) { return pageUnit(+m[1]); }],
+    [/^\/unit\/(\d+)\/p\/(\d+)$/, function (m) { return pageStudy(+m[1], +m[2]); }],
+    [/^\/unit\/(\d+)\/roleplay$/, function (m) { return pageRoleplay(+m[1]); }],
+    [/^\/unit\/(\d+)\/review$/, function (m) { return pageUnitReview(+m[1]); }],
+    [/^\/listen$/, function () { return pageListen(); }],
+    [/^\/listen\/(choose|what)$/, function (m) { return pageListenQuiz(m[1]); }],
+    [/^\/speak$/, function () { return pageSpeak(); }],
+    [/^\/sim$/, function () { return pageSim(); }],
+    [/^\/quick$/, function () { return pageQuick(); }],
+    [/^\/fav$/, function () { return pageFav(); }],
+    [/^\/review$/, function () { return pageReview(); }],
+    [/^\/progress$/, function () { return pageProgress(); }],
+    [/^\/roadmap$/, function () { return pageRoadmap(); }],
+    [/^\/sounds$/, function () { return pageSounds(); }],
+    [/^\/settings$/, function () { return pageSettings(); }],
+    [/^\/guide$/, function () { return pageGuide(); }]
+  ];
+  var pendingScroll = null;
+  function render(keepScroll) {
+    TTS.stop(); stopRecognition(); if (Recorder.active()) Recorder.stop();
+    var path = (location.hash || "#/home").replace(/^#/, "") || "/home", page = null;
+    REG = [];
+    for (var i = 0; i < ROUTES.length; i++) { var m = path.match(ROUTES[i][0]); if (m) { try { page = ROUTES[i][1](m); } catch (e) { page = { title: "Trang chủ", nav: "home", html: '<div class="info">Có lỗi nhỏ khi mở trang này. Mẹ bấm “Trang chủ” để quay lại nhé.</div>' }; if (window.console) console.error(e); } break; } }
+    if (!page) page = pageHome();
+    var v = $("#view"); v.innerHTML = page.html;
+    $("#toptitle").textContent = page.title;
+    document.title = page.title + " · English with Mẹ Hằng";
+    Array.prototype.forEach.call(document.querySelectorAll(".bottomnav a"), function (a) { a.classList.toggle("on", a.getAttribute("data-nav") === page.nav); });
+    if (!keepScroll) {
+      if (pendingScroll) { var el = document.getElementById(pendingScroll); pendingScroll = null; if (el) { el.scrollIntoView(); return; } }
+      window.scrollTo(0, 0);
+      try { v.focus({ preventScroll: true }); } catch (e) {}
+    }
+  }
+  function refresh() { var y = window.scrollY; render(true); window.scrollTo(0, y); }
+
+  /* ============================================================
+     ACTIONS
+     ============================================================ */
+  async function playDialog(n, mode) {
+    var u = unitByNum(n); TTS.stop(); var my = SEQ;
+    for (var i = 0; i < u.dialogue.length; i++) {
+      if (my !== SEQ) return;
+      var row = document.getElementById("dl-" + i); if (row) { row.style.background = "#FFF3D6"; row.scrollIntoView({ block: "center", behavior: "smooth" }); }
+      var l = u.dialogue[i];
+      await TTS.speak(l.en, { rate: rateFor(mode), voice: l.who === "H" ? TTS.primary() : voiceOf("guest") });
+      if (row) row.style.background = "";
+      if (my !== SEQ) return;
+      await wait(450);
+    }
+    markActivity();
+  }
+  var ACT = {
+    play: function (el) {
+      var r = REG[+el.getAttribute("data-r")]; if (!r) return;
+      Array.prototype.forEach.call(document.querySelectorAll(".playing"), function (b) { b.classList.remove("playing"); });
+      TTS.stop(); el.classList.add("playing");
+      var voice = r.v ? (RP && r.v === RP.voice && RP.curVoice ? RP.curVoice : voiceOf(r.v)) : (LQ.q && el.closest("#lq") ? LQ.voice : TTS.primary());
+      TTS.speak(r.t, { rate: rateFor(isNaN(+el.getAttribute("data-mode")) ? el.getAttribute("data-mode") : +el.getAttribute("data-mode")), voice: voice }).then(function () { el.classList.remove("playing"); });
+    },
+    soundcheck: async function () {
+      TTS.stop(); var my = SEQ, m = $("#sc-msg"), t = "Welcome to Vietnam! We're so happy you're here.";
+      if (m) m.innerHTML = '<div class="info">1/2: 🐢 Chậm…</div>';
+      await TTS.speak(t, { rate: rateFor("slow") }); if (my !== SEQ) return; await wait(700); if (my !== SEQ) return;
+      if (m) m.innerHTML = '<div class="info">2/2: ▶ Bình thường…</div>';
+      await TTS.speak(t, { rate: 1.0 }); if (my !== SEQ) return;
+      if (m) m.innerHTML = '<div class="good">Xong! Lần 2 phải nhanh hơn lần 1. Nếu đúng như vậy, âm thanh đã hoạt động tốt.</div>';
+    },
+    stop: function () { TTS.stop(); Array.prototype.forEach.call(document.querySelectorAll(".dl"), function (r) { r.style.background = ""; }); },
+    dialog: function (el) { playDialog(+el.getAttribute("data-n"), el.getAttribute("data-mode")); },
+    speed: function (el) { state.speed = +el.getAttribute("data-v"); save(); refreshKeepState(); TTS.speak("This is the speed you chose.", { rate: state.speed }); },
+    fav: function (el) {
+      var id = el.getAttribute("data-id"), k = state.fav.indexOf(id);
+      if (k >= 0) state.fav.splice(k, 1); else state.fav.push(id); save();
+      var f = isFav(id); el.textContent = f ? "★ Đã lưu" : "☆ Lưu yêu thích";
+      if (el.classList.contains("btn")) { el.classList.toggle("soft", f); el.classList.toggle("ghost", !f); }
+      toast(f ? "Đã lưu vào Câu yêu thích ⭐" : "Đã bỏ khỏi Câu yêu thích");
+    },
+    rate: function (el) {
+      var id = el.getAttribute("data-id"), v = el.getAttribute("data-v");
+      setStatus(id, v); var rb = $("#ratebox"); if (rb) rb.outerHTML = rateBox(id);
+      toast(v === "comfortable" ? "😊 Tuyệt vời! Mẹ đã quen câu này." : v === "practice" ? "💪 Đã thêm vào phần Ôn tập. Mình luyện thêm nhé!" : "🌱 Không sao, mình nghe thêm nhé!");
+    },
+    shadow: function (el) { doShadow(el.getAttribute("data-id")); },
+    sr: function (el) { doSR(el.getAttribute("data-id"), el); },
+    showrec: function (el) { var rb = $("#recbox"); if (rb) rb.classList.remove("hidden"); el.classList.add("hidden"); },
+    rec: function (el) { doRecord(el.getAttribute("data-id"), el); },
+    showreal: function (el) { var t = $("#realtxt"); if (t) t.classList.toggle("hidden"); el.textContent = t && t.classList.contains("hidden") ? "👀 Hiện câu" : "🙈 Ẩn câu"; },
+    togglevi: function (el) { var box = document.getElementById(el.getAttribute("data-target")); if (box) Array.prototype.forEach.call(box.querySelectorAll(".tv"), function (x) { x.classList.toggle("hidden"); }); },
+    done: function (el) {
+      var n = +el.getAttribute("data-n"), k = state.lessonsDone.indexOf(n);
+      if (k >= 0) state.lessonsDone.splice(k, 1); else { state.lessonsDone.push(n); toast("🎉 Mẹ đã học xong Bài " + n + "! Giỏi lắm!"); }
+      save(); el.textContent = unitDone(n) ? "✓ Đã đánh dấu học xong (bấm để bỏ)" : "✓ Đánh dấu đã học xong bài này";
+    },
+    jump: function (el) { var t = document.getElementById(el.getAttribute("data-t")); if (t) t.scrollIntoView({ behavior: "smooth" }); },
+    hints: function () { state.showHints = !state.showHints; save(); refreshKeepState(); },
+    /* role-play */
+    rpen: function () { RP.showEn = !RP.showEn; rpShow(false); },
+    rpvi: function () { RP.showVi = !RP.showVi; rpShow(false); },
+    rphelp: async function () {
+      TTS.stop(); var my = SEQ;
+      await TTS.speak("Sorry, could you say that again more slowly?", { rate: rateFor("slow") });
+      if (my !== SEQ) return; await wait(500); if (my !== SEQ) return;
+      RP.showEn = true; RP.showVi = true; rpShow(false);
+      TTS.speak(RP.gText, { rate: 0.75, voice: RP.curVoice });
+      toast("😊 Hỏi lại là rất bình thường! Khách đang nói chậm lại cho Mẹ.");
+    },
+    rpopt: function (el) {
+      var k = +el.getAttribute("data-k"), o = RP.steps[RP.i].options[k];
+      RP.fb = '<div class="bubble me"><div class="who">Mẹ Hằng:</div><div class="en">' + esc(o.en) + '</div><div class="vi">' + esc(o.vi) + "</div></div>" +
+        '<div class="good">' + esc(pick(["Very good, Mẹ! Bây giờ Mẹ nói to câu này nhé.", "Great! They will understand you. Mẹ nói to câu này nhé!", "Câu trả lời rất hay! Mẹ nghe mẫu rồi nói theo nhé."])) + "</div>";
+      rpShow(false);
+      var fb = $("#rp-fb"); if (fb) { REG.push({ t: o.en, v: "" }); fb.insertAdjacentHTML("beforeend", '<div class="row"><button class="btn" data-act="play" data-r="' + (REG.length - 1) + '" data-mode="slow">🐢 Nghe mẫu lại</button></div>'); fb.scrollIntoView({ block: "center", behavior: "smooth" }); }
+      TTS.stop(); TTS.speak(o.en, { rate: rateFor("slow") });
+    },
+    rpsr: function (el) {
+      doSR("", el, function (r) {
+        if (r.error) { RP.fb = '<div class="almost">' + esc(srErrorText(r.error)) + " Mẹ cũng có thể chọn một câu trả lời ở trên.</div>"; rpShow(false); return; }
+        var best = null; RP.steps[RP.i].options.forEach(function (o) { var a = analyze(o.en, r.alts); if (!best || a.score > best.a.score) best = { a: a, o: o }; });
+        RP.fb = feedbackHtml(best.a, best.o.en); rpShow(false);
+      });
+    },
+    rprec: function () {
+      var o = RP.steps[RP.i].options[0];
+      RP.fb = '<div class="card"><p class="small">Mẹ bấm “Ghi âm”, nói câu trả lời, rồi bấm “Dừng”. Sau đó nghe lại giọng mình.</p><div class="row"><button class="btn" data-act="rec" data-id="rp">⏺️ Ghi âm</button></div><div id="rec-out"></div></div>';
+      rpShow(false);
+    },
+    rpnext: function () { RP.i++; RP.fb = ""; RP.gText = null; RP.showVi = false; if (RP.i >= RP.steps.length) { state.roleplayCount++; markActivity(); } rpShow(true); window.scrollTo(0, 0); },
+    rpagain: function () { var sim = RP.sim, n = RP.n, alt = RP.useAlt; startRP(n, { sim: sim, alt: sim ? true : alt }); RP.gText = null; rpShow(true); window.scrollTo(0, 0); },
+    rpalt: function () { startRP(RP.n, { alt: true }); RP.gText = null; rpShow(true); window.scrollTo(0, 0); },
+    /* listening quiz */
+    lqplay: function (el) { TTS.stop(); el.classList.add("playing"); TTS.speak(lqText(), { rate: rateFor(el.getAttribute("data-mode")), voice: LQ.voice }).then(function () { el.classList.remove("playing"); }); },
+    lqen: function () { LQ.showEn = true; lqShow(); },
+    lqans: function (el) {
+      if (LQ.answered) return; LQ.chosen = +el.getAttribute("data-k"); LQ.answered = true;
+      state.listenCount++; markActivity();
+      if (LQ.q.opts[LQ.chosen].id !== LQ.q.p.id) addToReview(LQ.q.p.id); else markPracticed(LQ.q.p.id);
+      lqShow();
+    },
+    lqnext: function () { lqNew(); lqShow(); var b = $("#lq [data-act=lqplay]"); if (b) { TTS.stop(); TTS.speak(lqText(), { rate: rateFor("normal"), voice: LQ.voice }); } },
+    lqmix: function (el) { LQ.mixVoices = !LQ.mixVoices; el.classList.toggle("on", LQ.mixVoices); el.classList.toggle("ghost", !LQ.mixVoices); el.textContent = "🎙️ " + (LQ.mixVoices ? "Đang đổi giọng ngẫu nhiên" : "Nghe nhiều giọng khác nhau"); LQ.voice = LQ.mixVoices ? TTS.random() : TTS.primary(); },
+    /* unit review */
+    urans: function (el) { if (UR.answered) return; UR.chosen = +el.getAttribute("data-k"); UR.answered = true; var q = UR.qs[UR.i]; if (q.opts[UR.chosen].id === q.p.id) { UR.right++; markPracticed(q.p.id); } else addToReview(q.p.id); urShow(); },
+    urnext: function () { UR.i++; UR.answered = false; UR.chosen = null; if (UR.i >= UR.qs.length && !unitDone(UR.n)) { state.lessonsDone.push(UR.n); save(); } markActivity(); urShow(); window.scrollTo(0, 0); },
+    uragain: function () { urNew(UR.n); urShow(); },
+    /* review */
+    rvkind: function (el) { pendingReviewKind = el.getAttribute("data-v"); refresh(); },
+    rv: function (el) { var id = RV.ids[RV.i], easy = el.getAttribute("data-v") === "1"; reviewRate(id, easy); RV.done++; if (!easy && RV.again.indexOf(id) < 0 && RV.ids.length < 30) { RV.again.push(id); RV.ids.push(id); } RV.i++; rvShow(); window.scrollTo(0, 0); },
+    /* speaking page */
+    spnext: function () { var pool = SP.unit === "all" ? ALLP : unitByNum(+SP.unit).phrases; SP.id = pick(pool.filter(function (p) { return p.id !== SP.id; })).id; refresh(); },
+    sppractice: function () { var l = practiceList(); SP.id = l[Math.floor(Math.random() * l.length)]; refresh(); },
+    /* progress & settings */
+    goal: function (el) { state.goal = Math.max(3, Math.min(30, state.goal + (+el.getAttribute("data-v")))); save(); refresh(); },
+    voice: function (el) { var v = TTS.en[+el.getAttribute("data-i")]; if (!v) return; state.voiceURI = v.voiceURI; save(); $("#voices").innerHTML = voicesHtml(); TTS.speak("Hello! Welcome to Vietnam!", { voice: v, rate: state.speed }); },
+    tryvoice: function (el) { var v = TTS.en[+el.getAttribute("data-i")]; if (v) { TTS.stop(); TTS.speak("Hello! Welcome to Vietnam!", { voice: v, rate: state.speed }); } },
+    reset: function (el) {
+      if (!resetArmed) { resetArmed = true; el.textContent = "Bấm lần nữa để xác nhận xóa"; el.classList.add("primary"); setTimeout(function () { resetArmed = false; if (el.isConnected) { el.textContent = "Xóa tiến độ"; el.classList.remove("primary"); } }, 6000); return; }
+      Store.clear(); state = DEFAULTS(); save(); resetArmed = false; toast("Đã xóa tiến độ. Mình bắt đầu lại nhé!"); location.hash = "#/home";
+    }
+  };
+  function refreshKeepState() {
+    /* re-render pages that keep in-memory quiz state without resetting it */
+    var h = location.hash;
+    if (/listen\/(choose|what)/.test(h)) { var c = $("#lq"); var tmp = LQ.q, a = LQ.answered, ch = LQ.chosen, se = LQ.showEn, n = LQ.n; refresh(); LQ.q = tmp; LQ.answered = a; LQ.chosen = ch; LQ.showEn = se; LQ.n = n; lqShow(); return; }
+    if (/roleplay|\/sim/.test(h)) { rpShow(false); Array.prototype.forEach.call(document.querySelectorAll("[data-act=speed]"), function (b) { var on = +b.getAttribute("data-v") === state.speed; b.classList.toggle("on", on); b.classList.toggle("ghost", !on); }); return; }
+    if (/\/review$/.test(h) || /\/p\/\d+$/.test(h) || /\/speak$/.test(h)) { Array.prototype.forEach.call(document.querySelectorAll("[data-act=speed]"), function (b) { var on = +b.getAttribute("data-v") === state.speed; b.classList.toggle("on", on); b.classList.toggle("ghost", !on); }); if (!/\/p\/\d+$|\/speak$/.test(h)) return; }
+    refresh();
+  }
+
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("a[data-scroll]") : null;
+    if (a) pendingScroll = (a.getAttribute("data-scroll") === "mic") ? "g-mic" : a.getAttribute("data-scroll");
+    var ra = e.target.closest ? e.target.closest("a[data-review]") : null;
+    if (ra) pendingReviewKind = ra.getAttribute("data-review");
+    var el = e.target.closest ? e.target.closest("[data-act]") : null;
+    if (!el || el.disabled) return;
+    var f = ACT[el.getAttribute("data-act")];
+    if (f) { e.preventDefault(); try { f(el); } catch (err) { if (window.console) console.error(err); toast("Có lỗi nhỏ. Mẹ thử bấm lại nhé."); } }
+  });
+  document.addEventListener("change", function (e) {
+    var el = e.target; if (!el || !el.getAttribute) return;
+    var k = el.getAttribute("data-change");
+    if (k === "lqunit") { LQ.unit = el.value; LQ.n = 0; lqNew(); lqShow(); }
+    if (k === "spunit") { SP.unit = el.value; var pool = SP.unit === "all" ? ALLP : unitByNum(+SP.unit).phrases; SP.id = pool[0].id; refresh(); }
+  });
+  document.addEventListener("mh-voices", function () {
+    var v = $("#voices"); if (v) v.innerHTML = voicesHtml();
+    if (!location.hash || location.hash === "#/home" || location.hash === "#/") refresh();
+    if (RP) RP.curVoice = voiceOf(RP.voice);
+    if (LQ.q && !LQ.voice) LQ.voice = LQ.mode === "what" ? (TTS.secondary() || TTS.primary()) : TTS.primary();
+  });
+  window.addEventListener("hashchange", function () { render(false); });
+
+  /* home-screen icon drawn at runtime (no external files) */
+  function makeIcon() {
+    try {
+      var c = document.createElement("canvas"); c.width = c.height = 180; var g = c.getContext("2d");
+      g.fillStyle = "#7A3B24"; g.fillRect(0, 0, 180, 180);
+      var gr = g.createRadialGradient(90, 80, 10, 90, 92, 70); gr.addColorStop(0, "#FFD36B"); gr.addColorStop(1, "#D9562E");
+      g.fillStyle = gr; g.beginPath(); g.ellipse(90, 92, 52, 62, 0, 0, Math.PI * 2); g.fill();
+      g.fillStyle = "#F3C75F"; g.fillRect(70, 26, 40, 10); g.fillRect(70, 148, 40, 10); g.fillRect(86, 158, 8, 16);
+      g.fillStyle = "#7A3B24"; g.font = "bold 40px -apple-system, Arial, sans-serif"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText("Mẹ", 90, 94);
+      var l = document.querySelector("link[rel=apple-touch-icon]"); if (l) l.href = c.toDataURL("image/png");
+      var f = document.querySelector("link[rel=icon]"); if (f) f.href = c.toDataURL("image/png");
+    } catch (e) {}
+  }
+
+  /* ---------- boot ---------- */
+  loadState(); if (!Store.ok) showStorageBanner();
+  TTS.init(); makeIcon(); render(false);
+
+  /* test hooks (read-only helpers used by the automated QA script) */
+  window.__MH = { LESSONS: LESSONS, QUICK: QUICK, analyze: analyze, daysUntilArrival: daysUntilArrival, hcmToday: hcmToday, streak: streak, state: function () { return state; }, Store: Store, SR: !!SRClass, REC: REC_OK, TTS: TTS, currentWeek: currentWeek };
+})();
+
+</script>
+</body>
+</html>
